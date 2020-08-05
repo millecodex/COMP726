@@ -19,7 +19,7 @@ Lecture 12 - Final Presentations
 Tutorial 1 - Archimate\
 Tutorial 2 - Software design processes and tools\
 Tutorial 3 - The Open Group Architecture Framework\
-Tutorial 4 - Block structure, hashing & merkle trees with Python and Jupyter\
+Tutorial 4 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_block_creation.ipynb)\
 Tutorial 5 - Elliptic curve cryptography key generation\
 Tutorial 6 - Proof of work\
 Tutorial 7 - Remix Part I\
