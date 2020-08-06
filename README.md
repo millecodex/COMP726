@@ -20,7 +20,7 @@ Tutorial 1 - Archimate\
 Tutorial 2 - Software design processes and tools\
 Tutorial 3 - The Open Group Architecture Framework\
 Tutorial 4 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_block_creation.ipynb)\
-Tutorial 5 - Proof of work - Mining\
+Tutorial 5 - [Proof of work - Mining](https://github.com/millecodex/COMP726/blob/master/Tutorial_5_PoW.ipynb)\
 Tutorial 6 - Elliptic curve cryptography key generation\
 Tutorial 7 - Remix Part I\
 Tutorial 8 - Remix Part II\
