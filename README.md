@@ -9,12 +9,12 @@ Lecture 3 - Consensus: centralized & decentralized, double-spend attack\
 Lecture 4 - Consensus: proof of work\
 Lecture 5 - Systems architectures: case studies\
 Lecture 6 - Public key cryptography\
-Lecture 7 - Student Presentations\
-Lecture 8 - Security\
-Lecture 9 - Guest Speaker\
+Lecture 7 - Security\
+Lecture 8 - Decentralized Finance\
+Lecture 9 - Privacy & Data Sovereignty\
 Lecture 10 - Scalability\
 Lecture 11 - Serverless Platforms\
-Lecture 12 - Final Presentations
+Lecture 12 - Guest Speaker
 
 Tutorial 1 - Archimate\
 Tutorial 2 - Software design processes and tools\
