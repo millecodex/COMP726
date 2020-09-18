@@ -22,6 +22,6 @@ Tutorial 3 - The Open Group Architecture Framework\
 Tutorial 4 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_block_creation.ipynb)\
 Tutorial 5 - [Proof of work - Mining](https://github.com/millecodex/COMP726/blob/master/Tutorial_5_PoW.ipynb)\
 Tutorial 6 - [Elliptic curve cryptography key generation](https://github.com/millecodex/COMP726/blob/master/Tutorial_6_ECC.ipynb)\
-Tutorial 7 - Remix Part I\
-Tutorial 8 - Remix Part II\
-Tutorial 9 - Remix Part III
+Tutorial 7 - Student Presentations\
+Tutorial 8 - [Remix Part I](https://github.com/millecodex/COMP726/tree/master/Tutorial_8)\
+Tutorial 9 - Remix Part II
