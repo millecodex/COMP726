@@ -1,5 +1,7 @@
 # Tutorial 8 #
-Sample solidity smart contract files
+Sample solidity smart contract files:
+* helloWorld.sol
+* compoundInterest.sol
 
 ### Useful links: ###
 * Remix [IDE](https://remix.ethereum.org/) and [docs](https://remix-ide.readthedocs.io/en/latest/)
