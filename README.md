@@ -14,7 +14,7 @@ Lecture 8 - Decentralized Finance\
 Lecture 9 - Privacy & Data Sovereignty\
 Lecture 10 - IPFS\
 Lecture 11 - Scaling\
-Lecture 12 - wrap up\
+Lecture 12 - wrap up
 
 Tutorial 1 - Search for a blockchain or platform investigate
 Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_block_creation.ipynb)\
@@ -27,4 +27,4 @@ Tutorial 8 - \
 Tutorial 9 - \
 Tutorial 10 - \
 Tutorial 11 - \
-Tutorial 12 - \
+Tutorial 12 - 
