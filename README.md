@@ -17,7 +17,7 @@ Lecture 11 - Scaling\
 Lecture 12 - wrap up
 
 Tutorial 1 - Search for a blockchain or platform investigate
-Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_block_creation.ipynb)\
+Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_2_block_creation.ipynb)\
 Tutorial 3 - \
 Tutorial 4 - \
 Tutorial 5 - \
