@@ -1,27 +1,30 @@
 ## COMP726
 Blockchain and Cryptocurrency Technology at Auckland University of Technology
 
-This course is brand new! And thus, a work in progress...
+As always this crypto space moves fast and so this is a work in progress...
 
-Lecture 1 - History of the blockchain\
+Lecture 1 - Motivation for & history of computing leading to Bitcoin\
 Lecture 2 - Hash functions, merkle trees, block structure\
 Lecture 3 - Consensus: centralized & decentralized, double-spend attack\
-Lecture 4 - Consensus: proof of work\
-Lecture 5 - Systems architectures: case studies\
-Lecture 6 - Public key cryptography\
+Lecture 4 - Mining: proof of work\
+Lecture 5 - Public key cryptography\
+Lecture 6 - Systems architecture\
 Lecture 7 - Security\
 Lecture 8 - Decentralized Finance\
 Lecture 9 - Privacy & Data Sovereignty\
-Lecture 10 - Scalability\
-Lecture 11 - Serverless Platforms\
-Lecture 12 - Guest Speaker
+Lecture 10 - IPFS\
+Lecture 11 - Scaling\
+Lecture 12 - wrap up\
 
-Tutorial 1 - Archimate\
-Tutorial 2 - Software design processes and tools\
-Tutorial 3 - The Open Group Architecture Framework\
-Tutorial 4 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_block_creation.ipynb)\
-Tutorial 5 - [Proof of work - Mining](https://github.com/millecodex/COMP726/blob/master/Tutorial_5_PoW.ipynb)\
-Tutorial 6 - [Elliptic curve cryptography key generation](https://github.com/millecodex/COMP726/blob/master/Tutorial_6_ECC.ipynb)\
-Tutorial 7 - Student Presentations\
-Tutorial 8 - [Remix Part I](https://github.com/millecodex/COMP726/tree/master/Tutorial_8)\
-Tutorial 9 - Remix Part II
+Tutorial 1 - Search for a blockchain or platform investigate
+Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_block_creation.ipynb)\
+Tutorial 3 - \
+Tutorial 4 - \
+Tutorial 5 - \
+Tutorial 6 - \
+Tutorial 7 - \
+Tutorial 8 - \
+Tutorial 9 - \
+Tutorial 10 - \
+Tutorial 11 - \
+Tutorial 12 - \
