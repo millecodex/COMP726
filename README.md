@@ -19,7 +19,7 @@ Lecture 12 - wrap up
 Tutorial 1 - Search for a blockchain or platform to investigate\
 Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_2_block_creation.ipynb)\
 Tutorial 3 - [Proof-of-Work: mining, difficulty, probability](https://github.com/millecodex/COMP726/blob/master/Tutorial_3_PoW.ipynb)\
-Tutorial 4 - [Elliptic curve cryptography: Turn a public-private key pair into an address](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_ECC.ipynb)
+Tutorial 4 - [Elliptic curve cryptography: Turn a public-private key pair into an address](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_ECC.ipynb)\
 Tutorial 5 - \
 Tutorial 6 - \
 Tutorial 7 - \
