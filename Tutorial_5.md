@@ -42,3 +42,4 @@ Some links that may be helpful:
   - [Remix Part I: deploy an empty contract: helloWorld](https://www.youtube.com/watch?v=bqyrRS5AN00)
   - [Remix Part II: Function Call and visibility](https://www.youtube.com/watch?v=dRZIBw-2DO8)
   - [Remix Part III: Gas](https://www.youtube.com/watch?v=BY4o0Qqlh-4)
+- [Solidity by example](https://docs.soliditylang.org/en/v0.8.6/solidity-by-example.html) has example smart contracts you can follow to see how features are implemented
