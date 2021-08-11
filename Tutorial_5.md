@@ -24,7 +24,8 @@ contract helloWorld{
 ```
 
 ## Remix
-Head to [remix.ethereum.org](https://remix.ethereum.org/) to get started. We'll be going through the LEARNETH tutorials.![LearnEth](https://user-images.githubusercontent.com/39792005/128951882-1708100a-927e-48a9-8e51-947c37d3f4f2.PNG)
+Head to [remix.ethereum.org](https://remix.ethereum.org/) to get started. Find the LEARNETH tutorials.![LearnEth](https://user-images.githubusercontent.com/39792005/128951882-1708100a-927e-48a9-8e51-947c37d3f4f2.PNG)
+Check the plugins tab to make sure LearnEth is in the Active Modules list. Additionally the Solidity compiler needs to be active.
 
 ***error loading: undefined***
 If you are getting an error try with your laptop and alternately try the links below to a different resource. I have been having an issue using this plugin on the network.
