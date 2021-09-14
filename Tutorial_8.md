@@ -162,5 +162,5 @@ I'm not sure yet...its late and Jeff has three classes tomorrow!
 Please send me your questions or errors so I can start to compile a FAQ. I expect this to be updated in the future.
 
 ## Image Credits:
-Parity & Substrate Recipes Workshop https://www.youtube.com/watch?v=KVJIWxZSNHQ&t=4112s (Slightly out of date if you're following along but the concepts still apply.)
+Substrate modules & architecture from Parity & Substrate Recipes Workshop https://www.youtube.com/watch?v=KVJIWxZSNHQ&t=4112s (Slightly out of date if you're following along but the concepts still apply.)
 
