@@ -17,7 +17,7 @@ A standalone node architecture:
 
 <img width="800" alt="substrate_architecture" src="https://user-images.githubusercontent.com/39792005/133337126-e304dcbe-6663-435e-92d5-a090820b21bb.png">
 
-The runtime logic is the specific funtionality that is required of the chain. For Bitcoin this is a ledger (the unspent-transaction output set). For Ethereum this is the virtual machine that is capable of arbitrary calculation. For Polkadot this is keeping track of the heads of the parachains. The entire node is written in Rust, however the Runtime is *also* compiled into web assembly (Wasm) and this means that so-called *forkless upgrades* are possible.
+The runtime logic is the specific funtionality that is required of the chain. For Bitcoin this is a ledger (the unspent-transaction output set). For Ethereum this is the virtual machine that is capable of arbitrary calculation. For Polkadot this is keeping track of the heads of the parachains. The entire node is written in Rust, however the Runtime is *also* compiled into web assembly (Wasm) and this means that so-called [*forkless upgrades*](https://substrate.dev/docs/en/tutorials/forkless-upgrade/) are possible.
 
 There are four pre-made node arrangements in the package we'll be looking at:
 ```
