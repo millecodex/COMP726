@@ -9,6 +9,7 @@ The pieces of a blockchain can be abstracted into the following modules:
 * Transaction Queue
 * Consensus Engine
 * Runtime logic
+
 A standalone client like Bitcoin core has all of the above coded into its base. If someone wanted to create a new blockchain with most of Bitcoin's functionality they would have recode (or copy and refactor) all the modules. This is the motivation behind creating Substrate.
 
 ## Nodes
