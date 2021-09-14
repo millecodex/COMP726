@@ -86,10 +86,8 @@ If our node is running (you can see it has a local server connection at `127.0.0
 <img width="800" alt="polkadot_explorer_switch" src="https://user-images.githubusercontent.com/39792005/133219220-0c959267-8456-4d0b-8189-82c5e9b1f1a3.png">
 > Sidebar: you can explore all sorts of chains and parachains that are connected through the polkadot network from the Development dropdown.
 
-You now have a fully functioning front-end to your substrate node. This is in orange, possibly to avoid the risk of developing and interacting on the real (pink) Polkadot chain.
+You now have a (nearly) fully functioning front-end to your substrate node. This is in orange, possibly to avoid the risk of developing and interacting on the real (pink) Polkadot chain.
 <img width="800" alt="substrate_frontend" src="https://user-images.githubusercontent.com/39792005/133219675-ffdd526c-e333-4c4f-bfc3-37d430a139f2.PNG">
-
-### Congrats 🥳 you're now running a functional development blockchain!
 
 ## 3. Do some Stuff
 In order to do some stuff, we need a few things: accounts + balances, and send + sign + receive functionality. These functions (sending a transaction) are called extrinsics in Substrate. You can send some coins straight away by clicking Accounts and choose someone with a non-zero balance and click Send. Type in an amount and click Make Transfer -> Sign and Submit.
@@ -139,7 +137,7 @@ At this point it is likely you'll see an error: *verification Error: Runtime err
 ```
 >Sidebar: this JSON can be found here: `runtimes\super-runtime\types.json`. Remember when our node first started (line 9) it said: `Native runtime: super-runtime-1`? Well this is the module our node is using to execute the logic.
 
-Now refresh the page and try again to send some funds. If successful you should see an extrinsic event listener notification. **Quickly** flip to your terminal to see the backend output (you may need to scroll up):
+Click Save and refresh the page. Try again to send some funds. If successful you should see an extrinsic event listener notification. **Quickly** flip to your terminal to see the backend output (you may need to scroll up):
 ```
 2021-09-14 20:20:28 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
 2021-09-14 20:20:31 🙌 Starting consensus session on top of parent 0x0725bbae0b15b4b21842fb959279a4ff031b17333a4d0f500083e47e4dbb9fda    
@@ -149,5 +147,14 @@ Now refresh the page and try again to send some funds. If successful you should 
 2021-09-14 20:20:33 💤 Idle (0 peers), best: #1 (0xac14…bd06), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0   
 ```
 Note the block number increase between the first and last line. Our blockchain has been sitting idle this whole time waiting for something to process. Once it had the transfer it began the consensus session, checked the signatures and balances, and declared `Instant Seal success: CreatedBlock {hash: 0xac..bd06 ..}`
+
+### Congrats 🥳 you're now running a functional development blockchain!
  
-## 4 . Change the Consensus Protocol
+## 4. Exercises
+Mess around with the functions available in the frontend (you can't break anything!) Send some transactions, then view the chain state. Clicking the plus sign adds state to the display.
+<img width="800" alt="chain_state" src="https://user-images.githubusercontent.com/39792005/133228889-b45325f1-091d-4a0f-b13a-e4e06482eaed.PNG">
+
+
+## 5. Next time
+I'm not sure yet...its late and Jeff has three classes tomorrow!
+
