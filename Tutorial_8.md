@@ -24,8 +24,8 @@ There are four pre-made node arrangements in the package we'll be looking at:
 	+-- basic-pow
 	|
 	+-- hybrid-consensus
-  |
-  +-- **kitchen-node**
+  	|
+  	+-- kitchen-node
 	|
 	+-- rpc-node
 ```
@@ -33,32 +33,47 @@ Each node is ready to go but has been configured with different with different p
 
 
 ## 1.  Development Environment
-Substrate is written in [rust](https://www.rust-lang.org/) and so a rust compiler is necessary to run any substrate based blockchain. On a linux/macOS system, you can run this [script](https://getsubstrate.io/) for autoconfiguration:
-
+Substrate is written in [rust](https://www.rust-lang.org/) and so a rust compiler is necessary to run any substrate based blockchain. On a linux/macOS system, you can run this [script](https://getsubstrate.io/) for autoconfiguration:\
 `curl https://getsubstrate.io -sSf | bash -s -- --fast`
 
 If you are using Windows I **do not** recommend attempting to configure rust/substrate, rather [install WSL](https://devblogs.microsoft.com/commandline/install-wsl-with-a-single-command-now-available-in-windows-10-version-2004-and-higher/) (Windows Subsystem for Linux).
 
 More detail about various OS configurations (including Apple arm M1s) is at [substrate.dev](https://substrate.dev/docs/en/knowledgebase/getting-started/).
 
-We will be running a specific configuration of substrate found in the [Recipes](https://substrate.dev/recipes/) cookbook. Clone the Substrate recipes repo:
-
+We will be running a specific configuration of substrate found in the [Recipes](https://substrate.dev/recipes/) cookbook. Clone the Substrate recipes repo:\
 `git clone https://github.com/substrate-developer-hub/recipes.git`
-
-
 
 ## 2.  Get your Blockchain Running
 Navigate to the `\recipes` directory and build the binary. This will take a while the first time you do it because all the dependencies get compiled.
 
-Build without debug option (takes longer):
+Build using the flag `--release` which builds without the debug option and is quicker:\
 `cargo build --release`
 
-Build the node called `kitchen-node`:
+In the `\nodes` folder there are four different nodes (see above). Build the node called `kitchen-node`:\
 `cargo build --bin kitchen-node --release`
 
-Run the compiled binary, here using development (`--dev`) mode and a temporary storage directory (`--tmp`):
+Run the compiled binary, here using development `--dev` mode and a temporary storage directory `--tmp`):\
 `cargo run --bin kitchen-node -- --dev --tmp`
 
-
+If successful we will get a lot of useful output. Note the node we're running in line 2, a generated name (6), the runtime (9) -- more on this in a moment, and the blockchain being processed (>16).
+```
+1 2021-09-14 16:20:18 Running in --dev mode, RPC CORS has been disabled.    
+2 2021-09-14 16:20:18 Kitchen Node    
+3 2021-09-14 16:20:18 ✌️  version 3.0.0-98d3625-x86_64-linux-gnu    
+4 2021-09-14 16:20:18 ❤️  by Substrate DevHub <https://github.com/substrate-developer-hub>, 2019-2021    
+5 2021-09-14 16:20:18 📋 Chain specification: Development    
+6 2021-09-14 16:20:18 🏷 Node name: embarrassed-pollution-8954    
+7 2021-09-14 16:20:18 👤 Role: AUTHORITY    
+8 2021-09-14 16:20:18 💾 Database: RocksDb at /tmp/substratew3PomX/chains/dev/db    
+9 2021-09-14 16:20:18 ⛓  Native runtime: super-runtime-1 (super-runtime-1.tx1.au1)    
+10 2021-09-14 16:20:19 🔨 Initializing Genesis block/state (state: 0x09b1…a1ef, header-hash: 0x0725…9fda)    
+11 2021-09-14 16:20:19 Using default protocol ID "sup" because none is configured in the chain specs    
+12 2021-09-14 16:20:19 🏷 Local node identity is: 12D3KooWLvczW8BaJ1yhB4j6en7PQrJMwQw2aUUUAU7RjNm639W3    
+13 2021-09-14 16:20:19 📦 Highest known block at #0    
+14 2021-09-14 16:20:19 〽️ Prometheus server started at 127.0.0.1:9615    
+15 2021-09-14 16:20:19 Listening for new connections on 127.0.0.1:9944.    
+16 2021-09-14 16:20:24 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
+17 2021-09-14 16:20:29 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
+```
 
 ## 3 . Change the Consensus Protocol
