@@ -34,28 +34,29 @@ Each node is ready to go but has been configured with different with different p
 
 ## 1.  Development Environment
 Substrate is written in [rust](https://www.rust-lang.org/) and so a rust compiler is necessary to run any substrate based blockchain. On a linux/macOS system, you can run this [script](https://getsubstrate.io/) for autoconfiguration:\
-`curl https://getsubstrate.io -sSf | bash -s -- --fast`
+`$ curl https://getsubstrate.io -sSf | bash -s -- --fast`
 
 If you are using Windows I **do not** recommend attempting to configure rust/substrate, rather [install WSL](https://devblogs.microsoft.com/commandline/install-wsl-with-a-single-command-now-available-in-windows-10-version-2004-and-higher/) (Windows Subsystem for Linux).
 
 More detail about various OS configurations (including Apple arm M1s) is at [substrate.dev](https://substrate.dev/docs/en/knowledgebase/getting-started/).
 
 We will be running a specific configuration of substrate found in the [Recipes](https://substrate.dev/recipes/) cookbook. Clone the Substrate recipes repo:\
-`git clone https://github.com/substrate-developer-hub/recipes.git`
+`$ git clone https://github.com/substrate-developer-hub/recipes.git`
 
 ## 2.  Get your Blockchain Running
+### Backend
 Navigate to the `\recipes` directory and build the binary. This will take a while the first time you do it because all the dependencies get compiled.
 
 Build using the flag `--release` which builds without the debug option and is quicker:\
-`cargo build --release`
+`$ cargo build --release`
 
 In the `\nodes` folder there are four different nodes (see above). Build the node called `kitchen-node`:\
-`cargo build --bin kitchen-node --release`
+`$ cargo build --bin kitchen-node --release`
 
 Run the compiled binary, here using development `--dev` mode and a temporary storage directory `--tmp`):\
-`cargo run --bin kitchen-node -- --dev --tmp`
+`$ cargo run --bin kitchen-node -- --dev --tmp`
 
-If successful we will get a lot of useful output. Note the node we're running in line 2, a generated name (6), the runtime (9) -- more on this in a moment, and the blockchain being processed (>16).
+If successful we will get a lot of useful output. Note the node we're running in line 2, a generated name (6), the runtime (9) -- more on this in a moment, and the ''blockchain'' being processed (>16). This will continue in idle mode every 5 seconds or until a transaction is processed at which point a block will be added to the chain.
 ```
 1 2021-09-14 16:20:18 Running in --dev mode, RPC CORS has been disabled.    
 2 2021-09-14 16:20:18 Kitchen Node    
@@ -75,5 +76,20 @@ If successful we will get a lot of useful output. Note the node we're running in
 16 2021-09-14 16:20:24 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
 17 2021-09-14 16:20:29 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
 ```
+
+The local substrate node (called the kitchen node) is running on your local machine waiting for input to process as a new block in the chain. To manipulate this input we need to call the appropriate functions in the program. A frontend interface here would be helpful...
+
+### Frontend
+Conveniently, the super shadowy coders over at Polkadot have done just this. Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain.
+![substrate_architecture](https://user-images.githubusercontent.com/39792005/133218529-445678f1-cc7f-4bc3-b78f-544cfa27e100.png)\
+If our node is running (you can see it has a local server connection at 127.0.0.1:9615) then you can switch the explorer to view your node. Select the main Polkadot button (light blue box) and choose Development -> Local Node -> Switch.
+<img width="771" alt="polkadot_explorer_switch" src="https://user-images.githubusercontent.com/39792005/133219220-0c959267-8456-4d0b-8189-82c5e9b1f1a3.png">\
+You now have a fully functioning front-end to your substrate node. This is in orange, possibly to avoid the risk of developing and interacting on the real (pink) Polkadot chain.
+<img width="818" alt="substrate_frontend" src="https://user-images.githubusercontent.com/39792005/133219675-ffdd526c-e333-4c4f-bfc3-37d430a139f2.PNG">\
+
+
+
+
+
 
 ## 3 . Change the Consensus Protocol
