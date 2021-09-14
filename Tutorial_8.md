@@ -77,19 +77,76 @@ If successful we will get a lot of useful output. Note the node we're running in
 17 2021-09-14 16:20:29 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
 ```
 
-The local substrate node (called the kitchen node) is running on your local machine waiting for input to process as a new block in the chain. To manipulate this input we need to call the appropriate functions in the program. A frontend interface here would be helpful...
+The local substrate node (called the kitchen node) is running on your local machine waiting for input to process as a new block in the chain. To manipulate this input we need to call the appropriate functions in the program. If only there was a frontend interface to help...🤔
 
 ### Frontend
-Conveniently, the super shadowy coders over at Polkadot have done just this. Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain.
-![substrate_architecture](https://user-images.githubusercontent.com/39792005/133218529-445678f1-cc7f-4bc3-b78f-544cfa27e100.png)\
-If our node is running (you can see it has a local server connection at 127.0.0.1:9615) then you can switch the explorer to view your node. Select the main Polkadot button (light blue box) and choose Development -> Local Node -> Switch.
-<img width="771" alt="polkadot_explorer_switch" src="https://user-images.githubusercontent.com/39792005/133219220-0c959267-8456-4d0b-8189-82c5e9b1f1a3.png">\
+Conveniently, the super shadowy coders over at Polkadot have done just this. Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain.\
+<img width="800" alt="polkadot_explorer" src="https://user-images.githubusercontent.com/39792005/133219965-35567470-3a12-4558-aac8-641685c0a58c.png">\
+If our node is running (you can see it has a local server connection at `127.0.0.1:9615`) then you can switch the explorer to view your node. Select the main Polkadot button (light blue box) and choose Development -> Local Node -> Switch.
+<img width="800" alt="polkadot_explorer_switch" src="https://user-images.githubusercontent.com/39792005/133219220-0c959267-8456-4d0b-8189-82c5e9b1f1a3.png">\
+> Sidebar: you can explore all sorts of chains and parachains that are connected through the polkadot network from the Development dropdown.\
 You now have a fully functioning front-end to your substrate node. This is in orange, possibly to avoid the risk of developing and interacting on the real (pink) Polkadot chain.
-<img width="818" alt="substrate_frontend" src="https://user-images.githubusercontent.com/39792005/133219675-ffdd526c-e333-4c4f-bfc3-37d430a139f2.PNG">\
+<img width="800" alt="substrate_frontend" src="https://user-images.githubusercontent.com/39792005/133219675-ffdd526c-e333-4c4f-bfc3-37d430a139f2.PNG">\
 
+### Congrats 🥳 you're now running a functional development blockchain!
 
+## 3. Do some Stuff
+In order to do some stuff, we need a few things: accounts + balances, and send + sign + receive functionality. These functions (sending a transaction) are called extrinsics in Substrate. You can send some coins straight away by clicking Accounts and choose someone with a non-zero balance and click Send. Type in an amount and click Make Transfer -> Sign and Submit.
+<img width="800" alt="send_funds" src="https://user-images.githubusercontent.com/39792005/133223388-432befc7-5078-4a4c-bea3-4860b0317b67.PNG">\
+At this point it is likely you'll see an error: *verification Error: Runtime error: Execution failed*, etc. There is an easy remedy. We need to instruct the frontend to look for specific *types* that are allowed in our chain, for example a `balance` or `u32` (unsigned integer). Head to Settings -> Developer and paste the following JSON in. Be sure to match parentheses.
 
+```
+{
+  "AccountInfo": "AccountInfoWithDualRefCount",
+  "Address": "AccountId",
+  "LookupSource": "AccountId",
+  "ContinuousAccountData": {
+    "principal": "u64",
+    "deposit_date": "BlockNumber"
+  },
+  "U16F16": "[u8; 4]",
+  "GroupIndex": "u32",
+  "ValueStruct": {
+    "integer": "i32",
+    "boolean": "bool"
+  },
+  "BufferIndex": "u8",
+  "AccountIdOf": "AccountId",
+  "BalanceOf": "Balance",
+  "FundInfoOf": "FundInfo",
+  "FundInfo": {
+    "beneficiary": "AccountId",
+    "deposit": "Balance",
+    "raised": "Balance",
+    "end": "BlockNumber",
+    "goal": "Balance"
+  },
+  "FundIndex": "u32",
+  "InnerThing": {
+    "number": "u32",
+    "hash": "Hash",
+    "balance": "Balance"
+  },
+  "SuperThing": {
+    "super_number": "u32",
+    "inner_thing": "InnerThing"
+  },
+  "InnerThingOf": "InnerThing"
+}
+```
+>Sidebar: this JSON can be found here: `runtimes\super-runtime\types.json`. Remember when our node first started (line 9) it said: `Native runtime: super-runtime-1`? Well this is the module our node is using to execute the logic.
+<img width="952" alt="json_types" src="https://user-images.githubusercontent.com/39792005/133225698-71fa8d51-7e7c-4d71-8162-446a4b3bdef2.PNG">\
 
+Now refresh the page and try again to send some funds. If successful you should see an extrinsic event listener notification. **Quickly** flip to your terminal to see the backend output (you may need to scroll up):
+```
+2021-09-14 20:20:28 💤 Idle (0 peers), best: #0 (0x0725…9fda), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0    
+2021-09-14 20:20:31 🙌 Starting consensus session on top of parent 0x0725bbae0b15b4b21842fb959279a4ff031b17333a4d0f500083e47e4dbb9fda    
+2021-09-14 20:20:31 🎁 Prepared block for proposing at 1 [hash: 0xac14ea544421411c8e3889ab9b55ab7b61eda0686250a866476dfd814101bd06; parent_hash: 0x0725…9fda; extrinsics (2): [0x0cfd…c1c3, 0x4cb6…305c]]    
+2021-09-14 20:20:31 ✨ Imported #1 (0xac14…bd06)    
+2021-09-14 20:20:31 Instant Seal success: CreatedBlock { hash: 0xac14ea544421411c8e3889ab9b55ab7b61eda0686250a866476dfd814101bd06, aux: ImportedAux { header_only: false, clear_justification_requests: false, needs_justification: false, bad_justification: false, is_new_best: true } }    
+2021-09-14 20:20:33 💤 Idle (0 peers), best: #1 (0xac14…bd06), finalized #0 (0x0725…9fda), ⬇ 0 ⬆ 0   
+```
+Note the block number increase between the first and last line. Our blockchain has been sitting idle this whole time waiting for something to process. Once it had the transfer it began the consensus session, checked the signatures and balances, and declared `Instant Seal success: CreatedBlock {hash: 0xac..bd06 ..}`
 
-
-## 3 . Change the Consensus Protocol
+ 
+## 4 . Change the Consensus Protocol
