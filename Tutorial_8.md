@@ -14,7 +14,8 @@ A standalone client like Bitcoin core has all of the above coded into its base. 
 
 ## Nodes
 A standalone node architecture:
-![substrate_architecture](https://user-images.githubusercontent.com/39792005/133176791-f0691be9-5e36-4915-b2ba-7a01f1e61cc8.png)
+
+<img width="800" alt="substrate_architecture" src="https://user-images.githubusercontent.com/39792005/133337126-e304dcbe-6663-435e-92d5-a090820b21bb.png">
 
 The runtime logic is the specific funtionality that is required of the chain. For Bitcoin this is a ledger (the unspent-transaction output set). For Ethereum this is the virtual machine that is capable of arbitrary calculation. For Polkadot this is keeping track of the heads of the parachains. The entire node is written in Rust, however the Runtime is *also* compiled into web assembly (Wasm) and this means that so-called *forkless upgrades* are possible.
 
@@ -157,6 +158,9 @@ Mess around with the functions available in the frontend (you can't break anythi
 ## 5. Next time
 I'm not sure yet...its late and Jeff has three classes tomorrow!
 
+## FAQ
+Please send me your questions or errors so I can start to compile a FAQ. I expect this to be updated in the future.
+
 ## Image Credits:
-(Parity & Substrate Recipes Workshop (YouTube))(https://www.youtube.com/watch?v=KVJIWxZSNHQ&t=4112s)
+Parity & Substrate Recipes Workshop https://www.youtube.com/watch?v=KVJIWxZSNHQ&t=4112s (Slightly out of date if you're following along but the concepts still apply.)
 
