@@ -1,22 +1,22 @@
 # Substrate
 Substrate is a blockchain framework for developers. The modular approach allows the creator to use pre-existing components for their blockchain that are time consuming to develop and risky to deploy if not tested thouroughly. The plug-and-play modules can be interchanged, for example, swapping out a proof-of-work consensus mechanism for instant finality. Additional components (pallets) can be addedd as necessary or created from scratch.
 
-![substrate_stack](https://user-images.githubusercontent.com/39792005/133175571-f387c5e2-8a0b-4a21-b9a0-6e231f95784b.png)
-
+<img width="800" alt="substrate_modules" src="https://user-images.githubusercontent.com/39792005/133334949-eb949e8a-9d38-4d33-b007-7021730de4a7.png">
+ 
 The pieces of a blockchain can be abstracted into the following modules:
-* Storage backend
-* P2P Networking Layer
-* Transaction Queue
-* Consensus Engine
-* Runtime logic
+* Storage backend; need to keep the state of the chain
+* P2P Networking Layer; how to communicate updates / message passing
+* Transaction Queue; ordering of events - what gets processed into a block?
+* Consensus Engine; agreement on the state of the chain
+* Runtime logic; what the blockchain does, business logic, the state transition function
 
 A standalone client like Bitcoin core has all of the above coded into its base. If someone wanted to create a new blockchain with most of Bitcoin's functionality they would have recode (or copy and refactor) all the modules. This is the motivation behind creating Substrate.
 
 ## Nodes
+A standalone node architecture:
 ![substrate_architecture](https://user-images.githubusercontent.com/39792005/133176791-f0691be9-5e36-4915-b2ba-7a01f1e61cc8.png)
-Substrate node architecture
 
-The runtime logic is the specific funtionality that is required of the chain. For Bitcoin this is a ledger (the unspent-transaction output set). For Ethereum this is the virtual machine that is capable of arbitrary calculation. 
+The runtime logic is the specific funtionality that is required of the chain. For Bitcoin this is a ledger (the unspent-transaction output set). For Ethereum this is the virtual machine that is capable of arbitrary calculation. For Polkadot this is keeping track of the heads of the parachains. The entire node is written in Rust, however the Runtime is *also* compiled into web assembly (Wasm) and this means that so-called *forkless upgrades* are possible.
 
 There are four pre-made node arrangements in the package we'll be looking at:
 ```
@@ -30,8 +30,7 @@ There are four pre-made node arrangements in the package we'll be looking at:
 	|
 	+-- rpc-node
 ```
-Each node is ready to go but has been configured with different with different parameters. We'll be running the `kitchen-node`.
-
+Each node is ready to go but has been configured with different with different parameters. When these are up and running they will represent *different* blockchains. We'll be running the `kitchen-node`.
 
 ## 1.  Development Environment
 Substrate is written in [rust](https://www.rust-lang.org/) and so a rust compiler is necessary to run any substrate based blockchain. On a linux/macOS system, you can run this [script](https://getsubstrate.io/) for autoconfiguration:\
@@ -155,7 +154,9 @@ Note the block number increase between the first and last line. Our blockchain h
 Mess around with the functions available in the frontend (you can't break anything!) Send some transactions, then view the chain state. Clicking the plus sign adds state to the display.
 <img width="800" alt="chain_state" src="https://user-images.githubusercontent.com/39792005/133228889-b45325f1-091d-4a0f-b13a-e4e06482eaed.PNG">
 
-
 ## 5. Next time
 I'm not sure yet...its late and Jeff has three classes tomorrow!
+
+## Image Credits:
+(Parity & Substrate Recipes Workshop (YouTube))(https://www.youtube.com/watch?v=KVJIWxZSNHQ&t=4112s)
 
