@@ -21,9 +21,9 @@ Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](h
 Tutorial 3 - [Proof-of-Work: mining, difficulty, probability](https://github.com/millecodex/COMP726/blob/master/Tutorial_3_PoW.ipynb)\
 Tutorial 4 - [Elliptic curve cryptography: Turn a public-private key pair into an address](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_ECC.ipynb)\
 Tutorial 5 - [Remix Part I](Tutorial_5.md)\
-Tutorial 6 - \
-Tutorial 7 - \
-Tutorial 8 - \
+Tutorial 6 - [Remix Part II (missing)](Tutorial_6.md)\
+Tutorial 7 - ~cancelled~\
+Tutorial 8 - [Substrate Part I](Tutorial_8.md)\
 Tutorial 9 - \
 Tutorial 10 - \
 Tutorial 11 - \
