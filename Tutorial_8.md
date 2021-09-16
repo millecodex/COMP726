@@ -81,7 +81,7 @@ If successful we will get a lot of useful output. Note the node we're running in
 The local substrate node (called the kitchen node) is running on your local machine waiting for input to process as a new block in the chain. To manipulate this input we need to call the appropriate functions in the program. If only there was a frontend interface to help...🤔
 
 ### Frontend
-Conveniently, the super shadowy coders over at Polkadot have done just this. Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain.\
+Conveniently, the shadowy super-coders over at Polkadot have done just this. Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain.\
 <img width="800" alt="polkadot_explorer" src="https://user-images.githubusercontent.com/39792005/133219965-35567470-3a12-4558-aac8-641685c0a58c.png">\
 If our node is running (you can see it has a local server connection at `127.0.0.1:9615`) then you can switch the explorer to view your node. Select the main Polkadot button (light blue box) and choose Development -> Local Node -> Switch.
 <img width="800" alt="polkadot_explorer_switch" src="https://user-images.githubusercontent.com/39792005/133219220-0c959267-8456-4d0b-8189-82c5e9b1f1a3.png">
