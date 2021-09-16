@@ -24,7 +24,7 @@ Tutorial 5 - [Remix Part I](Tutorial_5.md)\
 Tutorial 6 - [Remix Part II (missing)](Tutorial_6.md)\
 Tutorial 7 - ~cancelled~\
 Tutorial 8 - [Substrate Part I](Tutorial_8.md)\
-Tutorial 9 - \
+Tutorial 9 - [Substrate Part II](Tutorial_9.md)\
 Tutorial 10 - \
 Tutorial 11 - \
 Tutorial 12 - 
