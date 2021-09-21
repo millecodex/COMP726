@@ -1,11 +1,16 @@
 # UNDER CONSTRUCTION
 
 # Substrate Part II
-In Part 1 we compiled and ran a substrate backend node (on our local machine) and connected it to the front end from Polkadot. The node was called kitchen-node and when running it sat idle waiting for something to happen. This idle-ness was due to the type of consensus mechanism it was running: instant seal. The idea is that when there is something new to report the runtime calls the consensus module and it is processed. The transaction is committed instantly. Easy. 
+In Part 1 we compiled and ran a substrate backend node (on our local machine) and connected it to the front end from Polkadot. The node was called kitchen-node and when running it sat idle waiting for something to happen. This idle-ness was due to the type of consensus mechanism it was running: instant seal. The idea is that when there is something new to report the runtime calls the consensus module and it is processed. Instant seal wakes up from idle and the transaction is committed instantly. Easy. 
 
-Lets look at a more traditional consensus mechanism: Proof of Work.
+<img width="800" alt="substrate_instant_seal" src="https://user-images.githubusercontent.com/39792005/134260344-46795688-0443-4e35-b317-aa53746f63c5.png">
 
-## basic-pow
+Lets look at a more traditional consensus mechanism: Proof of Work. A key difference here is that the consensus mechanism runs *independently* of the activity (in the runtime). This means that blocks will be mined and appended regardless of transaction activity. From the users point of view a transaction may have to wait in a queue and you may not know when it will be processed, or if at all. A consequence of interest is the possibility of mining empty blocks.
+> Q✋: What are the implications of mining empty blocks?
+
+<img width="800" alt="substrate_pow" src="https://user-images.githubusercontent.com/39792005/134260413-a13066fe-27f1-4b24-af92-0b31f574dc5f.png">
+
+## Basic-PoW
 A basic [proof of work node](https://substrate.dev/recipes/basic-pow.html) comes prepackaged with the recipes cookbook. This node uses `sha3pow::MinimalSha3Algorithm` a family of [secure hashing algorithms](https://en.wikipedia.org/wiki/SHA-3) (generation three). The algo is minimal because its just to get you started. When using a PoW there must be difficulty function as well as a validator function. More details are [here](https://substrate.dev/recipes/sha3-pow-consensus.html) and you can see that it is using `256` bits for the hashing length:
 
 ```
@@ -65,7 +70,7 @@ Check back on the terminal output to see that blocks have been mining away! Note
 Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain and connect to your local node (e.g.: `Prometheus server started at 127.0.0.1:9615` from above output). Your block explorer should show you all the recent blocks. This is a different from last time when we only saw blocks once some activity was processed by the instant seal consensus method.
 
 Click Accounts and send some funds. A notification will let you know the transaction is ready. A further notification will appear when the block is mined.
-> Do all blocks occur at regular intervals? Why or why not?
+> Q✋: Do all blocks occur at regular intervals? Why or why not?
 
 <img width="600" alt="substrate_pow_notification" src="https://user-images.githubusercontent.com/39792005/134150946-ba87878a-26aa-43b5-994b-2ae4fb160d3e.png">
 
