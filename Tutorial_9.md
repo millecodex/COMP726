@@ -67,6 +67,8 @@ Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live in
 Click Accounts and send some funds. A notification will let you know the transaction is ready. A further notification will appear when the block is mined.
 > Do all blocks occur at regular intervals? Why or why not?
 
+<img width="600" alt="substrate_pow_notification" src="https://user-images.githubusercontent.com/39792005/134150946-ba87878a-26aa-43b5-994b-2ae4fb160d3e.png">
+
 Once mined check out some details. Note event count, extrinsic count, & weight. 
 <img width="800" alt="substrate_pow_block" src="https://user-images.githubusercontent.com/39792005/134149216-0aa13529-bc9e-46c3-a134-b8cb91aa5dca.png">
 
