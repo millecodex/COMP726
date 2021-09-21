@@ -70,19 +70,35 @@ Check back on the terminal output to see that blocks have been mining away! Note
 Head to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/) to see a live interface to the Polkadot blockchain and connect to your local node (e.g.: `Prometheus server started at 127.0.0.1:9615` from above output). Your block explorer should show you all the recent blocks. This is a different from last time when we only saw blocks once some activity was processed by the instant seal consensus method.
 
 Click Accounts and send some funds. A notification will let you know the transaction is ready. A further notification will appear when the block is mined.
-> Q✋: Do all blocks occur at regular intervals? Why or why not?
 
-<img width="600" alt="substrate_pow_notification" src="https://user-images.githubusercontent.com/39792005/134150946-ba87878a-26aa-43b5-994b-2ae4fb160d3e.png">
+<img width="600" alt="substrate_pow_notification" src="https://user-images.githubusercontent.com/39792005/134150946-ba87878a-26aa-43b5-994b-2ae4fb160d3e.png">\
+> Q✋: Do all blocks occur at regular intervals? Why or why not?
 
 Once mined check out some details. Note event count, extrinsic count, & weight. 
 <img width="800" alt="substrate_pow_block" src="https://user-images.githubusercontent.com/39792005/134149216-0aa13529-bc9e-46c3-a134-b8cb91aa5dca.png">
 
 ## RandomnessDemo
+Lets access a random number. There is a pallet called `randomness collective flip` that will use some part of the previous block's hashes to generate a seed value. This seed is then influenced by a user-dertermined nonce to produce a random result when this extrinsic is called. The seed is only generated once per block.
+
+```
+let random_seed = T::RandomnessSource::random_seed();
+let random_result = T::RandomnessSource::random(&subject);
+```
+
+Go to the Developer tab -> Extrinsics. Select `randomnessDemo` -> `consumeRandomness()`. Sign and submit the transaction.
+
+<img width="800" alt="substrate_randomness" src="https://user-images.githubusercontent.com/39792005/134262294-91177c28-3980-444d-a5c1-995f30f4ccf5.png">
+The random function was called in block 35 and so the seed depends on block 34.
+
+> Q✋: Why would we want to access a random number?
 
 ## What about Validators?
-Aura and Babe are the names of consensus modules that query the runtime for the set of validators that can be used for block production. As only certain nodes have validator status, they are special,  
+Aura and Babe are the names of consensus modules that query the runtime for the set of validators that can be used for block production. As only certain nodes have validator status, they are special.
 
 ## Finalization
+<incomplete>
 
 # Footnotes
 > SHA-3 uses a completely different underlying [recipe](https://stackoverflow.com/questions/14356526/whats-the-difference-between-the-hash-algorithms-sha-2-and-sha-3) to scramble the bits and was chosen for its dissimilarity to SHA-2 which is famous for its SHA-256 used in Bitcoin.
+
+> Start here to go down a [random](https://www.random.org/randomness/) rabbit hole
