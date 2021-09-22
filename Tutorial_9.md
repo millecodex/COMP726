@@ -93,7 +93,7 @@ The random function was called in block 35 and so the seed depends on block 34.
 > Q✋: Why would we want to access a random number?
 
 ## What about Validators?
-Aura and Babe are the names of consensus modules that query the runtime for the set of validators that can be used for block production. As only certain nodes have validator status, they are special.
+Aura and Babe are the names of consensus modules that query the runtime for the set of validators that can be used for block production. Only certain nodes have been delegated validator status, and they have the authority to produce blocks. These fall under the category of Delegate Proof of Stake, with variations called proof of authority, or proof of importance. (Aura)[https://substrate.dev/rustdocs/latest/sc_consensus_aura/index.html] rotates through a list of validators and babe employs a random function to choose between authorized validators.
 
 ## Finalization
 <incomplete>
