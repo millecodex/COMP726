@@ -94,7 +94,7 @@ The random function was called in block 35 and so the seed depends on block 34.
 Aura and Babe are the names of consensus modules that query the runtime for the set of validators that can be used for block production. Only certain nodes have been delegated validator status, and they have the authority to produce blocks. These fall under the category of Delegate Proof of Stake, with variations called proof of authority, or proof of importance. (Aura)[https://substrate.dev/rustdocs/latest/sc_consensus_aura/index.html] rotates through a list of validators and babe employs a random function to choose between authorized validators.
 
 ## Finalization
-<incomplete>
+*incomplete*
 
 # Footnotes
 > SHA-3 uses a completely different underlying [recipe](https://stackoverflow.com/questions/14356526/whats-the-difference-between-the-hash-algorithms-sha-2-and-sha-3) to scramble the bits and was chosen for its dissimilarity to SHA-2 which is famous for its SHA-256 used in Bitcoin.
