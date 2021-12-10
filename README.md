@@ -25,6 +25,6 @@ Tutorial 6 - [Remix Part II (missing)](Tutorial_6.md)\
 Tutorial 7 - ~cancelled~\
 Tutorial 8 - [Substrate Part I](Tutorial_8.md)\
 Tutorial 9 - [Substrate Part II](Tutorial_9.md)\
-Tutorial 10 - \
-Tutorial 11 - \
-Tutorial 12 - 
+Tutorial 10 - IPFS\
+Tutorial 11 - Scaling & ETH2\
+Tutorial 12 - Lightning Network Demo
