@@ -32,7 +32,7 @@ Tutorial 4 - [Proof-of-Work: mining, difficulty, probability](tutorials/PoW.ipyn
 Tutorial 5 - [Elliptic curve cryptography: Turn a public-private key pair into an address](tutorials/ECC.ipynb)\
 Tutorial 6 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)\
 Tutorial 7 - [Remix Part II - Metamask & Tokens](tutorials/remix_2.md)\
-Tutorial 8 - [2-minute Check-Point Presentations](tutorials/presentation_checkpoint.md)\
+Tutorial 8 - [Two-minute Presentations](tutorials/presentation_checkpoint.md)\
 Tutorial 9 - TBD\
 Tutorial 10 - IPFS & NFTs\
 Tutorial 11 - Scaling & ETH2 & lightning\
