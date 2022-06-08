@@ -1,7 +1,15 @@
-## COMP726
-Blockchain and Cryptocurrency Technology at Auckland University of Technology
+## COMP726 - Applied Blockchain and Cryptocurrency Technology 
+### Auckland University of Technology
 
-As always this crypto space moves fast and so this is a work in progress...
+As always this crypto space moves fast :rocket: and so this is a work in progress 🚧
+
+The course website is hosted on Canvas https://canvas.aut.ac.nz/courses/8343, however you need to be an enrolled student to login. This site serves as the open-source version. (You will still need to login to Canvas to view the lecture videos.)
+
+Lectures are Wednesdays 12:10-13:00 in WZ518 begnning July 20, 2022
+Tutorials are Thursdays 12:10-14:00 in WZ518 beginning July 21, 2022
+
+## Lecture Topics
+Official lecture notes are on Canvas; these are my personal copies where I am slowly making updates and converting to markdown.
 
 Lecture 1 - Motivation for & history of computing leading to Bitcoin\
 Lecture 2 - Hash functions, merkle trees, block structure\
@@ -16,15 +24,21 @@ Lecture 10 - IPFS\
 Lecture 11 - Scaling\
 Lecture 12 - wrap up
 
-Tutorial 1 - Search for a blockchain or platform to investigate\
-Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](https://github.com/millecodex/COMP726/blob/master/Tutorial_2_block_creation.ipynb)\
-Tutorial 3 - [Proof-of-Work: mining, difficulty, probability](https://github.com/millecodex/COMP726/blob/master/Tutorial_3_PoW.ipynb)\
-Tutorial 4 - [Elliptic curve cryptography: Turn a public-private key pair into an address](https://github.com/millecodex/COMP726/blob/master/Tutorial_4_ECC.ipynb)\
-Tutorial 5 - [Remix Part I](Tutorial_5.md)\
-Tutorial 6 - [Remix Part II (missing)](Tutorial_6.md)\
-Tutorial 7 - ~cancelled~\
-Tutorial 8 - [Substrate Part I](Tutorial_8.md)\
-Tutorial 9 - [Substrate Part II](Tutorial_9.md)\
-Tutorial 10 - IPFS\
-Tutorial 11 - Scaling & ETH2\
-Tutorial 12 - Lightning Network Demo
+## Tutorial Topics
+Tutorial 1 - [Blockchain search and discovery](tutorials/blockchain_search.md)\
+Tutorial 2 - [Block structure, hashing & merkle trees with Python and Jupyter](tutorials/block_data_structure.ipynb)\
+Tutorial 3 - [Design with Archimate](tutorials/archimate.md)\
+Tutorial 4 - [Proof-of-Work: mining, difficulty, probability](tutorials/PoW.ipynb)\
+Tutorial 5 - [Elliptic curve cryptography: Turn a public-private key pair into an address](tutorials/ECC.ipynb)\
+Tutorial 6 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)\
+Tutorial 7 - [Remix Part II - Metamask & Tokens](tutorials/remix_2.md)\
+Tutorial 8 - [2-minute Check-Point Presentations](tutorials/presentation_checkpoint.md)\
+Tutorial 9 - TBD\
+Tutorial 10 - IPFS & NFTs\
+Tutorial 11 - Scaling & ETH2 & lightning\
+Tutorial 12 - Free Session
+
+## Getting started with Substrate
+For those that are interested in Substrate as a custom blockchain platform, there are some introduction tutorials here.\
+Extra Tutorial - [Substrate Part I](tutorials/substrate_1.md)\
+Extra Tutorial - [Substrate Part II](tutorials/substrate_2.md)
