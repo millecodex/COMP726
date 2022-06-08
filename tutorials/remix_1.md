@@ -1,4 +1,4 @@
-# Tutorial 5: Its time to build!
+# Tutorial 6: Its time to build!
 
 For the next few weeks we're going to look at a common system for writing smart contracts (snippets of code) that can be deployed to and interact with Ethereum. 
 
