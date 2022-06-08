@@ -5,7 +5,7 @@ As always this crypto space moves fast :rocket: and so this is a work in progres
 
 The course website is hosted on Canvas https://canvas.aut.ac.nz/courses/8343, however you need to be an enrolled student to login. This site serves as the open-source version. (You will still need to login to Canvas to view the lecture videos.)
 
-Lectures are Wednesdays 12:10-13:00 in WZ518 begnning July 20, 2022
+Lectures are Wednesdays 12:10-13:00 in WZ518 begnning July 20, 2022\
 Tutorials are Thursdays 12:10-14:00 in WZ518 beginning July 21, 2022
 
 ## Lecture Topics
