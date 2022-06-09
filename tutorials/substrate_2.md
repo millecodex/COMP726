@@ -1,3 +1,5 @@
+***<last updated August/September 2021 and so may be out-of-date>***
+
 # Substrate Part II
 In Part 1 we compiled and ran a substrate backend node (on our local machine) and connected it to the front end from Polkadot. The node was called kitchen-node and when running it sat idle waiting for something to happen. This idle-ness was due to the type of consensus mechanism it was running: instant seal. The idea is that when there is something new to report the runtime calls the consensus module and it is processed. Instant seal wakes up from idle and the transaction is committed instantly. Easy. 
 
