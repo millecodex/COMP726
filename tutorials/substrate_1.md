@@ -1,3 +1,5 @@
+***<last updated August/September 2021 and so may be out-of-date>***
+
 # Substrate
 Substrate is a blockchain framework for developers. The modular approach allows the creator to use pre-existing components for their blockchain that are time consuming to develop and risky to deploy if not tested thouroughly. The plug-and-play modules can be interchanged, for example, swapping out a proof-of-work consensus mechanism for instant finality. Additional components (pallets) can be addedd as necessary or created from scratch.
 
