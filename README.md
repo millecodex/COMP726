@@ -39,7 +39,8 @@ Tutorial 11 - Scaling & ETH2 & lightning\
 Tutorial 12 - Free Session
 
 ## Getting started with Substrate
-For those that are interested in Substrate as a custom blockchain platform, there are some introduction tutorials here.\
+For those that are interested in Substrate as a custom blockchain platform, there are some introduction tutorials here.
+
 Extra Tutorial - [Substrate Part I](tutorials/substrate_1.md)\
 Extra Tutorial - [Substrate Part II](tutorials/substrate_2.md)
 
