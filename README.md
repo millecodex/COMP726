@@ -42,3 +42,10 @@ Tutorial 12 - Free Session
 For those that are interested in Substrate as a custom blockchain platform, there are some introduction tutorials here.\
 Extra Tutorial - [Substrate Part I](tutorials/substrate_1.md)\
 Extra Tutorial - [Substrate Part II](tutorials/substrate_2.md)
+
+## Resources
+Resources that may be helpful for the technical aspects of this course
+
+* The whole shebang from FreeCodeCamp - [Web3 Ultimate Course](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
+* YouTube tutorial by [Nader Dabit](https://github.com/dabit3/full-stack-ethereum) - [Full-stack ethereum development](https://www.youtube.com/watchv=a0osIaAOFSE&ab_channel=NaderDabit)
+* Still one of the best - [CryptoZombies](https://cryptozombies.io/)
