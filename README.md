@@ -22,7 +22,7 @@ Lecture 8 - Decentralized Finance\
 Lecture 9 - Privacy & Data Sovereignty\
 Lecture 10 - IPFS\
 Lecture 11 - Scaling\
-Lecture 12 - wrap up
+Lecture 12 - Wrap up / guest lecture
 
 ## Tutorials
 Tutorial 1 - [Blockchain search and discovery](tutorials/blockchain_search.md)\
