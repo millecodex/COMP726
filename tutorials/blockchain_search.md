@@ -5,6 +5,7 @@ Head to one of the crypto token aggregators:
 * [CoinGecko](https://www.coingecko.com/)
 * [DropsTab](https://dropstab.com/)
 
+## Exercises
 In pairs with your neighbor have a look at some of the tokens/blockchains that are listed. Select a few chains to start researching deeper. Use the following to guide your investigation:
 * What 'type' of blockchain is it? What does that mean?
 * What can it do? Would you want to use it?
