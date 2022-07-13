@@ -27,7 +27,7 @@ Lecture 12 - Wrap up / guest lecture
 ## Tutorials
 Tutorial 1 - [Blockchain search and discovery](tutorials/blockchain_search.md)\
 Tutorial 2 - [Python Part I - Block structure, hashing & merkle trees](tutorials/python_1_blocks.ipynb)\
-Tutorial 3 - [Design with Archimate](tutorials/archimate.md)\
+Tutorial 3 - [App Design with Archimate](tutorials/archimate.md)\
 Tutorial 4 - [Python Part II - Proof-of-Work: mining, difficulty, probability](tutorials/python_2_PoW.ipynb)\
 Tutorial 5 - [Python Part III - Elliptic curve cryptography](tutorials/python_3_ECC.ipynb)\
 Tutorial 6 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)\
