@@ -29,13 +29,12 @@ Head to [remix.ethereum.org](https://remix.ethereum.org/) to get started. Find t
 ***error loading: undefined***
 If you are getting an error try with your laptop and alternately try the links below to a different resource. I have been having an issue using this plugin on the network.
 
-
-
-## Developer Learning Tools
+## Developer Learning Tools & Resources
 Some links that may be helpful:
 - [ethereum.org](https://ethereum.org/en/developers/learning-tools/) developer learning tools
-- [Eth.Build](https://eth.build/) has a drag and drop interface
-- [CryptoZombies](https://cryptozombies.io/en/solidity) is a very popular game to help you learn
+- The whole shebang from FreeCodeCamp - [Web3 Ultimate Course](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
+- YouTube tutorial by [Nader Dabit](https://github.com/dabit3/full-stack-ethereum) - [Full-stack ethereum development](https://www.youtube.com/watchv=a0osIaAOFSE&ab_channel=NaderDabit)
+- Still one of the best is [CryptoZombies](https://cryptozombies.io/) - a tutorial for you to build a game similar to [CryptoKitties](https://www.cryptokitties.co/)
 - Jeff has some videos on Remix. (These are over a year old so you may have to set your compiler accordingly.)
   - [Playlist on youtube](https://www.youtube.com/watch?v=bqyrRS5AN00&list=PLWdMs73ohrSn2ZnaiOQi-3WpVjKXazUkF)
   - [Remix Part I: deploy an empty contract: helloWorld](https://www.youtube.com/watch?v=bqyrRS5AN00)
@@ -43,9 +42,4 @@ Some links that may be helpful:
   - [Remix Part III: Gas](https://www.youtube.com/watch?v=BY4o0Qqlh-4)
 - [Solidity by example](https://docs.soliditylang.org/en/v0.8.6/solidity-by-example.html) has example smart contracts you can follow to see how features are implemented
 
-## Resources (from the course [homepage](https://github.com/millecodex/COMP726/blob/master/README.md))
-Resources that may be helpful for the technical aspects of this course
 
-* The whole shebang from FreeCodeCamp - [Web3 Ultimate Course](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
-* YouTube tutorial by [Nader Dabit](https://github.com/dabit3/full-stack-ethereum) - [Full-stack ethereum development](https://www.youtube.com/watchv=a0osIaAOFSE&ab_channel=NaderDabit)
-* Still one of the best - [CryptoZombies](https://cryptozombies.io/)
