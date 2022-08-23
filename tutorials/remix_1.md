@@ -24,10 +24,23 @@ contract helloWorld{
 ```
 
 ## Remix
-Head to [remix.ethereum.org](https://remix.ethereum.org/) to get started. Find the LEARNETH tutorials.![LearnEth](https://user-images.githubusercontent.com/39792005/128951882-1708100a-927e-48a9-8e51-947c37d3f4f2.PNG) Check the plugins tab to make sure LearnEth is in the Active Modules list. Additionally the Solidity compiler needs to be active. If this tutorial seems to advanced, consider starting with the playlist of videos below or the CryptoZombies game.
+Head to [remix.ethereum.org](https://remix.ethereum.org/) to get started. Find the LEARNETH tutorials. Note the **Scam Alert** message and always check your URLs.
 
+<p align="center"><img width="" alt="remix_IDE_0 25 3" src="https://user-images.githubusercontent.com/39792005/186281481-9131b786-dc75-48ee-88b6-09d66ee63d82.PNG"></p>
+
+Check the plugins tab to make sure LearnEth is in the Active Modules list. Additionally the Solidity compiler needs to be active. See the [docs](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) for more info on how to select a tutorial and get started.
+
+<p align="left"><img width="400" alt="plugin_manager_remix" src="https://user-images.githubusercontent.com/39792005/186283135-fc0d374a-2c34-4ec5-815b-4c50c5fd29c0.PNG"></p>
+
+
+---
 ***error loading: undefined***
-If you are getting an error try with your laptop and alternately try the links below to a different resource. I have been having an issue using this plugin on the network.
+<p align="left"><img width="300" alt="remix_error" src="https://user-images.githubusercontent.com/39792005/186282091-0b5edc91-5fad-4831-99c3-221b895c346b.PNG"></p>
+If you are getting an error try with your laptop and alternately try the links below to a different resource. I have been having an issue using this plugin on the 
+network.
+
+---
+If this tutorial seems too advanced, consider starting with the playlist of videos below or the CryptoZombies game.
 
 ## Developer Learning Tools & Resources
 Some links that may be helpful:
