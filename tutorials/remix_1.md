@@ -2,7 +2,7 @@
 
 For the next few weeks we're going to look at a common system for writing smart contracts (snippets of code) that can be deployed to and interact with Ethereum. 
 
-*Note:* Most students want to build an app that interacts with a blockchain and this is what learning some solidity can help you with. You are not required to use Solidiy/Ethereum for your project; see [below](#developer-learning-tools) for a list of some alternatives. This is simply informative to give you an idea of whats possible. You are encouraged to use whatever tech/IDE/language/system that interests you. Some students are interested in other aspects of blockchains (not SC-based apps) and that is great too! 
+*Note:* Most students want to build an app that interacts with a blockchain and this is what learning some solidity can help you with. You are not required to use Solidiy/Ethereum for your project; see [below](#alternate-developer-learning-tools) for a list of some alternatives. This is simply informative to give you an idea of whats possible. You are encouraged to use whatever tech/IDE/language/system that interests you. Some students are interested in other aspects of blockchains (not SC-based apps) and that is great too! 
 
 ## Solidity
 [Solidity](https://docs.soliditylang.org) is a programming language developed specifically to create smart contracts to be executed by the Ethereum virtual machine (EVM). It looks a lot like javascript. The benefit of learning some solidity is that it is widely used, has been around for a long time (relative to other SC languages) and so has support libraries.
@@ -55,4 +55,11 @@ Some links that may be helpful:
   - [Remix Part III: Gas](https://www.youtube.com/watch?v=BY4o0Qqlh-4)
 - [Solidity by example](https://docs.soliditylang.org/en/v0.8.6/solidity-by-example.html) has example smart contracts you can follow to see how features are implemented
 
-
+## Alternate Developer Learning Tools
+You may want to build on other blockchains, for example:
+- Avalanche: [docs](https://docs.avax.network/), [sample tutorials](https://docs.avax.network/community/tutorials-contest/2022)
+- Substrate/Polkadot: [docs](https://docs.substrate.io/), [sample tutorials](https://wiki.polkadot.network/docs/learn-video-tutorials)
+- Solana: [docs](https://docs.solana.com/), [sample tutorials](https://github.com/solana-labs/example-helloworld)
+- Fantom: [docs](https://docs.fantom.foundation/), [sample tutorials](https://blog.chain.link/how-to-build-and-deploy-a-smart-contract-on-the-fantom-blockchain/)
+- BinanceBNB: [docs](https://docs.bnbchain.org/docs/bnbIntro), [sample tutorials](https://docs.bnbchain.org/docs/bsc-tutorials/)
+- Cosmos: [docs](https://docs.cosmos.network/), [sample tutorials](https://tutorials.cosmos.network/)
