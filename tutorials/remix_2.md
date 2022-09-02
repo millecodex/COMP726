@@ -32,5 +32,16 @@ After creating a password, watching the video, writing down your phrase, and re-
 <p align="left"><img width="800" alt="MetaMask interface" src="https://user-images.githubusercontent.com/39792005/188044996-51bd22f0-1661-4646-9634-840ec3df62ab.png"></p>
 
 ## Hierarchical Deterministic (HD) Wallets
+Each instance of MetaMask that has a recovery phrase is called a hierarchical deterministic wallet. Within this hierarchy you can generate multiple accounts, each having their own public/private key pair and each being able to be regenerated with the recovery phrase. This allows many addresses to be generated from the same seed entropy[^1], so you can always invoice with a fresh address. The new accounts generated under this regime are ordered, with one 'leading' to the next, and deterministic such that when recovering a wallet the child accounts generated will be the same and in the same order.
+
+[^1]: Seed entropy refers to the orignal source of randomness used to generate the seed phrase. In the case of browser generation such as with MetaMask this comes from the OS random function and is the safest way to do so online.
+
+<p align="left"><img width="800" alt="Hierarchical Deterministic (HD) Wallet structure" src=""></p>
+
+## BIP39
+The seed phrase is a mapping of common English (& some other) language words to numbers that when assembled in the correct order represent the master private key. **BIP39**[^2] is a standard that was developed for Bitcoin and now used in many cryptocurrency projects. The total list is [2048 words](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) and contains words as short as `mom` and as long as `mosquito`.
+
+[^2]: Bitcoin improvement proposal number [39](https://en.bitcoin.it/wiki/BIP_0039). See also [BIP32](https://en.bitcoin.it/wiki/BIP_0032) and [BIP44]()
+
 
 
