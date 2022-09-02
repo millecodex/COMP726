@@ -21,13 +21,16 @@ The default is *London* which includes support for the [London fork](https://eth
 
 After installing the extension, you have the option to import a previous wallet using a recovery phrase or create a new one.
 
-<p align="left"><img width="400" alt="MetaMask create" src="https://user-images.githubusercontent.com/39792005/188044930-e8934667-f578-4e81-a37b-94a11e4c888e.png"></p>
+<p align="left"><img width="600" alt="MetaMask create screen" src="https://user-images.githubusercontent.com/39792005/188044930-e8934667-f578-4e81-a37b-94a11e4c888e.png"></p>
 
 MetaMask will provide you with a *Secret Recovery Phrase* (often called a seed phrase), and ask you to securely store the words and then submit them back in the correct order. It is very important to keep this recovery phrase of 12 words **private** and **secure**. (Even if only using for testnet activity it is wise crypto behaviour to become comfortable with self custody.)
 
-<p align="left"><img width="800" alt="MetaMask_SRP" src="https://user-images.githubusercontent.com/39792005/188044954-8da4e5bd-e167-4e8d-9c2d-1c124cfc6c08.png"></p>
+<p align="left"><img width="600" alt="MetaMask Secret Recovery Phrase" src="https://user-images.githubusercontent.com/39792005/188044954-8da4e5bd-e167-4e8d-9c2d-1c124cfc6c08.png"></p>
 
-After creating a password, watching the video, writing down your phrase, and re-entering your phrase, you'll be at the interface.
+After creating a password, watching the video, writing down your phrase, and re-entering your phrase, you'll be at the interface ready to use your new account address (the one shown here is `0x99A95d4d7DDe6B9E663509a41CF3A9eeAfC07Ad9`) in any of the chains that accept Ethereum based addresses.
 
-<p align="left"><img width="800" alt="MetaMask_interface" src="https://user-images.githubusercontent.com/39792005/188044996-51bd22f0-1661-4646-9634-840ec3df62ab.png"></p>
+<p align="left"><img width="800" alt="MetaMask interface" src="https://user-images.githubusercontent.com/39792005/188044996-51bd22f0-1661-4646-9634-840ec3df62ab.png"></p>
+
+## Hierarchical Deterministic (HD) Wallets
+
 
