@@ -16,6 +16,18 @@ The default is *London* which includes support for the [London fork](https://eth
 [Metamask](https://metamask.io/download/) is a Chrome extension. It can run with Chrome/Firefox/Brave/Edge and acts as a middleman between blockchains (mainnets, testnets, custom interfaces, etc.) and applications. The 'wallet' part will store your private keys and sign messages and transactions as well as manage multiple accounts. 
 
 <p align="left"><img width="800" alt="various crypto extensions" src="https://user-images.githubusercontent.com/39792005/188037152-bd2711d2-633b-4d73-a388-9d4bc56b5630.png"></p>
+
 > various crypto extensions running in Brave. *Crypto Wallets* is Brave's native wallet extension. Best practise for security is to disable extensions when they are not in use. See [here](https://coinguides.org/metamask-security/) for a list of recommended Metamask settings and some of the common scams in play.
 
-After installing the extension, MetaMask will provide you with a *Secret Recovery Phrase* (often called a seed phrase), and ask you to securely store the words and then submit them back in the correct order. It is very important to keep this recovery phrase of 12 words **private** and **secure**. (Even if only using for testnet activity it is wise crypto behaviour to become comfortable with self custody.)
+After installing the extension, you have the option to import a previous wallet using a recovery phrase or create a new one.
+
+<p align="left"><img width="400" alt="MetaMask create" src="https://user-images.githubusercontent.com/39792005/188044930-e8934667-f578-4e81-a37b-94a11e4c888e.png"></p>
+
+MetaMask will provide you with a *Secret Recovery Phrase* (often called a seed phrase), and ask you to securely store the words and then submit them back in the correct order. It is very important to keep this recovery phrase of 12 words **private** and **secure**. (Even if only using for testnet activity it is wise crypto behaviour to become comfortable with self custody.)
+
+<p align="left"><img width="800" alt="MetaMask_SRP" src="https://user-images.githubusercontent.com/39792005/188044954-8da4e5bd-e167-4e8d-9c2d-1c124cfc6c08.png"></p>
+
+After creating a password, watching the video, writing down your phrase, and re-entering your phrase, you'll be at the interface.
+
+<p align="left"><img width="800" alt="MetaMask_interface" src="https://user-images.githubusercontent.com/39792005/188044996-51bd22f0-1661-4646-9634-840ec3df62ab.png"></p>
+
