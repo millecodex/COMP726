@@ -17,7 +17,7 @@ The default is *London* which includes support for the [London fork](https://eth
 
 <p align="left"><img width="800" alt="various crypto extensions" src="https://user-images.githubusercontent.com/39792005/188037152-bd2711d2-633b-4d73-a388-9d4bc56b5630.png"></p>
 
-> various crypto extensions running in Brave. *Crypto Wallets* is Brave's native wallet extension. Best practise for security is to disable extensions when they are not in use. See [here](https://coinguides.org/metamask-security/) for a list of recommended Metamask settings and some of the common scams in play.
+> various crypto extensions running in Brave. *Crypto Wallets* is Brave's native wallet extension. Best practise for security is to disable extensions when they are not in use. See [here](https://coinguides.org/metamask-security/) for a list of recommended MetaMask security settings and some of the common scams in play.
 
 After installing the extension, you have the option to import a previous wallet using a recovery phrase or create a new one.
 
