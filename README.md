@@ -50,3 +50,4 @@ Resources that may be helpful for the technical aspects of this course
 * The whole shebang from FreeCodeCamp - [Web3 Ultimate Course](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 * YouTube tutorial by [Nader Dabit](https://github.com/dabit3/full-stack-ethereum) - [Full-stack ethereum development](https://www.youtube.com/watchv=a0osIaAOFSE&ab_channel=NaderDabit)
 * Still one of the best - [CryptoZombies](https://cryptozombies.io/)
+* More listed [here](https://github.com/millecodex/COMP726/blob/master/tutorials/remix_1.md#developer-learning-tools--resources)
