@@ -53,6 +53,13 @@ In order to guess someone's private key you need to guess a sequence of 12, or 2
 *Exercise:* How much harder is it to guess a 24-word phrase? How long would it take your computer to guess every possible key?
 
 ## Remix Integration
+Back in MetaMask, the Ethereum mainnet is the default selection. Mainnet Ethereum requires gas fees to be paid in real ETH and so we'll want to click `Show/hide test networks` and then select `Goerli`.
+
+<img width="298" alt="MM_show_hide" src="https://user-images.githubusercontent.com/39792005/188387461-c1c7fcc1-2ccd-42df-99ff-c9944670fe0b.png">
+
+<img width="299" alt="MM_test_networks" src="https://user-images.githubusercontent.com/39792005/188387547-d54fd7b0-07c4-44e3-b1a1-d3a6ab0bd166.png">
+
+> Goerli is a fully operational ethereum test network that activated the proof-of-stake merge in August 2022 and should be supported into the merge and subsequent updates.
 
 
 
