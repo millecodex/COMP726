@@ -76,12 +76,11 @@ We now have access to [Goerli](https://goerli.net/) and an IDE that can compile 
 * any other faucets I've investigated aren't working right now because its a busy time 
 
 Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virtual machine in the browser.
+
 <img width="267" alt="faucet eth" src="https://user-images.githubusercontent.com/39792005/188402640-bdee8291-827a-45cb-9472-2e03328c8a6b.png">
 
-## Lets send some ETH (finally)
-In MetaMask create a new account, by default it will be called account 2 (remember these are hierarchical deterministic). Cope the address and have it ready for Remix.
-
-1. In the `fire explorer` tab open the `2_Owner.sol` contract template
+## Lets use some ETH (finally)
+1. In the `File explorer` tab open the `2_Owner.sol` contract template
 2. In the `Solidity compiler` tab click the button that says `Compile 2_Owner.sol`
 3. In the `Deploy & run transactions` tab click the `deploy` button
 4. Here, a MetaMask notifcation pops up asking you to confirm deployment and showing the gas required.
@@ -93,3 +92,5 @@ In MetaMask create a new account, by default it will be called account 2 (rememb
 <img width="671" alt="remix_etherscan link" src="https://user-images.githubusercontent.com/39792005/188406300-6ed4e8e3-0bd6-4c1d-8a7d-bc59129a8668.png">
 
 6. Check our your remaining balance. Any difference?
+
+## Send some ETH
