@@ -75,5 +75,21 @@ We now have access to [Goerli](https://goerli.net/) and an IDE that can compile 
 * go to https://goerli-faucet.pk910.de/, enter your address, complete some strange captcha's and mine some. You will have to leave your browser window open for a while
 * any other faucets I've investigated aren't working right now because its a busy time 
 
+Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virtual machine in the browser.
+<img width="267" alt="faucet eth" src="https://user-images.githubusercontent.com/39792005/188402640-bdee8291-827a-45cb-9472-2e03328c8a6b.png">
+
 ## Lets send some ETH (finally)
-Back in MetaMask create a new account, by default it will be called account 2 (remember these are hierarchical deterministic). Cope the address and have it ready for Remix.
+In MetaMask create a new account, by default it will be called account 2 (remember these are hierarchical deterministic). Cope the address and have it ready for Remix.
+
+1. In the `fire explorer` tab open the `2_Owner.sol` contract template
+2. In the `Solidity compiler` tab click the button that says `Compile 2_Owner.sol`
+3. In the `Deploy & run transactions` tab click the `deploy` button
+4. Here, a MetaMask notifcation pops up asking you to confirm deployment and showing the gas required.
+
+<img width="300" alt="remix gas fee warning" src="https://user-images.githubusercontent.com/39792005/188405909-e50827b6-b6fd-43e7-9921-1a65cd1c1a19.png">
+
+5. You have to wait for these transactions to be confirmed. Once the contract has been deployed you will see an update in the console and a link to the transaction on [etherscan](https://goerli.etherscan.io/tx/0x831fc41c187503e6b63b9524f5b2c46a64011a4ae4398ac4bf31b063705ca9be).
+
+<img width="671" alt="remix_etherscan link" src="https://user-images.githubusercontent.com/39792005/188406300-6ed4e8e3-0bd6-4c1d-8a7d-bc59129a8668.png">
+
+6. Check our your remaining balance. Any difference?
