@@ -65,8 +65,15 @@ Back at (remix.ethereum.org) select the `Deploy` tab and `Injected Provider` env
 
 <img width="800" alt="remix injected provider metamask" src="https://user-images.githubusercontent.com/39792005/188399297-22c987b9-37fa-47d9-aa97-f92f85394435.png">
 
-Click `Next` and `Connect`. Remix now shows your MetaMask address ``0x99A..C07Ad9` along with its balance.
+Click `Next` and `Connect`. Remix now shows your MetaMask address `0x99A..C07Ad9` along with its balance.
 
 <img width="284" alt="remix metamask account balance" src="https://user-images.githubusercontent.com/39792005/188399780-767cc391-3f64-4743-b9de-aace0eb04dcd.png">
 
+## Testnet ETH
+We now have access to [Goerli](https://goerli.net/) and an IDE that can compile contracts and send transactions through a wallet. But to do we always need to pay gas fees. Yes, even on testnets, as they must mimic the mainnet as closely as possible. A few options to acquire some goerliETH:
+* go to https://goerlifaucet.com/ and sign up for an Alchemi account and you can access their faucet
+* go to https://goerli-faucet.pk910.de/, enter your address, complete some strange captcha's and mine some. You will have to leave your browser window open for a while
+* any other faucets I've investigated aren't working right now because its a busy time 
 
+## Lets send some ETH (finally)
+Back in MetaMask create a new account, by default it will be called account 2 (remember these are hierarchical deterministic). Cope the address and have it ready for Remix.
