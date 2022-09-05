@@ -61,5 +61,12 @@ Back in MetaMask, the Ethereum mainnet is the default selection. Mainnet Ethereu
 
 > Goerli is a fully operational ethereum test network that activated the proof-of-stake merge in August 2022 and should be supported into the merge and subsequent updates.
 
+Back at (remix.ethereum.org) select the `Deploy` tab and `Injected Provider` environment. MetaMask should open and ask you to connect.
+
+<img width="800" alt="remix injected provider metamask" src="https://user-images.githubusercontent.com/39792005/188399297-22c987b9-37fa-47d9-aa97-f92f85394435.png">
+
+Click `Next` and `Connect`. Remix now shows your MetaMask address ``0x99A..C07Ad9` along with its balance.
+
+<img width="284" alt="remix metamask account balance" src="https://user-images.githubusercontent.com/39792005/188399780-767cc391-3f64-4743-b9de-aace0eb04dcd.png">
 
 
