@@ -1,6 +1,17 @@
 # Remix Part II - Wallets
 Remix Part I looked at using the IDE to compile and deploy smart contracts; Remix comes with some stock-standard contracts for storage, ownership, & voting. 
 
+## Contents
+1. [Environment](remix_2.md#environment)
+2. [MetaMask](remix_2.md#metamask)
+3. [Hierarchical Deterministic (HD) Wallets](remix_2.md#hierarchical-deterministic-hd-wallets)
+4. [BIP39](remix_2.md#bip39)
+5. [Security](remix_2.md#security)
+6. [Remix Integration](remix_2.md#rmeix-integration)
+7. [Testnet ETH](remix_2.md#testnet-eth)
+8. [Prepare a Transaction to Send Some ETH](remix_2.md#prepare-a-transaction-to-send-some-eth)
+9. [Exercises](remix_2.md#exercises)
+
 ## Environment
 These contracts get compiled within the virtual machine (VM) environment that runs within your browser instance. This is a simulated blockchain; there are no real blocks, or miners, or validators here. From the [docs](https://remix-ide.readthedocs.io/en/latest/run.html): For connecting to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own “blockchain” and on each reload the old chain will be cleared and a new blockchain will be started. The old one will not be saved. The London refers to the London fork of Ethereum.
 
@@ -75,7 +86,7 @@ Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virt
 
 > <img width="267" alt="faucet eth" src="https://user-images.githubusercontent.com/39792005/188402640-bdee8291-827a-45cb-9472-2e03328c8a6b.png">
 
-## Lets use some ETH (finally)
+### Lets use some ETH (finally)
 1. In the `File explorer` tab open the `2_Owner.sol` contract template
 2. In the `Solidity compiler` tab click the button that says `Compile 2_Owner.sol`
 3. In the `Deploy & run transactions` tab click the `deploy` button
