@@ -1,8 +1,8 @@
 # Remix Part II - Wallets
-Remix Part I looked at using the IDE to compile and deploy smart contracts; remix comes with some stock-standard contracts for storage, ownership, etc. 
+Remix Part I looked at using the IDE to compile and deploy smart contracts; remix comes with some stock-standard contracts for storage, ownership, & voting. 
 
 ## Environment
-These get compiled within the virtual machine (VM) environment that runs within your browser instance. This is a simulated blockchain; there are no real blocks, or miners, or validators here. From the [docs](https://remix-ide.readthedocs.io/en/latest/run.html):
+These contracts get compiled within the virtual machine (VM) environment that runs within your browser instance. This is a simulated blockchain; there are no real blocks, or miners, or validators here. From the [docs](https://remix-ide.readthedocs.io/en/latest/run.html):
 
 > For connecting to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own “blockchain” and on each reload the old chain will be cleared and a new blockchain will be started. The old one will not be saved. The London refers to the London fork of Ethereum.
 
@@ -177,3 +177,6 @@ In MetaMask I will switch to Account 2 to get a fresh address: `0xd2b2A1F06B05f9
 ### Did it work? 
 Check your other account in MetaMask to see.
 
+## Exercises
+1. The `ReceiveEther` contract currently has a balance of zero. Send some ether to this contract.
+2. Why would you want to send ETH to a contract and not to someone's wallet?
