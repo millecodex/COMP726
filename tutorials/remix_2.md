@@ -53,31 +53,31 @@ In order to guess someone's private key you need to guess a sequence of 12, or 2
 *Exercise:* How much harder is it to guess a 24-word phrase? How long would it take your computer to guess every possible key?
 
 ## Remix Integration
-Back in MetaMask, the Ethereum mainnet is the default selection. Mainnet Ethereum requires gas fees to be paid in real ETH and so we'll want to click `Show/hide test networks` and then select `Goerli`.
+In MetaMask, the Ethereum mainnet is the default selection. Mainnet Ethereum requires gas fees to be paid in real ETH and so we'll want to click `Show/hide test networks` and then select `Goerli`.
 
-<img width="298" alt="MM_show_hide" src="https://user-images.githubusercontent.com/39792005/188387461-c1c7fcc1-2ccd-42df-99ff-c9944670fe0b.png">
+> <img width="298" alt="MM_show_hide" src="https://user-images.githubusercontent.com/39792005/188387461-c1c7fcc1-2ccd-42df-99ff-c9944670fe0b.png">
 
-<img width="299" alt="MM_test_networks" src="https://user-images.githubusercontent.com/39792005/188387547-d54fd7b0-07c4-44e3-b1a1-d3a6ab0bd166.png">
-
+> <img width="299" alt="MM_test_networks" src="https://user-images.githubusercontent.com/39792005/188387547-d54fd7b0-07c4-44e3-b1a1-d3a6ab0bd166.png">
+>
 > Goerli is a fully operational ethereum test network that activated the proof-of-stake merge in August 2022 and should be supported into the merge and subsequent updates.
 
-Back at (remix.ethereum.org) select the `Deploy` tab and `Injected Provider` environment. MetaMask should open and ask you to connect.
+Back at remix.ethereum.org select the `Deploy` tab and `Injected Provider` environment. MetaMask should open and ask you to connect.
 
-<img width="800" alt="remix injected provider metamask" src="https://user-images.githubusercontent.com/39792005/188399297-22c987b9-37fa-47d9-aa97-f92f85394435.png">
+> <img width="800" alt="remix injected provider metamask" src="https://user-images.githubusercontent.com/39792005/188399297-22c987b9-37fa-47d9-aa97-f92f85394435.png">
 
 Click `Next` and `Connect`. Remix now shows your MetaMask address `0x99A..C07Ad9` along with its balance.
 
-<img width="284" alt="remix metamask account balance" src="https://user-images.githubusercontent.com/39792005/188399780-767cc391-3f64-4743-b9de-aace0eb04dcd.png">
+> <img width="284" alt="remix metamask account balance" src="https://user-images.githubusercontent.com/39792005/188399780-767cc391-3f64-4743-b9de-aace0eb04dcd.png">
 
 ## Testnet ETH
 We now have access to [Goerli](https://goerli.net/) and an IDE that can compile contracts and send transactions through a wallet. But to do we always need to pay gas fees. Yes, even on testnets, as they must mimic the mainnet as closely as possible. A few options to acquire some goerliETH:
 * go to https://goerlifaucet.com/ and sign up for an Alchemi account and you can access their faucet
 * go to https://goerli-faucet.pk910.de/, enter your address, complete some strange captcha's and mine some. You will have to leave your browser window open for a while
-* any other faucets I've investigated aren't working right now because its a busy time 
+* any other faucets I've investigated aren't working right now because its a busy time due to the merge
 
 Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virtual machine in the browser.
 
-<img width="267" alt="faucet eth" src="https://user-images.githubusercontent.com/39792005/188402640-bdee8291-827a-45cb-9472-2e03328c8a6b.png">
+> <img width="267" alt="faucet eth" src="https://user-images.githubusercontent.com/39792005/188402640-bdee8291-827a-45cb-9472-2e03328c8a6b.png">
 
 ## Lets use some ETH (finally)
 1. In the `File explorer` tab open the `2_Owner.sol` contract template
@@ -85,7 +85,7 @@ Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virt
 3. In the `Deploy & run transactions` tab click the `deploy` button
 4. Here, a MetaMask notifcation pops up asking you to confirm deployment and showing the gas required.
 
-<img width="300" alt="remix gas fee warning" src="https://user-images.githubusercontent.com/39792005/188405909-e50827b6-b6fd-43e7-9921-1a65cd1c1a19.png">
+> <img width="300" alt="remix gas fee warning" src="https://user-images.githubusercontent.com/39792005/188405909-e50827b6-b6fd-43e7-9921-1a65cd1c1a19.png">
 
 5. You have to wait for these transactions to be confirmed. Once the contract has been deployed you will see an update in the console and a link to the transaction on [etherscan](https://goerli.etherscan.io/tx/0x831fc41c187503e6b63b9524f5b2c46a64011a4ae4398ac4bf31b063705ca9be).
 
@@ -171,12 +171,15 @@ Interacting with a contract or sending coins involves preparing and posting a tr
 In MetaMask I will switch to Account 2 to get a fresh address: `0xd2b2A1F06B05f9880577B2d0e7083e8ABbeC3dBb`. Set up your transaction as follows.
 
 > <img width="421" alt="image" src="https://user-images.githubusercontent.com/39792005/188567691-ab3a69ca-7f4b-4f92-b4b2-b809ff6c569b.png">
- 
-> <img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188567427-52b4eb18-421e-4c99-aef8-f650e2c2fc83.png">
 
 ### Did it Work? 
 Check your other account in MetaMask to see.
 
+> <img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188567427-52b4eb18-421e-4c99-aef8-f650e2c2fc83.png">
+
 ## Exercises
 1. The `ReceiveEther` contract currently has a balance of zero. Send some ether to this contract.
 2. Why would you want to send ETH to a contract and not to someone's wallet?
+3. Are your gas fees different than mine? Why?
+4. From the section on [security](), how much harder is it to guess a 24-word phrase than a 12-word phrase? 
+5. For a (modest) 12-word seed, how long would it take your computer to guess every possible key?
