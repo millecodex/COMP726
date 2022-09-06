@@ -89,12 +89,12 @@ Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virt
 
 5. You have to wait for these transactions to be confirmed. Once the contract has been deployed you will see an update in the console and a link to the transaction on [etherscan](https://goerli.etherscan.io/tx/0x831fc41c187503e6b63b9524f5b2c46a64011a4ae4398ac4bf31b063705ca9be).
 
-<img width="671" alt="remix_etherscan link" src="https://user-images.githubusercontent.com/39792005/188406300-6ed4e8e3-0bd6-4c1d-8a7d-bc59129a8668.png">
+> <img width="671" alt="remix_etherscan link" src="https://user-images.githubusercontent.com/39792005/188406300-6ed4e8e3-0bd6-4c1d-8a7d-bc59129a8668.png">
 
 6. Check our your remaining balance. Any difference?
 
-## Send some ETH
-For this section you can switch back to the Javascript VM or continue using MetaMask connected to Goerli.
+## Prepare a Transaction to Send Some ETH
+For this section you can switch back to the Javascript VM or continue using MetaMask connected to Goerli. I will use Goerli as we are already connected to it.
 
 Copy the following solidity [code](https://solidity-by-example.org/sending-ether/) into a new file. Name it `send_Receive.sol`.
 ```
@@ -150,31 +150,31 @@ contract SendEther {
     }
 }
 ```
-In remix, in the `Solidity compiler` tab, click `compile`. (Its a good idea to leave auto compile turned on.) You should get a warning about an unused local variale and a status update in the terminal window. 
+In remix, in the `Solidity compiler` tab, click `compile`. (Its a good idea to leave auto compile turned on.) You should get a warning about an unused local variable and a status update in the terminal window. 
 
 Switch to the `Deploy & run transactions` tab. Clicking on the `CONTRACT` box shows there are actually *two* contracts in the code above: `ReceiveEther` & `SendEther`.
 
-<img width="703" alt="image" src="https://user-images.githubusercontent.com/39792005/188563943-08503e5f-9219-461c-b1fc-d68f43d37e6f.png">
+> <img width="703" alt="image" src="https://user-images.githubusercontent.com/39792005/188563943-08503e5f-9219-461c-b1fc-d68f43d37e6f.png">
 
 Deploy both contracts & pay the gas fees using MetaMask (not not if using the VM).
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188564370-4ceccd0d-f69e-4d4f-b2a2-0381f3f7cc7a.png">
+> <img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188564370-4ceccd0d-f69e-4d4f-b2a2-0381f3f7cc7a.png">
 
 You should see all of your available contracts in the IDE.
 
-<img width="293" alt="image" src="https://user-images.githubusercontent.com/39792005/188564596-904103d2-48d4-4c74-9554-7c6a1cb43dc4.png">
+> <img width="293" alt="image" src="https://user-images.githubusercontent.com/39792005/188564596-904103d2-48d4-4c74-9554-7c6a1cb43dc4.png">
 
 Interacting with a contract or sending coins involves preparing and posting a transaction. Key information is the `GAS LIMIT` or how much gas you are willing to pay to get the transaction to post--once your gas runs out the transaction will cancel, `VALUE` which can be ether denominated in smaller units--`Wei` is shown in Remix[^3], and the `address_to` field which is the recipient. This is all usually done by the wallet software. Remix will prepare and broadcast our transaction.
 
-In MetaMask I will switch to Account 2 to get a fresh address: `0xd2b2A1F06B05f9880577B2d0e7083e8ABbeC3dBb`
-
 [^3]: 10 million `gwei` is `0.01` ether, see https://eth-converter.com/ 
 
-<img width="421" alt="image" src="https://user-images.githubusercontent.com/39792005/188567691-ab3a69ca-7f4b-4f92-b4b2-b809ff6c569b.png">
+In MetaMask I will switch to Account 2 to get a fresh address: `0xd2b2A1F06B05f9880577B2d0e7083e8ABbeC3dBb`. Set up your transaction as follows.
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188567427-52b4eb18-421e-4c99-aef8-f650e2c2fc83.png">
+> <img width="421" alt="image" src="https://user-images.githubusercontent.com/39792005/188567691-ab3a69ca-7f4b-4f92-b4b2-b809ff6c569b.png">
+ 
+> <img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188567427-52b4eb18-421e-4c99-aef8-f650e2c2fc83.png">
 
-### Did it work? 
+### Did it Work? 
 Check your other account in MetaMask to see.
 
 ## Exercises
