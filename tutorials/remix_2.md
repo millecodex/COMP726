@@ -181,5 +181,5 @@ Check your other account in MetaMask to see.
 1. The `ReceiveEther` contract currently has a balance of zero. Send some ether to this contract.
 2. Why would you want to send ETH to a contract and not to someone's wallet?
 3. Are your gas fees different than mine? Why?
-4. From the section on [security](), how much harder is it to guess a 24-word phrase than a 12-word phrase? 
+4. From the section on [security](remix_2.md#security), how much harder is it to guess a 24-word phrase than a 12-word phrase? 
 5. For a (modest) 12-word seed, how long would it take your computer to guess every possible key?
