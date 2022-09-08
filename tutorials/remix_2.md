@@ -12,6 +12,9 @@ Remix Part I looked at using the IDE to compile and deploy smart contracts; Remi
 8. [Prepare a Transaction to Send Some ETH](remix_2.md#prepare-a-transaction-to-send-some-eth)
 9. [Exercises](remix_2.md#exercises)
 
+## Video
+There's a screencast of this tutorial on [YouTube](https://youtu.be/itRlyKoz8pU).
+
 ## Environment
 These contracts get compiled within the virtual machine (VM) environment that runs within your browser instance. This is a simulated blockchain; there are no real blocks, or miners, or validators here. From the [docs](https://remix-ide.readthedocs.io/en/latest/run.html): For connecting to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own “blockchain” and on each reload the old chain will be cleared and a new blockchain will be started. The old one will not be saved. The London refers to the London fork of Ethereum.
 
