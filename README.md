@@ -33,8 +33,8 @@ Tutorial 5 - [Python Part III - Elliptic curve cryptography](tutorials/python_3_
 Tutorial 6 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)\
 Tutorial 7 - [Remix Part II - Metamask & Wallets](tutorials/remix_2.md)\
 Tutorial 8 - [Two-minute Presentations](tutorials/presentation_checkpoint.md)\
-Tutorial 9 - TBD\
-Tutorial 10 - IPFS & NFTs\
+Tutorial 9 - [NFTs Part I](tutorials/nft_1.md)\
+Tutorial 10 -[IPFS & NFTs Part II](tutorials/nft_2.md)\
 Tutorial 11 - Scaling & ETH2 & lightning\
 Tutorial 12 - Free Session
 
