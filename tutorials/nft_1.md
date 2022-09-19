@@ -16,7 +16,7 @@
 
 # Further Reading - the very short list
 * [Based on this Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
-* []()
+* https://nftschool.dev/
 * []()
 
 # Exercises
