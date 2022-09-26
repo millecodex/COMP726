@@ -55,7 +55,8 @@ Examples of the ERC-1155 standard include:
 We'll need the following tools in our environment before we can get going.
 1. MetaMask account with some testnet ether. See our previous steps for this [here](https://github.com/millecodex/COMP726/blob/master/tutorials/remix_2.md#metamask).
 2. Alchemy account to communicate with Ethereum. Head to https://www.alchemy.com/ and sign up for free. We listed this as an option to get Goerli testnet ETH. The Alchemy accounts allows you to communicate with an Ethereum full node via an API. Other ways to do this are through your own hosted full node, or through [Infura](https://infura.io/), for example.
-3. 
+3. Node.js for running javascript applications [download link](https://nodejs.org/en/download/), and
+4. NPM the node package manager to download and install packages. Windows and Mac install instructions [here](https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac).
 
 # Let's Mint an NFT
 1. Create your app in Alchemy by clicking `Create App` from the `Apps` menu.
@@ -72,6 +73,31 @@ And the response:
 
 This value `"result":"0x16d2798836302a2"` is in hexadecimal and can be [converted](https://www.rapidtables.com/convert/number/hex-to-decimal.html) to decimal as `102781902492205730`. Recall that ether has 18 decimal places, and this value is in `wei`. Dividing by $10^{18}$ gives us `0.10278` ETH.
 
+3. Initialize a new package with NPM:
+ i. Create a new directory: `mkdir my-nft-app`
+ ii. Navigate there: `cd mkdir my-nft-app`
+ iii. Initialize package: `npm init`. I answered as follows with blanks for `test command`, `git repository`, and `keywords`:
+
+```
+{
+  "name": "my-nft-app",
+  "version": "1.0.0",
+  "description": "NFTs for course credits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeff",
+  "license": "ISC"
+}
+```
+
+4. Install [Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview) within your app directory: `npm install --save-dev hardhat`. Hardhat is a dev environment for Ethereum that helps with deploying & debugging smart contracts & apps and all that jazz.
+5. Create a new Hardhat project: `npx hardhat` and select `Create an empty hardhat.config.js`
+
+![hardhat_welcome_message](https://user-images.githubusercontent.com/39792005/192395287-db1aee49-7534-4048-a805-53089b6917db.png)
+
+6. Create some folders for organization: `mkdir contracts` & `mkdir scripts`
 
 
 # Further Reading - the very short list
