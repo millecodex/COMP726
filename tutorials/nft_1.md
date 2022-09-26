@@ -8,7 +8,19 @@
 1. [Further Reading - the very short list](nft_1.md#further-reading---the-very-short-list)
 
 # Intro
-[Earlier](https://github.com/millecodex/COMP726/blob/master/tutorials/archimate.md) we laid out the basics for an app that tracks student progression. Teachers had the authority to confer qualifications upon a student after completing a course (or at checkpoints along the way). Somthing like a qualification certificate is a perfect use case for a non-fungible token. Most paper documents of this sort contain some basic info: title, name, date, authority, potential expiry, logo or signature, etcetera. Lets say you wanted to present your diploma to an institution to prove that you had already completed some Foundation Programming classes, it is likely the diploma would not be enough. The registrar at the potential school would contact the student's previous school to validate the claim. If only there was a trustless decentralised system that allowed for easy verification? Hmm....
+[Earlier](https://github.com/millecodex/COMP726/blob/master/tutorials/archimate.md) we laid out the basics for an app that tracks student progression. Teachers had the authority to confer qualifications upon a student after completing a course (or at checkpoints along the way). Somthing like a qualification certificate is a perfect use case for a non-fungible token. Most paper documents of this sort contain some basic info: title, name, date, authority, potential expiry, logo or signature, etcetera. Lets say you wanted to present your diploma to an institution to prove that you had already completed some Programming classes, it is likely the diploma would not be enough. The registrar at the potential school would have to contact your previous school to validate the claim. If only there was a trustless decentralised system that allowed for easy verification? Hmm....
+
+# Fungible vs Non-fungible
+Q: Are Coins Tokens?
+
+If you have some bitcoin or ether, yes, these are digital tokens because they are fungible, secure, scarce, transferrable, and have monetary value and utility. (Bitcoin's utility is widely considered to be a store-of-value.) Its confusing at first but there is a difference between value and utility. In Bitcoin's case the utility *is* value. For Ethereum there is broader application, e.g., using ether to purchase an NFT or invest in a new project or pay gas fees. Many tokens claim some form of utility and let value be determined by a market. It is a regulatory grey area when it comes to classifying tokens as securities or otherwise, and has implications for taxation and reporting.
+
+### Non-Fungible
+Currency tokens (and cash) are interchangeable, or fungible, because it doesn't matter what specific token you have, everyone agrees on the same value. If people were willing to pay a premium for specific tokens or characteristics, then the overall utility of the medium as money begins to fall apart. This is the problem with barter; there is far too much subjective difference in value between objects for people to easily exchange goods directly. 
+
+Think of paintings in a gallery. All the paintings are similar in many respects─composed of paint, multicolour, framed canvas, 2-dimensional, etc.─however, each painting is obviously unique with value determined by many external factors. Non-fungible tokens, where each unit is unique, are designed for this purpose. In a digital manner they implement security and scarcity. Value and use are subjective like gallery paintings, but these now inherit the open, permissionless, censorship-resistant properties of the blockchain.
+
+NFTs aren't just for collectibles, art, and profile pictures. Any document or data structure that can be digitised can be represented as an NFT: music, certificates, degrees, licenses, passes, patents, title deeds, concert tickets, contracts, voting rights, et-cetera.
 
 # Ethereum Token Standards
 Over time standards have emerged that assist developers with creating new projects, building functionality, and interacting with other tokens, contracts, and chains. Some of the main [standards](https://ethereum.org/en/developers/docs/standards/tokens/) that have been developed for Ethereum are:
@@ -41,13 +53,26 @@ Examples of the ERC-1155 standard include:
 
 # Pre-requisites
 We'll need the following tools in our environment before we can get going.
-1. MetaMask account with some testnet ether. (See our previous steps for this here.)
-2. Alchemy account to communicate with Ethereum. (Note there are many other ways to do this.)
+1. MetaMask account with some testnet ether. See our previous steps for this [here](https://github.com/millecodex/COMP726/blob/master/tutorials/remix_2.md#metamask).
+2. Alchemy account to communicate with Ethereum. Head to https://www.alchemy.com/ and sign up for free. We listed this as an option to get Goerli testnet ETH. The Alchemy accounts allows you to communicate with an Ethereum full node via an API. Other ways to do this are through your own hosted full node, or through [Infura](https://infura.io/), for example.
 3. 
 
 # Let's Mint an NFT
-* Point form list
-  * second
+1. Create your app in Alchemy by clicking `Create App` from the `Apps` menu.
+
+> ![Alchemy_create_app](https://user-images.githubusercontent.com/39792005/192390028-0b8106c4-fd90-4556-a735-a4afaf96706d.png)
+
+2. Use Alchemy's API to check your MetaMask account balance. The `Composer` tool will create a query to post to the blockchain. In this case its using a JSON RPC. I'll use the account address that (should) already have testnet `ETH`
+
+> ![Alchemy_composer](https://user-images.githubusercontent.com/39792005/192390914-dde3f9bd-76f9-417e-9ba1-db257eb8b9db.png)
+
+And the response:
+
+> ![Alchemy_getbalance_response](https://user-images.githubusercontent.com/39792005/192390951-d3dd3dd8-186c-4917-b52d-89eadb60e762.png)
+
+This value `"result":"0x16d2798836302a2"` is in hexadecimal and can be [converted](https://www.rapidtables.com/convert/number/hex-to-decimal.html) to decimal as `102781902492205730`. Recall that ether has 18 decimal places, and this value is in `wei`. Dividing by $10^{18}$ gives us `0.10278` ETH.
+
+
 
 # Further Reading - the very short list
 * [Based on this Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
