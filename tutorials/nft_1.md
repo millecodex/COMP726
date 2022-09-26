@@ -73,9 +73,9 @@ And the response:
 This value `"result":"0x16d2798836302a2"` is in hexadecimal and can be [converted](https://www.rapidtables.com/convert/number/hex-to-decimal.html) to decimal as `102781902492205730`. Recall that ether has 18 decimal places, and this value is in `wei`. Dividing by $10^{18}$ gives us `0.10278` ETH.
 
 3. Initialize a new package with NPM:
- i. Create a new directory: `mkdir my-nft-app`
- ii. Navigate there: `cd mkdir my-nft-app`
- iii. Initialize package: `npm init`. I answered as follows with blanks for `test command`, `git repository`, and `keywords`:
+   - (i)   Create a new directory: `mkdir my-nft-app`
+   - (ii)  Navigate there: `cd mkdir my-nft-app`
+   - (iii) Initialize package: `npm init`. I answered as follows with blanks for `test command`, `git repository`, and `keywords`:
 
 ```
 {
@@ -97,6 +97,9 @@ This value `"result":"0x16d2798836302a2"` is in hexadecimal and can be [converte
 ![hardhat_welcome_message](https://user-images.githubusercontent.com/39792005/192395287-db1aee49-7534-4048-a805-53089b6917db.png)
 
 6. Create some folders for organization: `mkdir contracts` & `mkdir scripts`
+7. The Smart Contract code
+   - (i) Create a new file in the `\contracts` folder; mine is called `courseNFT.sol` This code is based on the OpenZeppelin standard:  https://docs.openzeppelin.com/contracts/3.x/erc721. Copy and paste the code (file is here).
+   - (i) Install the OpenZeppelin Library via: `npm install @openzeppelin/contracts`
 
 
 # Further Reading - the very short list
