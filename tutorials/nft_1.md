@@ -136,6 +136,38 @@ module.exports = {
 
 ![hardhat_compile](https://user-images.githubusercontent.com/39792005/192401736-2682279c-80ef-45bc-ace8-40dcb0914e86.png)
 
+12. Write the deploy script. Create a new file called `deploy.js` in the `\scripts` folder. It will contain:
+```
+async function main() {
+    const CourseNFT = await ethers.getContractFactory("courseNFT")
+  
+    // Start deployment, returning a promise that resolves to a contract object
+    const courseNFT = await CourseNFT.deploy()
+    await courseNFT.deployed()
+    console.log("Contract deployed to address:", courseNFT.address)
+  }
+  
+  main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+      console.error(error)
+      process.exit(1)
+    })
+``` 
+Save the script.
+13. Deploy the contract in the command line using: `npx hardhat --network goerli run scripts/deploy.js` and you should get a response address where the contract now lives (permanently) on the (testnet) blockchain!
+
+![hardhat_contract_deployed](https://user-images.githubusercontent.com/39792005/192403178-b798cbb5-71a4-4bda-a947-0abcc4fa040b.png)
+
+Copy the address and go to https://goerli.etherscan.io/ and search for it.
+
+![goerli_scan_contract_deployment](https://user-images.githubusercontent.com/39792005/192403228-b22f0a34-8905-45a0-b28f-978928b60d14.png)
+
+Remember your Alchemy dashboard? It now will register the details. Check that the address matches your MetaMask.
+
+![Alchemy_contract_deploy_receipt](https://user-images.githubusercontent.com/39792005/192403486-9e629a6c-78a0-4627-9bf2-9980c1568315.png)
+
+
 
 # Further Reading - the very short list
 * This has been based on this [Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
@@ -143,3 +175,4 @@ module.exports = {
 
 # Exercises
 1. What are some examples of fungible tokens compared to non-fungible tokens that you use that are not blockchain related?
+2. How much gas did you pay to deploy your contract? What are some implications of the gas auction fees model?
