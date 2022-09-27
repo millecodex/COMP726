@@ -1,5 +1,4 @@
 # Tutorial 9: NFTs
-## 🛠️ Under Construction 🚧 👷
 ### Contents
 1. [Intro](nft_1.md#intro)
 1. [Fungible vs Not](nft_1.md#fungible-vs-non-fungible)
@@ -184,7 +183,7 @@ Remember your Alchemy dashboard? It now will register the details. Check that th
 ![Alchemy_contract_deploy_receipt](https://user-images.githubusercontent.com/39792005/192403486-9e629a6c-78a0-4627-9bf2-9980c1568315.png)
 
 # Up Next
-* What can we do with our contract? Well call it ofcourse. Next Tutorial we'll look into calling the mint function.
+* What can we do with our contract? We'll call it ofcourse. In the next [tutorial](https://github.com/millecodex/COMP726/blob/master/tutorials/nft_2.md) we'll look into calling the mint function.
 
 # Further Reading - the very short list
 * This has been based on this [Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
