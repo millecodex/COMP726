@@ -1,11 +1,14 @@
 # Tutorial 9: NFTs
 ## 🛠️ Under Construction 🚧 👷
 ### Contents
-1. [intro](nft_1.md#intro)
-1. [second](nft_1.md#second)
-1. [third](nft_1.md#third)
-1. [What did we miss?](nft_1.md#what-did-we-miss)
-1. [Further Reading - the very short list](nft_1.md#further-reading---the-very-short-list)
+1. [Intro](nft_1.md#intro)
+1. [Fungible vs Not](nft_1.md#fungible-vs-non-fungible)
+1. [Ethereum Token Standards](nft_1.md#ethereum-token-standards)
+1. [Prerequisited - Set up the environment](nft_1.md#prerequisites)
+1. [Deploy an NFT Contract](nft_1.md#lets-deploy-an-nft-contract)
+1. [Up Next](nft_1.md#up-next)
+1. [Further Reading - the very short list](nft_1.md#further-reading---the-very-short-list) 
+1. [Exercises](nft_1.md#exercises)
 
 # Intro
 [Earlier](https://github.com/millecodex/COMP726/blob/master/tutorials/archimate.md) we laid out the basics for an app that tracks student progression. Teachers had the authority to confer qualifications upon a student after completing a course (or at checkpoints along the way). Somthing like a qualification certificate is a perfect use case for a non-fungible token. Most paper documents of this sort contain some basic info: title, name, date, authority, potential expiry, logo or signature, etcetera. Lets say you wanted to present your diploma to an institution to prove that you had already completed some Programming classes, it is likely the diploma would not be enough. The registrar at the potential school would have to contact your previous school to validate the claim. If only there was a trustless decentralised system that allowed for easy verification? Hmm....
