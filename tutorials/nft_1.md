@@ -98,14 +98,48 @@ This value `"result":"0x16d2798836302a2"` is in hexadecimal and can be [converte
 
 6. Create some folders for organization: `mkdir contracts` & `mkdir scripts`
 7. The Smart Contract code
-   - (i) Create a new file in the `\contracts` folder; mine is called `courseNFT.sol` This code is based on the OpenZeppelin standard:  https://docs.openzeppelin.com/contracts/3.x/erc721. Copy and paste the code (file is here).
-   - (i) Install the OpenZeppelin Library via: `npm install @openzeppelin/contracts`
+   - (i) Create a new file in the `\contracts` folder; mine is called `courseNFT.sol` This code is based on the OpenZeppelin standard:  https://docs.openzeppelin.com/contracts/3.x/erc721. Copy and paste the code (file is [here]()). You can modify the name and tokenID in the constructor: `constructor() ERC721("courseNFT", "ccNFT") {}`. The name `courseNFT` must match the contract name. Save the file.
+   - (ii) Install the OpenZeppelin Library via: `npm install @openzeppelin/contracts`
+ 8. Connect MetaMask and Alchemy by storing our details in an environment file.
+    - (i) Get your Alchemy API URL by clicking `VIEW KEY` in your dashboard. It should look like: `https://eth-goerli.g.alchemy.com/v2/FU3d...dctz`
+    - (ii) Export your private key from MetaMask by clicking the hamburger menu, `Account Details`, and `Export Private Key`
+
+![MetaMask_export](https://user-images.githubusercontent.com/39792005/192399646-f63ffc2f-4963-489a-8ff4-6a3dfb3dfad3.png)
+
+    - (iii) Create an environment file to store our keys. From the command line: `npm install dotenv --save`. Now create a `.env` file that contains:
+```
+API_URL="https://eth-goerli.g.alchemy.com/v2/FU3d3...cdctz"
+PRIVATE_KEY="97a08...be6b3d"
+```
+9. Install `ether.js` back at the command line with: `npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0`
+10. Update the `hardhat.config.js` file in the project root directory with all of our dependencies we've been collecting:
+```
+/**
+* @type import('hardhat/config').HardhatUserConfig
+*/
+require('dotenv').config();
+require("@nomiclabs/hardhat-ethers");
+const { API_URL, PRIVATE_KEY } = process.env;
+module.exports = {
+   solidity: "0.8.1",
+   defaultNetwork: "goerli",
+   networks: {
+      hardhat: {},
+      goerli: {
+         url: API_URL,
+         accounts: [`0x${PRIVATE_KEY}`]
+      }
+   },
+}
+```
+11. In the command line compile the contract with Hardhat: `npx hardhat compile`. You should get a success message: `Compiled 13 Solidity files successfully`
+
+![hardhat_compile](https://user-images.githubusercontent.com/39792005/192401736-2682279c-80ef-45bc-ace8-40dcb0914e86.png)
 
 
 # Further Reading - the very short list
-* [Based on this Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
-* https://nftschool.dev/
-* []()
+* This has been based on this [Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
+* https://nftschool.dev/ looks like a promising resource
 
 # Exercises
 1. What are some examples of fungible tokens compared to non-fungible tokens that you use that are not blockchain related?
