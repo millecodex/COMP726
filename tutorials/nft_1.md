@@ -163,11 +163,9 @@ Copy the address and go to https://goerli.etherscan.io/ and search for it.
 
 ![goerli_scan_contract_deployment](https://user-images.githubusercontent.com/39792005/192403228-b22f0a34-8905-45a0-b28f-978928b60d14.png)
 
-Remember your Alchemy dashboard? It now will register the details. Check that the address matches your MetaMask.
+Remember your Alchemy dashboard? It now will register the details. Check that the `from` address matches your MetaMask.
 
 ![Alchemy_contract_deploy_receipt](https://user-images.githubusercontent.com/39792005/192403486-9e629a6c-78a0-4627-9bf2-9980c1568315.png)
-
-
 
 # Further Reading - the very short list
 * This has been based on this [Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
