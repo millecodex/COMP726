@@ -80,7 +80,7 @@ This value `"result":"0x16d2798836302a2"` is in hexadecimal and can be [converte
    - (ii)  Navigate there: `cd mkdir my-nft-app`
    - (iii) Initialize package: `npm init`. I answered as follows with blanks for `test command`, `git repository`, and `keywords`:
 
-```
+```json
 {
   "name": "my-nft-app",
   "version": "1.0.0",
@@ -125,7 +125,7 @@ Back at the command line: `npm install --save-dev @nomiclabs/hardhat-ethers ethe
 
 ### 9. Update hardhat.config.js
 In the project root directory edit the `hardhat.config.js` file with all of our information:
-```
+```js
 /**
 * @type import('hardhat/config').HardhatUserConfig
 */
@@ -151,7 +151,7 @@ In the command line compile the contract with Hardhat: `npx hardhat compile`. Yo
 
 ### 11. Write the deploy script 
 In your project root create a folder for organization. Type `mkdir scripts`. Create a new file called `deploy.js` in the `\scripts` folder. It will contain:
-```
+```js
 async function main() {
     const CourseNFT = await ethers.getContractFactory("courseNFT")
   
