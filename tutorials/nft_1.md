@@ -58,7 +58,7 @@ Examples of the ERC-1155 standard include:
 We'll need the following tools in our environment before we can get going.
 1. **MetaMask** account with some testnet ether. See our previous steps for this [here](https://github.com/millecodex/COMP726/blob/master/tutorials/remix_2.md#metamask).
 2. **Alchemy** account to communicate with Ethereum. Head to https://www.alchemy.com/ and sign up for free. We listed this as an option to get Goerli testnet ETH. The Alchemy accounts allows you to communicate with an Ethereum full node via an API. Other ways to do this are through your own hosted full node, or through [Infura](https://infura.io/), for example.
-3. **Node.js** for running javascript applications [download link](https://nodejs.org/en/download/), and **NPM** the node package manager to download and install packages. Windows and Mac install instructions [here](https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac).
+3. **Node.js** for running javascript applications ([download link](https://nodejs.org/en/download/)), and **NPM** the node package manager to download and install packages. Windows and Mac install instructions [here](https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac).
 
 # Let's Deploy an NFT Contract
 ### 1. Create your app in Alchemy by clicking `Create App` from the `Apps` menu.
