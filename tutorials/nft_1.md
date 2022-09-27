@@ -104,7 +104,7 @@ Within your app directory type: `npx hardhat` and select `Create an empty hardha
 
 ### 6. The Smart Contract code
    - (i) Create a folder for organization: Type `mkdir contracts`
-   - (ii) Create a new file in the `\contracts` folder; mine is called `courseNFT.sol` This code is based on the OpenZeppelin standard:  https://docs.openzeppelin.com/contracts/3.x/erc721. Copy and paste the code (file is [here]()). You can modify the name and tokenID in the constructor: `constructor() ERC721("courseNFT", "ccNFT") {}`. The name `courseNFT` must match the contract name. Save the file.
+   - (ii) Create a new file in the `\contracts` folder; mine is called `courseNFT.sol` This code is based on the OpenZeppelin standard:  https://docs.openzeppelin.com/contracts/3.x/erc721. Copy and paste the code (file is [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/contracts/courseNFT.sol)). You can modify the name and tokenID in the constructor: `constructor() ERC721("courseNFT", "ccNFT") {}`. The name `courseNFT` must match the contract name. Save the file.
    - (iii) Install the OpenZeppelin Library via: `npm install @openzeppelin/contracts`
  
  ### 7. Connect MetaMask and Alchemy by storing our details in an environment file
@@ -193,3 +193,6 @@ Remember your Alchemy dashboard? It now will register the details. Check that th
 # Exercises
 1. What are some examples of fungible tokens compared to non-fungible tokens that you use that are not blockchain related?
 2. How much gas did you pay to deploy your contract? What are some implications of the gas auction fees model?
+
+# Sample code
+Files be found [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/)
