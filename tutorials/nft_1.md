@@ -119,7 +119,9 @@ Within your app directory type: `npx hardhat` and select `Create an empty hardha
 API_URL="https://eth-goerli.g.alchemy.com/v2/FU3d3...cdctz"
 PRIVATE_KEY="97a08...be6b3d"
 ```
-Be sure to fill in your actual details, but never commit these with git.
+
+> **Warning** \
+> Never commit these with version control like git or GitHub! If you do so accidentally they must be regenerated immediately.
 
 ### 8. Install ether.js 
 Back at the command line: `npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0`
