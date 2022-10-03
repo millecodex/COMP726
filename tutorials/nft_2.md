@@ -9,6 +9,8 @@
 1. [What did we miss?](template.md#what-did-we-miss)
 1. [Further Reading - the very short list](template.md#further-reading---the-very-short-list)
 
+In NFTs [Part I](./nft_1.md)
+
 # What did we miss?
 * Point form list
   * second
