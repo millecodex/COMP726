@@ -15,7 +15,7 @@ Here in Part II we will interact with the smart contract and mint our NFT.
  * [Same from last time](https://github.com/millecodex/COMP726/blob/master/tutorials/nft_1.md#prerequisites), plus
  * Get yourself a [Pinata](https://app.pinata.cloud/register) account; this is for decentralised storage
 
-## Install [Alchemy's Web3 library](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)\
+## Install [Alchemy's Web3 library](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)
 In your home directory type `npm install @alch/alchemy-web3`; a number of packages will be added to your environment
 
 Go to your `\scripts` directory and create a new file called `mint-nft.js`
@@ -86,10 +86,10 @@ PRIVATE_KEY="97a...b3d"
 PUBLIC_KEY="0x99A95d4d7DDe6B9E663509a41CF3A9eeAfC07Ad9"
 ```
 
-Update the mint-nft.js file to include your public and private keys and setup the transaction (`const tx = {`):
+Update the `mint-nft.js` file to include your public and private keys and setup the transaction (`const tx = {...`):
 ```js
 require("dotenv").config()
-const API_URL = process.env.API_URL
+const API_URL = process.env.API_URL;
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
