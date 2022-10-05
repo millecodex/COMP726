@@ -114,6 +114,7 @@ async function mintNFT(tokenURI) {
 ```
 
 ## Sign the transaction
+When we send the transaction we need to sign it. **Don't trust, verify!** For this we need access to our `PRIVATE_KEY` variable; remember this is only stored locally in the `.env` file. Most of the code below is for error logging.
 ```js
 const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
     signPromise
@@ -139,6 +140,12 @@ const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
         .catch((err) => {
         console.log(" Promise failed:", err)
     })
+```
+
+## Check the metadata.json
+Check that its been uploaded to the IPFS via Pinata. Copy your CID hash from pinata and create a URL:
+```
+https://gateway.pinata.cloud/ipfs/QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB
 ```
 
 ## Call the mint
