@@ -89,9 +89,9 @@ PUBLIC_KEY="0x99A95d4d7DDe6B9E663509a41CF3A9eeAfC07Ad9"
 Update the `mint-nft.js` file to include your public and private keys and setup the transaction (`const tx = {...`):
 ```js
 require("dotenv").config()
-const API_URL = process.env.API_URL;
-const PUBLIC_KEY = process.env.PUBLIC_KEY;
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const API_URL = process.env.API_URL
+const PUBLIC_KEY = process.env.PUBLIC_KEY
+const PRIVATE_KEY = process.env.PRIVATE_KEY
 
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
@@ -114,7 +114,7 @@ async function mintNFT(tokenURI) {
 ```
 
 ## Sign the transaction
-When we send the transaction we need to sign it. **Don't trust, verify!** For this we need access to our `PRIVATE_KEY` variable; remember this is only stored locally in the `.env` file. Most of the code below is for error logging.
+When we send the transaction we need to sign it. **Don't trust, verify!** For this we need access to our `PRIVATE_KEY` variable; remember this is only stored locally in the `.env` file. Add this code to `mint-nft.js`. Most of the code below is for error logging.
 ```js
 const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
     signPromise
@@ -134,7 +134,7 @@ const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
                 err
                 )
             }
-            }
+        }
         )
         })
         .catch((err) => {
@@ -143,14 +143,24 @@ const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
 ```
 
 ## Check the metadata.json
-Check that its been uploaded to the IPFS via Pinata. Copy your CID hash from pinata and create a URL:
-```
+Check that its been uploaded to the IPFS via Pinata. Copy your CID hash from pinata and create a URL:\
 https://gateway.pinata.cloud/ipfs/QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB
+
+## Call the mintNFT function
+Lastly call `mintNFT` by adding the following:
+```js
+mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")
 ```
-
-## Call the mint
-Add the mint with the pinata hashdata `mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")`
-
+And run the script:
+```
+node scripts/mint-nft.js
+```
+Success looks like 
+```
+C:\my-nft-app>node scripts/mint-nft.js
+The hash of your transaction is:  0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3
+Check Alchemy's Mempool to view the status of your transaction!
+```
 
 # Up Next
 * Next tutorial we are looking to scaling via layer two solutions -- i.e. the Lightning network
