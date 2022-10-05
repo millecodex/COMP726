@@ -151,7 +151,7 @@ Lastly call `mintNFT` by adding the following:
 ```js
 mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")
 ```
-And run the script:
+The complete `mint-nft.js` file is [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app). Now run the script:
 ```
 node scripts/mint-nft.js
 ```
@@ -161,6 +161,14 @@ C:\my-nft-app>node scripts/mint-nft.js
 The hash of your transaction is:  0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3
 Check Alchemy's Mempool to view the status of your transaction!
 ```
+
+
+### Error: Transaction has been reverted by the EVM:
+You may get an error if you used a different account to call the contract. Browsing goerli.etherscan.io this can look like: 
+
+![goerli-error](https://user-images.githubusercontent.com/39792005/193970215-e2fd7e1e-8f9f-4783-8516-177c38788765.png)
+
+We're told that `Fail with error 'Ownable: caller is not the owner'` which is a permissions issue. More on this next time.
 
 # Up Next
 * Next tutorial we are looking to scaling via layer two solutions -- i.e. the Lightning network
@@ -173,4 +181,4 @@ Check Alchemy's Mempool to view the status of your transaction!
 1. Write a script to generate a new random NFT every time that mint is called.
 
 # Sample code
-Files be found [here]()
+Files be found [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app).
