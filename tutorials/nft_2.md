@@ -1,21 +1,27 @@
 # Tutorial 10: NFTs Part II
 
-## 🛠️ Under Construction 🚧 👷
 ## Contents
-1. [intro](nft_2.md#intro)
-1. [What did we miss?](nft_2.md#what-did-we-miss)
-1. [Further Reading - the very short list](nft_2.md#further-reading---the-very-short-list)
-1. [Exercises](nft_2.md#exercises)
-1. [Sample Code](nft_2.md#sample-code)
+1. [Intro](nft_2.md#intro)
+1. [Alchemy's Web3 Library](nft_2.md#alchemys-web3-library)
+1. [Contract ABI](nft_2.md#contract-abi)
+1. [Pinata](nft_2.md#pinata)
+1. [Minting Script](nft_2.md#minting-script)
+1. [Call the mintNFT function](nft_2.md#call-the-mintnft-function)
+3. [What did we miss?](nft_2.md#what-did-we-miss)
+4. [Further Reading - the very short list](nft_2.md#further-reading---the-very-short-list)
+5. [Exercises](nft_2.md#exercises)
+6. [Sample Code](nft_2.md#sample-code)
 
+# Intro
 In NFTs [Part I](./nft_1.md) we wrote a smart contract to mint an [ERC721](./nft_1.md#erc-721) (NFT) token for our Course Credits app. We used Hardhat to create our app and Alchemy to communicate with Ethereum and MetaMask to sign transactions. Finally we compiled our contract with Hardhat and deployed to Ethereum's testnet Goerli chain.
 
 Here in Part II we will interact with the smart contract and mint our NFT.
-# Environment Prerequisites
+
+## Environment Prerequisites
  * [Same from last time](https://github.com/millecodex/COMP726/blob/master/tutorials/nft_1.md#prerequisites), plus
  * Get yourself a [Pinata](https://app.pinata.cloud/register) account; this is for decentralised storage
 
-## Install [Alchemy's Web3 library](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)
+# Install [Alchemy's Web3 library](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)
 In your home directory type `npm install @alch/alchemy-web3`; a number of packages will be added to your environment
 
 Go to your `\scripts` directory and create a new file called `mint-nft.js`
@@ -27,7 +33,7 @@ const web3 = createAlchemyWeb3(API_URL)
 ```
 Note here that you have already installed the `dotenv` package from last time. The Alchemy package was downloaded in the previous step.
 
-## Prepare the contract ABI
+# Contract ABI
 ABI is the *application binary interface* which is the computer science way of saying the code that directly interacts with the blockchain. In this case the Ethereum virtual machine. (More on the EVM here.)
 
 To your `mint-nft.js` script add the following:
@@ -37,7 +43,7 @@ console.log(JSON.stringify(contract.abi))
 ```
 and run the script: `node scripts/mint-nft.js`. The last line we added `console.log` should write the ABI to the console. You can see the `json` in your `/contracts` folder.
 
-## Pinata
+# Pinata
 NFTs need metadata to differentiate each one (the non-fungible bit). In our example of the Course Credits App, this will be fields like Name, ID, Course, Grade, Date, etc. For a PFP it might be character traits like colour, accessory, logo, shirt, background, and so on.
 
 Login to Pinata and click the `Upload+` button selecting a file. Any file will do. Satoshi's certificate is [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/Satoshi-cert.png) if you want to use the same one. Upload your file and after the dashboard refreshes you'll see it along with a content identifier (CID).
@@ -70,7 +76,7 @@ Change the IPFS link CID image link to yours. You can edit the other characteris
 Check that its been uploaded to the IPFS via Pinata. Copy your CID hash from pinata and create a URL:\
 https://gateway.pinata.cloud/ipfs/QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB
 
-## Create a contract instance
+# Minting Script
 Get your contract address from Part I, mine is `0xdda15afec918308e8c20f70fb5090ca134063598`.
 
 Add the following to the `mint-nft.js` file:
@@ -142,8 +148,7 @@ const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
     })
 ```
 
-
-## Call the mintNFT function
+# Call the mintNFT function
 Lastly call `mintNFT` by adding the following:
 ```js
 mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")
@@ -162,7 +167,7 @@ Go to your Alchemy dashboard to see the recent activty. You can also see it on g
 
 ![goerli-successful-mint](https://user-images.githubusercontent.com/39792005/193971526-f3d7fcc6-8af9-4b0d-85bf-6bb9e9c9c200.png)
 
-### Error: Transaction has been reverted by the EVM:
+## Error: Transaction has been reverted by the EVM:
 You may get an error if you used a different account to call the contract. Searching the txid on [goerli.etherscan.io](https://goerli.etherscan.io/tx/0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3) this can look like: 
 
 ![goerli-error](https://user-images.githubusercontent.com/39792005/193970215-e2fd7e1e-8f9f-4783-8516-177c38788765.png)
