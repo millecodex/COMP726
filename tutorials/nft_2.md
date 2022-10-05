@@ -8,7 +8,7 @@
 1. [Exercises](nft_2.md#exercises)
 1. [Sample Code](nft_2.md#sample-code)
 
-In NFTs [Part I](./nft_1.md) we used the Open Zeppelin smart contract library for an ERC721 token to write a smart contract for our app. We used Hardhat to create and configure our app with Alchemy to communicate with Ethereum and MetaMask to sign transactions. Finally we compiled our contract with Hardhat and deployed to Ethereum's testnet Goerli chain.
+In NFTs [Part I](./nft_1.md) we used the Open Zeppelin smart contract library for an [ERC721](./nft_1.md#erc-721) token to write a smart contract for our app. We used Hardhat to create and configure our app with Alchemy to communicate with Ethereum and MetaMask to sign transactions. Finally we compiled our contract with Hardhat and deployed to Ethereum's testnet Goerli chain.
 
 Here in Part II we will interact with the smart contract and mint our NFT.
 # Environment Prerequisites
@@ -140,6 +140,7 @@ const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
         console.log(" Promise failed:", err)
     })
 ```
+
 ## Call the mint
 Add the mint with the pinata hashdata `mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")`
 
@@ -152,7 +153,7 @@ Add the mint with the pinata hashdata `mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRx
 * https://nftschool.dev/ looks like a promising resource
 
 # Exercises
-1. 
+1. Write a script to generate a new random NFT every time that mint is called.
 
 # Sample code
-Files be found [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/)
+Files be found [here](./my-nft-app/)
