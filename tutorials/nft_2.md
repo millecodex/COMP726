@@ -158,12 +158,20 @@ node scripts/mint-nft.js
 Success looks like 
 ```
 C:\my-nft-app>node scripts/mint-nft.js
-The hash of your transaction is:  0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3
+The hash of your transaction is:  0x4877840a2e1e21f0cbeacc64801d629e816da93a33f02713697047c027b66cc2
 Check Alchemy's Mempool to view the status of your transaction!
 ```
 
+![goerli-successful-mint](https://user-images.githubusercontent.com/39792005/193971526-f3d7fcc6-8af9-4b0d-85bf-6bb9e9c9c200.png)
+
+
 
 ### Error: Transaction has been reverted by the EVM:
+```
+C:\my-nft-app>node scripts/mint-nft.js
+The hash of your transaction is:  0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3
+Check Alchemy's Mempool to view the status of your transaction!
+```
 You may get an error if you used a different account to call the contract. Browsing goerli.etherscan.io this can look like: 
 
 ![goerli-error](https://user-images.githubusercontent.com/39792005/193970215-e2fd7e1e-8f9f-4783-8516-177c38788765.png)
