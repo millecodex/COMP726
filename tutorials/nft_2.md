@@ -34,7 +34,7 @@ const web3 = createAlchemyWeb3(API_URL)
 Note here that you have already installed the `dotenv` package from last time. The Alchemy package was downloaded in the previous step.
 
 # Contract ABI
-ABI is the *application binary interface* which is the computer science way of saying the code that directly interacts with the blockchain. In this case the Ethereum virtual machine. (More on the EVM here.)
+ABI is the *application binary interface* which is the result after compiling our contract code. It *interfaces* the human-readable program language with the EVM executable bytecode. (EVM is the Ethereum Virtual Machine which does all the computation.) 
 
 To your `mint-nft.js` script add the following:
 ```js
