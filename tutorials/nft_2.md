@@ -40,7 +40,7 @@ and run the script: `node scripts/mint-nft.js`. The last line we added `console.
 ## Pinata
 NFTs need metadata to differentiate each one (the non-fungible bit). In our example of the Course Credits App, this will be fields like Name, ID, Course, Grade, Date, etc. For a PFP it might be character traits like colour, accessory, logo, shirt, background, and so on.
 
-Login to Pinata and click the `Ipload+` button selecting a file. Any file will do. Satoshi's certificate is [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/Satoshi-cert.png) if you want to use the same one. Upload your file and after the dashboard refreshes you'll see it along with a content identifier (CID).
+Login to Pinata and click the `Upload+` button selecting a file. Any file will do. Satoshi's certificate is [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/Satoshi-cert.png) if you want to use the same one. Upload your file and after the dashboard refreshes you'll see it along with a content identifier (CID).
 
 ![pinata-pinned](https://user-images.githubusercontent.com/39792005/193709900-4442e908-e670-4240-bad3-2723515ff771.png)
 
