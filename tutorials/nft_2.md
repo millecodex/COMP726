@@ -156,4 +156,4 @@ Add the mint with the pinata hashdata `mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRx
 1. Write a script to generate a new random NFT every time that mint is called.
 
 # Sample code
-Files be found [here](././my-nft-app/)
+Files be found [here]()
