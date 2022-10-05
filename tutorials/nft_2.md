@@ -182,7 +182,7 @@ We're told that `Fail with error 'Ownable: caller is not the owner'` which is a 
 * https://nftschool.dev/ looks like a promising resource
 
 # Exercises
-1. Write a script to generate a new random NFT every time that mint is called.
+1. Write a script to generate a new random NFT every time `mint` is called.
 
 # Sample code
 Files be found [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app).
