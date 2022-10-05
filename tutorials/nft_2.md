@@ -8,11 +8,11 @@
 1. [Exercises](nft_2.md#exercises)
 1. [Sample Code](nft_2.md#sample-code)
 
-In NFTs [Part I](./nft_1.md) we used the Open Zeppelin smart contract library for an [ERC721](./nft_1.md#erc-721) token to write a smart contract for our app. We used Hardhat to create and configure our app with Alchemy to communicate with Ethereum and MetaMask to sign transactions. Finally we compiled our contract with Hardhat and deployed to Ethereum's testnet Goerli chain.
+In NFTs [Part I](./nft_1.md) we wrote a smart contract to mint an [ERC721](./nft_1.md#erc-721) (NFT) token for our Course Credits app. We used Hardhat to create our app and Alchemy to communicate with Ethereum and MetaMask to sign transactions. Finally we compiled our contract with Hardhat and deployed to Ethereum's testnet Goerli chain.
 
 Here in Part II we will interact with the smart contract and mint our NFT.
 # Environment Prerequisites
- * from last time
+ * [Same from last time](https://github.com/millecodex/COMP726/blob/master/tutorials/nft_1.md#prerequisites), plus
  * Get yourself a [Pinata](https://app.pinata.cloud/register) account; this is for decentralised storage
 
 ## Install [Alchemy's Web3 library](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)\
