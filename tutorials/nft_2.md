@@ -7,6 +7,7 @@
 1. [Pinata](nft_2.md#pinata)
 1. [Minting Script](nft_2.md#minting-script)
 1. [Call the mintNFT function](nft_2.md#call-the-mintnft-function)
+2. [View your NFT in MetaMask](nft_2.md#view-your-nft-in-metamask)
 3. [What did we miss?](nft_2.md#what-did-we-miss)
 4. [Further Reading - the very short list](nft_2.md#further-reading---the-very-short-list)
 5. [Exercises](nft_2.md#exercises)
@@ -172,7 +173,10 @@ You may get an error if you used a different account to call the contract. Searc
 
 ![goerli-error](https://user-images.githubusercontent.com/39792005/193970215-e2fd7e1e-8f9f-4783-8516-177c38788765.png)
 
-We're told that `Fail with error 'Ownable: caller is not the owner'` which is a permissions issue. More on this next time.
+We're told that `Fail with error 'Ownable: caller is not the owner'` which is a permissions issue.
+
+# View your NFT in MetaMask
+To view your freshly minted certificate go back to MetaMask and select collectibles. You need to tell MetaMask what contract to look in, and the tokenID. So put in the contract address `0xdda15afec918308e8c20f70fb5090ca134063598` and the tokenID `ccNFT`
 
 # Up Next
 * Next tutorial we are looking to scaling via layer two solutions -- i.e. the Lightning network
