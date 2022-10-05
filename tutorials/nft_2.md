@@ -176,12 +176,12 @@ You may get an error if you used a different account to call the contract. Searc
 We're told that `Fail with error 'Ownable: caller is not the owner'` which is a permissions issue.
 
 # View your NFT in MetaMask
-To view your freshly minted certificate go back to MetaMask and select collectibles. You need to tell MetaMask what contract to look in, and the tokenID. So put in the contract address `0x2bb13D3d4F60592611bc4910394aDFC1B4A9EF7C` and the tokenID `ccNFT` and the decimals `0` (no fractional NFTs here!).
+To view your freshly minted certificate go back to MetaMask and select collectibles. You need to tell MetaMask what contract to look in, and the tokenID. So put in the contract address `0x2bb13D3d4F60592611bc4910394aDFC1B4A9EF7C` and the tokenID `ccNFT` and the decimals `0` (no fractional NFTs here!). I've minted two so my balance is 2.
 
 ![token-import-metamask-combined](https://user-images.githubusercontent.com/39792005/194160772-c9454bb3-047f-4166-9e47-379b174b7aa4.png)
 
 # Up Next
-* Next tutorial we are looking to scaling via layer two solutions -- i.e. the Lightning network
+* In the next tutorial we are looking al scaling via layer two solutions -- i.e. the Lightning network
 
 # Further Reading - the very short list
 * This has been based on this [Tutorial](https://ethereum.org/en/developers/tutorials/how-to-mint-an-nft/) from Ethereum.org
