@@ -154,7 +154,7 @@ Lastly call `mintNFT` by adding the following:
 ```js
 mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")
 ```
-The complete `mint-nft.js` file is [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app). Now run the script from the command line:
+The complete `mint-nft.js` file is [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app/scripts). Now run the script from the command line:
 ```
 > node scripts/mint-nft.js
 ```
@@ -188,7 +188,8 @@ To view your freshly minted certificate go back to MetaMask and select collectib
 * https://nftschool.dev/ looks like a promising resource
 
 # Exercises
-1. Write a script to generate a new random NFT every time `mint` is called.
+1. Investiage how to actually view your NFT certificate that is stored on IPFS via Pinata.
+2. Write a script to generate a new random NFT every time `mint` is called.
 
 # Sample code
 Files be found [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app).
