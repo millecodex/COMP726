@@ -65,9 +65,7 @@ Back in your root directory create a new file: `nft-metadata.json` that contains
     "name": "Course Credit Certificate"
   }
 ```
-Change the IPFS link CID to yours. You can edit the other characteristics too. Save the `.json` file and upload it to Pinata.
-
-
+Change the IPFS link CID image link to yours. You can edit the other characteristics too (or add more). Save the `.json` file and upload it to Pinata.
 
 
 ## Create a contract instance
