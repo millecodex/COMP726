@@ -7,7 +7,7 @@
 1. [Pinata](nft_2.md#pinata)
 1. [Minting Script](nft_2.md#minting-script)
 1. [Call the mintNFT function](nft_2.md#call-the-mintnft-function)
-2. [View your NFT](nft_2.md#view-your-nft)
+2. [View your NFT in MetaMask and on OpenSea](nft_2.md#view-your-nft)
 3. [What did we miss?](nft_2.md#what-did-we-miss)
 4. [Further Reading - the very short list](nft_2.md#further-reading---the-very-short-list)
 5. [Exercises](nft_2.md#exercises)
