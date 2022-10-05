@@ -180,6 +180,8 @@ To view your freshly minted certificate go back to MetaMask and select collectib
 
 ![token-import-metamask-combined](https://user-images.githubusercontent.com/39792005/194160772-c9454bb3-047f-4166-9e47-379b174b7aa4.png)
 
+> **Note** Presently you can see the NFTs in your MetaMask wallet only as tokens. There is not yet native support for viewing custom NFTs (as images). See more: https://metamask.zendesk.com/hc/en-us/articles/360058238591-NFT-tokens-in-your-MetaMask-wallet
+
 # Up Next
 * In the next tutorial we are looking al scaling via layer two solutions -- i.e. the Lightning network
 
