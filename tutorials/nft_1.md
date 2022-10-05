@@ -191,7 +191,7 @@ Remember your Alchemy dashboard? It now will register the details. Check that th
 * What can we do with our contract? We'll call it ofcourse. In the next [tutorial](https://github.com/millecodex/COMP726/blob/master/tutorials/nft_2.md) we'll look into calling the mint function.
 
 # Further Reading - the very short list
-* This has been based on this [Tutorial from Ethereum.org](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)
+* This has been based on this [Tutorial](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/) from Ethereum.org
 * https://nftschool.dev/ looks like a promising resource
 
 # Exercises
