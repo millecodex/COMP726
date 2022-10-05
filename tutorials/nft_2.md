@@ -193,4 +193,4 @@ To view your freshly minted certificate go back to MetaMask and select collectib
 3. Write a script to generate a new random NFT every time `mint` is called.
 
 # Sample code
-Files be found [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app).
+Files be found [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app). Note your addresses will be different!
