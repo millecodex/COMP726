@@ -183,7 +183,7 @@ To view your freshly minted certificate go back to MetaMask and select collectib
 > **Note** Presently you can see the NFTs in your MetaMask wallet only as tokens. There is not yet native support for viewing custom NFTs (as images). See more: https://metamask.zendesk.com/hc/en-us/articles/360058238591-NFT-tokens-in-your-MetaMask-wallet
 
 ## But I want to *SEE* it
-The NFT marketplace Opensea has support to view custom tokens minted on testnets by constructing a url:
+The NFT marketplace [OpenSea](https://opensea.io/) has support to view custom tokens minted on testnets by constructing a url:
 ```
 https://testnets.opensea.io/assets/<asset_contract_address>/<token_id>
 ```
@@ -198,6 +198,7 @@ Paste in the contract address and tokenID to see OpenSea's marketplace descripti
 
 # Further Reading - the very short list
 * This has been based on this [Tutorial](https://ethereum.org/en/developers/tutorials/how-to-mint-an-nft/) from Ethereum.org
+* OpenSea ERC721 [Tutorial](https://docs.opensea.io/docs/getting-started)
 * https://nftschool.dev/ looks like a promising resource
 
 # Exercises
