@@ -152,6 +152,8 @@ In the command line compile the contract with Hardhat: `npx hardhat compile`. Yo
 
 ![hardhat_compile](https://user-images.githubusercontent.com/39792005/192401736-2682279c-80ef-45bc-ace8-40dcb0914e86.png)
 
+If you have already compiled the contract and nothing has changed, then the message will say: `Nothing to compile`
+
 ### 11. Write the deploy script 
 In your project root create a folder for organization. Type `mkdir scripts`. Create a new file called `deploy.js` in the `\scripts` folder. It will contain:
 ```js
