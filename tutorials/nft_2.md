@@ -65,8 +65,10 @@ Back in your root directory create a new file: `nft-metadata.json` that contains
     "name": "Course Credit Certificate"
   }
 ```
-Change the IPFS link CID image link to yours. You can edit the other characteristics too (or add more). Save the `.json` file and upload it to Pinata.
+Change the IPFS link CID image link to yours. You can edit the other characteristics too (or add more). Save the `.json` file and upload it to Pinata. Upload the `nft-metadata.json` file to Pinata.
 
+Check that its been uploaded to the IPFS via Pinata. Copy your CID hash from pinata and create a URL:\
+https://gateway.pinata.cloud/ipfs/QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB
 
 ## Create a contract instance
 Get your contract address from Part I, mine is `0xdda15afec918308e8c20f70fb5090ca134063598`.
@@ -84,7 +86,7 @@ PRIVATE_KEY="97a...b3d"
 PUBLIC_KEY="0x99A95d4d7DDe6B9E663509a41CF3A9eeAfC07Ad9"
 ```
 
-Update the `mint-nft.js` file to include your public and private keys and setup the transaction (`const tx = {...`):
+Update the `mint-nft.js` file to include your public and private keys and setup the transaction:
 ```js
 require("dotenv").config()
 const API_URL = process.env.API_URL
@@ -112,7 +114,7 @@ async function mintNFT(tokenURI) {
 ```
 
 ## Sign the transaction
-When we send the transaction we need to sign it. **Don't trust, verify!** For this we need access to our `PRIVATE_KEY` variable; remember this is only stored locally in the `.env` file. Add this code to `mint-nft.js`. Most of the code below is for error logging.
+**Don't trust, verify!** When we send the transaction we need to sign it. For this we need access to our `PRIVATE_KEY` variable; remember this is only stored locally in the `.env` file. Add this code to `mint-nft.js`. Most of the code below is for error logging.
 ```js
 const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
     signPromise
@@ -140,18 +142,15 @@ const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
     })
 ```
 
-## Check the metadata.json
-Check that its been uploaded to the IPFS via Pinata. Copy your CID hash from pinata and create a URL:\
-https://gateway.pinata.cloud/ipfs/QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB
 
 ## Call the mintNFT function
 Lastly call `mintNFT` by adding the following:
 ```js
 mintNFT("ipfs://QmXd6V3ASnzZpToshcwLZkLRxHxduZKeKSXj4zhHWQUcjB")
 ```
-The complete `mint-nft.js` file is [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app). Now run the script:
+The complete `mint-nft.js` file is [here](https://github.com/millecodex/COMP726/tree/master/my-nft-app). Now run the script from the command line:
 ```
-node scripts/mint-nft.js
+> node scripts/mint-nft.js
 ```
 Success looks like 
 ```
@@ -159,18 +158,12 @@ C:\my-nft-app>node scripts/mint-nft.js
 The hash of your transaction is:  0x4877840a2e1e21f0cbeacc64801d629e816da93a33f02713697047c027b66cc2
 Check Alchemy's Mempool to view the status of your transaction!
 ```
+Go to your Alchemy dashboard to see the recent activty. You can also see it on goerli.etherscan.io.
 
 ![goerli-successful-mint](https://user-images.githubusercontent.com/39792005/193971526-f3d7fcc6-8af9-4b0d-85bf-6bb9e9c9c200.png)
 
-
-
 ### Error: Transaction has been reverted by the EVM:
-```
-C:\my-nft-app>node scripts/mint-nft.js
-The hash of your transaction is:  0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3
-Check Alchemy's Mempool to view the status of your transaction!
-```
-You may get an error if you used a different account to call the contract. Browsing goerli.etherscan.io this can look like: 
+You may get an error if you used a different account to call the contract. Searching the txid on [goerli.etherscan.io](https://goerli.etherscan.io/tx/0x5a17ff868fc9e099f94ecb3ff43188698d2bccac9b9c982dbc29ad1d105e6be3) this can look like: 
 
 ![goerli-error](https://user-images.githubusercontent.com/39792005/193970215-e2fd7e1e-8f9f-4783-8516-177c38788765.png)
 
