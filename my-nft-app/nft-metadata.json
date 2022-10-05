@@ -1,0 +1,16 @@
+{
+    "attributes": [
+      {
+        "trait_type": "Course",
+        "value": "Cryptocurrency"
+      },
+      {
+        "trait_type": "Name",
+        "value": "Satoshi Nakamoto"
+      }
+    ],
+    "description": "Course Credits Certificate in Cryptocurrency",
+    "image": "ipfs://QmVxFXNuVJdk5QFzvkpSSeXypdDsCf8LET1kDnkZQBFyvj",
+    "name": "Course Credit Certificate"
+  }
+  
