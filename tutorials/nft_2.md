@@ -7,7 +7,7 @@
 1. [Pinata](nft_2.md#pinata)
 1. [Minting Script](nft_2.md#minting-script)
 1. [Call the mintNFT function](nft_2.md#call-the-mintnft-function)
-2. [View your NFT in MetaMask](nft_2.md#view-your-nft-in-metamask)
+2. [View your NFT](nft_2.md#view-your-nft)
 3. [What did we miss?](nft_2.md#what-did-we-miss)
 4. [Further Reading - the very short list](nft_2.md#further-reading---the-very-short-list)
 5. [Exercises](nft_2.md#exercises)
@@ -175,12 +175,23 @@ You may get an error if you used a different account to call the contract. Searc
 
 We're told that `Fail with error 'Ownable: caller is not the owner'` which is a permissions issue.
 
-# View your NFT in MetaMask
+# View your NFT
 To view your freshly minted certificate go back to MetaMask and select collectibles. You need to tell MetaMask what contract to look in, and the tokenID. So put in the contract address `0x2bb13D3d4F60592611bc4910394aDFC1B4A9EF7C` and the tokenID `ccNFT` and the decimals `0` (no fractional NFTs here!). I've minted two so my balance is 2.
 
 ![token-import-metamask-combined](https://user-images.githubusercontent.com/39792005/194160772-c9454bb3-047f-4166-9e47-379b174b7aa4.png)
 
 > **Note** Presently you can see the NFTs in your MetaMask wallet only as tokens. There is not yet native support for viewing custom NFTs (as images). See more: https://metamask.zendesk.com/hc/en-us/articles/360058238591-NFT-tokens-in-your-MetaMask-wallet
+
+## But I want to *SEE* it
+The NFT marketplace Opensea has support to view custom tokens minted on testnets by constructing a url:
+```
+https://testnets.opensea.io/assets/<asset_contract_address>/<token_id>
+```
+Paste in the contract address and tokenID to see OpenSea's marketplace description of you NFT. The [URL](https://testnets.opensea.io/assets/goerli/0x2bb13D3d4F60592611bc4910394aDFC1B4A9EF7C/1) should automatically resolve to goerli.
+
+![Open-sea-nft](https://user-images.githubusercontent.com/39792005/194172184-781b4c0a-5729-4221-b908-acc0eca2b1c7.png)
+
+### 🥳 🔥 Congratulation! You've minted a non-fungible token 🔥 :neckbeard:
 
 # Up Next
 * In the next tutorial we are looking al scaling via layer two solutions -- i.e. the Lightning network
