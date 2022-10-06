@@ -35,8 +35,8 @@ Tutorial  7 - [Remix Part II - Metamask & Wallets](tutorials/remix_2.md)\
 Tutorial  8 - [Two-minute Presentations](tutorials/presentation_checkpoint.md)\
 Tutorial  9 - [NFTs Part I](tutorials/nft_1.md)\
 Tutorial 10 - [IPFS & NFTs Part II](tutorials/nft_2.md)\
-Tutorial 11 - Scaling & ETH2 & lightning\
-Tutorial 12 - Free Session
+Tutorial 11 - [Blockchain Scaling](tutorials/scaling_1.md)\
+Tutorial 12 - Portfolio Wrap-up & Project Check-in
 
 ## Getting started with Substrate
 For those that are interested in Substrate as a custom blockchain platform, there are some introduction tutorials here.
