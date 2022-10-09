@@ -1,4 +1,4 @@
-# Tutorial 11: Scaling Blockchains 🌩️Lightning Network🖥️
+# Tutorial 11: Scaling Blockchains + 🌩️Lightning Network🖥️
 # 🚧 👷‍♀️ Under Construction 🏗️ 🚧
 ## Contents
 1. [Intro](scaling_1.md#intro)
@@ -11,11 +11,15 @@
 # Intro
 In NFTs [Part I](./nft_1.md)
 
-# Install 
+# Blockchain Trilemma
 In your home directory 
 
-# Up Next
-* In the next tutorial we are 
+# (Possible) Solutions
+
+# Sharding & Rollups
+
+# Lightning Network
+
 
 # Further Reading - the very short list
 * This 
@@ -26,5 +30,3 @@ In your home directory
 1. Change 
 2. Investiage
 3. Write a script
-
-
