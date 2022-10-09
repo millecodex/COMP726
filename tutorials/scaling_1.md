@@ -1,4 +1,4 @@
-# Tutorial 10: NFTs Part II
+# Tutorial 11: Scaling Blockchains 🌩️Lightning Network🖥️
 # 🚧 👷‍♀️ Under Construction 🏗️ 🚧
 ## Contents
 1. [Intro](scaling_1.md#intro)
