@@ -1,16 +1,14 @@
-## COMP726 - Applied Blockchain and Cryptocurrency Technology 
+## COMP726 - Blockchain and Cryptocurrency Technology
 ### Auckland University of Technology
 
 As always this crypto space moves fast :rocket: and so this is a work in progress 🚧
 
-The course website is hosted on Canvas https://canvas.aut.ac.nz/courses/8343, however you need to be an enrolled student to login. This site serves as the open-source version. (You will still need to login to Canvas to view the lecture videos.) 
+The course website is hosted on Canvas https://canvas.aut.ac.nz/courses/8343, however you need to be an enrolled student to login. This site serves as the open-source version. (You will still need to login to Canvas to view the assessment criteria and particiapate in the course discussion.) 
 
-Lectures are Wednesdays 12:10-13:00 in WZ518 begnning July 20, 2022\
-Tutorials are Thursdays 12:10-14:00 in WZ518 beginning July 21, 2022
+Lectures are Mondays 13:10-15:00 in WZ519 begnning July 17, 2023\
+Tutorials are Tuesdays 14:10-16:00 in WZ602 beginning July 18, 2023
 
 ## Lecture Topics
-Official lecture notes are on Canvas; these are my personal copies where I am slowly making updates and converting to markdown.
-
 Lecture 1 - Motivation for & history of computing leading to Bitcoin\
 Lecture 2 - Hash functions, merkle trees, block structure\
 Lecture 3 - Consensus: centralized & decentralized, double-spend attack\
