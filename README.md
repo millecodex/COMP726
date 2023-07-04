@@ -8,21 +8,26 @@ The course website is hosted on Canvas (https://canvas.aut.ac.nz/courses/8343), 
 Lectures are Mondays 13:10-15:00 in WZ519 begnning July 17, 2023\
 Tutorials are Wednesdays 12:10-14:00 in WS313-314 beginning July 19, 2023
 
-## Lecture Topics
-Lecture 1 - Motivation for & history of computing leading to Bitcoin\
-Lecture 2 - Hash functions, merkle trees, block structure\
-Lecture 3 - Consensus: centralized & decentralized, double-spend attack\
-Lecture 4 - Mining: proof of work\
-Lecture 5 - Public key cryptography\
-Lecture 6 - Systems architecture\
-Lecture 7 - Security\
-Lecture 8 - Decentralized Finance\
-Lecture 9 - Privacy & Data Sovereignty\
-Lecture 10 - IPFS\
-Lecture 11 - Scaling\
-Lecture 12 - Wrap up / guest lecture
+## Overview & Expectations
+Blockchain and Cryptocurency Technology intends to introduce you to the technology, beginning with Bitcoin, that makes peer-to-peer decentralised cash possible. Most of the topics will be applied to Bitcoin and Ethereum, and look into the solutions engineers are coming up with to build out these distributed systems. We will focus on the technilogical, but none of it is possible without the social and thus many topics have deep roots in the human societies we have constructed.
 
-## Tutorials
+Students are expected to create, and as such there is a large emphasis on the project which is wide-ranging and open-ended. You are expected to show what you've done at the end of semester, this is via mixed methods of presentation/video/demonstration/discussion/written reporting.
+
+## Lecture Topics
+1. Introduction & Bitcoin
+2. Decentralisation
+3. Consensus Part I: Proof of Work
+4. Consensus Part II: Other
+5. Cryptography
+6. Scaling
+7. Tokens
+8. Privacy
+9. Security
+10. DeFi
+11. Web3
+12. Social Factors
+
+## Tutorials - All To be Updated
 Tutorial  1 - [Blockchain search and discovery](tutorials/blockchain_search.md)\
 Tutorial  2 - [Python Part I - Block structure, hashing & merkle trees](tutorials/python_1_blocks.ipynb)\
 Tutorial  3 - [App Design with Archimate](tutorials/archimate.md)\
@@ -35,12 +40,6 @@ Tutorial  9 - [NFTs Part I](tutorials/nft_1.md)\
 Tutorial 10 - [IPFS & NFTs Part II](tutorials/nft_2.md)\
 Tutorial 11 - [Blockchain Scaling](tutorials/scaling_1.md)\
 Tutorial 12 - Portfolio Wrap-up & Project Check-in
-
-## Getting started with Substrate
-For those that are interested in Substrate as a custom blockchain platform, there are some introduction tutorials here.
-
-Extra Tutorial - [Substrate Part I](tutorials/substrate_1.md)\
-Extra Tutorial - [Substrate Part II](tutorials/substrate_2.md)
 
 ## Resources
 Resources that may be helpful for the technical aspects of this course
