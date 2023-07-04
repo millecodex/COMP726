@@ -11,7 +11,7 @@ Tutorials are Wednesdays 12:10-14:00 in WS313-314 beginning July 19, 2023
 ## Overview & Expectations
 Blockchain and Cryptocurency Technology intends to introduce you to the technology, beginning with Bitcoin, that makes peer-to-peer decentralised cash possible. Most of the topics will be applied to Bitcoin and Ethereum, and look into the solutions engineers are coming up with to build out these distributed systems. We will focus on the technilogical, but none of it is possible without the social and thus many topics have deep roots in the human societies we have constructed.
 
-Students are expected to create, and as such there is a large emphasis on the project which is wide-ranging and open-ended. You are expected to show what you've done at the end of semester, this is via mixed methods of presentation/video/demonstration/discussion/written reporting.
+Students are expected to create, and as such there is a large emphasis on the project which is wide-ranging and open-ended. You are expected to show what you've done at the end of semester, this is via mixed methods of presentation/ video/ demonstration/ discussion/ and written reporting.
 
 ## Lecture Topics
 1. Introduction & Bitcoin
