@@ -20,7 +20,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 4. Consensus Part II: Proof of Stake & Alternatives
 5. Scaling
 6. Wallets & Tokens
-7. Seminar
+7. Seminar -> likely to take place during tutorial 4 with [Base58](https://base58.info/) ⚡
 8. Privacy
 9. Security
 10. DeFi
