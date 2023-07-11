@@ -1,3 +1,6 @@
+![GitHub](https://img.shields.io/github/license/millecodex/COMP726)
+
+
 ## COMP726 - Blockchain and Cryptocurrency Technology
 ### Auckland University of Technology
 
