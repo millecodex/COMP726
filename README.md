@@ -63,7 +63,7 @@ Resources that may be helpful for the technical aspects of this course
 * [Bitcoin and Cryptocurrency Technologies](https://bitcoinbook.cs.princeton.edu/) (Princeton)
 * [CS251: Blockchain Technologies](https://cs251.stanford.edu/syllabus.html) (Stanford)
 
-## Other Academic Groups
+## Other Academic Blockchain(esque) Groups
 * [Resistance Money](https://www.resistance.money/) (Wyoming)
 * [RMIT Blockchain Innovation Hub](https://rmitblockchain.io/) (Melbourne)
 * [Decentralized Systems Lab](https://decentralize.ece.illinois.edu/) (Illinois)
