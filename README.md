@@ -71,3 +71,6 @@ Resources that may be helpful for the technical aspects of this course
 * [UZH Blockchain Center](https://www.blockchain.uzh.ch/) (Zurich)
 * [ETH Blockchain Initiative](https://blockchain.ethz.ch/) (ETH Zurich)
 * [UNIC Blockchain](https://www.unic.ac.cy/blockchain/) (Nicosia)
+
+## Open Source Contributions
+Notice something that doesn't seem right? Could be explained better? Have an analogy that helps with your understanding? Want to include soemthing new that I haven't? Feel free to fork and submit a pull-request. It can also be good practise (and an easy way) to build your contributions.
