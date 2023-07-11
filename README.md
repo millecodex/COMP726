@@ -14,7 +14,7 @@ Blockchain and Cryptocurency Technology intends to introduce you to the technolo
 Students are expected to **create**, and as such there is a large emphasis on the project which is wide-ranging and open-ended. You are expected to show what you've done at the end of semester, this is via mixed methods of presentation/ video/ demonstration/ discussion/ and written reporting. To get credit, You 👏 Must 👏 SHOW 👏 What 👏 You've 👏 Done.
 
 ## Lecture Topics
-1. Introduction & Bitcoin
+1. [Introduction & Bitcoin](https://github.com/millecodex/COMP726/blob/master/lectures/1-bitcoin.md)
 2. Cryptography
 3. Consensus Part I: Proof of Work
 4. Consensus Part II: Proof of Stake & Alternatives
