@@ -18,7 +18,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 
 ## Lecture Topics - Notes updated on the fly 🏃
 1. [Introduction & Bitcoin](https://github.com/millecodex/COMP726/blob/master/lectures/1-bitcoin.md)
-2. Cryptography
+2. [Cryptography](lectures/2-cryptography.md)
 3. Consensus Part I: Proof of Work
 4. Consensus Part II: Proof of Stake & Alternatives
 5. Scaling
