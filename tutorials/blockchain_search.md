@@ -4,7 +4,7 @@ Head to one of the crypto token aggregators:
 * [CoinMarketCap](https://coinmarketcap.com/)
 * [CoinGecko](https://www.coingecko.com/)
 * [DropsTab](https://dropstab.com/)
-* [Brave New Coin](https://bravenewcoin.com/data-and-charts/market-cap)*local company
+* [Brave New Coin](https://bravenewcoin.com/data-and-charts/market-cap)* local company
 
 ## Exercises
 In pairs with your neighbor have a look at some of the tokens/blockchains that are listed. Select a few chains to start researching deeper. Use the following to guide your investigation:
