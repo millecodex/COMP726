@@ -41,7 +41,7 @@ Tutorial  7 - [Two-minute Presentations](tutorials/presentation_checkpoint.md)\
 Tutorial  8 - [NFTs Part I](tutorials/nft_1.md)\
 Tutorial  9 - [IPFS & NFTs Part II](tutorials/nft_2.md)\
 Tutorial 10 - [Layer Twos: Lightning](tutorials/lightning.md)\
-Tutorial 11 - Project Time & Seminar\
+Tutorial 11 - Project Time &/or Seminar\
 Tutorial 12 - Portfolio Wrap-up & Project Check-in
 
 ## Resources
