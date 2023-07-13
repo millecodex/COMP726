@@ -10,7 +10,7 @@
 7. [Incentives - Why Participate in the Network?](#incentives---why-participate-in-the-network)
 8. [Summary](#summary)
 9. [What did we miss?](#what-did-we-miss)
-10. [Further Reading - the very short list](#further-reading---the-very-short-list)
+10. [Readings](#readings)
 11. [Exercises](#exercises)
 
 ## Introduction
