@@ -160,16 +160,11 @@ Elapsed time: 8363.934648275375
 
 The Figure shows a dedicated SHA256 miner. The S9 is (was) the workhorse of the bitcoin network. It contains 189 individual chips that calculate a total of 13.5 trillion hashes per second. (Compare this to the hashrate of the i5 above!)
 
-
 ### Block Time
-
 The difficulty adjustment aims to keep the time between blocks (successful hashes) at around ten minutes. In the early days, Satoshi and a few others could use their PC processors to find blocks every ten minutes. The hashpower has steadily increased and so has the difficulty target to keep the block time constant. Finding a hash of a block that is below the target size is a discrete event; it is either below or it is not. As with a lottery, it is only a matter of time before a hash is found, and the previous hash is independent of the current attempt. Statistically, this is a *Poisson* distribution. 
 
-> <img width="800" alt="Block Time Poisson" src="[https://github.com/millecodex/COMP842/assets/39792005/676c6c14-d4e4-494e-b475-167c12b69c11](https://github.com/millecodex/COMP842/assets/39792005/e8c6651b-a33d-4371-9168-375721807172)">\
-> Figure: Block Time Poisson
-
-From the graph, you can see it's possible to find a block immediately after the last one, but unlikely. Similarly, it's possible that no block could be found for an hour or two, but unlikely. In practice, the average block time is just under ten minutes because as more miners join the network it is easier overall to find blocks, until the difficulty is reset. Block time is a design consideration; Ethereum adds a block approximately every 15 seconds.
-
+> <img width="800" alt="Block Time Poisson" src="https://github.com/millecodex/COMP842/assets/39792005/e8c6651b-a33d-4371-9168-375721807172">\
+> Figure: From the graph, you can see it's possible to find a block immediately after the last one, but unlikely. Similarly, it's possible that no block could be found for an hour or two, but also unlikely. In practice, the average block time is just under ten minutes because as more miners join the network it is easier overall to find blocks, until the difficulty is reset. Block time is a design consideration; PoW Ethereum adds a block approximately every 15 seconds.
 
 
 ## PoW Vulnerabilities
