@@ -210,6 +210,7 @@ Consensus is the process of networks coming to agreement when new information is
 
 # Readings
 * SoK (Systemization of Knowledge) from 2015 by the authors of the Princeton Textbook. An oldie but goodie. [(pdf)](https://github.com/millecodex/COMP842/blob/master/papers/SoK_Research_Perspectives_and_Challenges_for_Bitcoin_and_Cryptocurrencies.pdf)
+* The ‘Skull of Satoshi’ Proves Bitcoin Mining Discourse Isn’t Dead - [Coindesk](https://www.coindesk.com/consensus-magazine/2023/03/27/the-skull-of-satoshi-proves-bitcoin-mining-discourse-isnt-dead/)
 
 # Next Lecture
 * :point_right: [Proof-of-Stake Consensus](4-consensus-pos.md)
