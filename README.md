@@ -1,4 +1,5 @@
-![GitHub](https://img.shields.io/github/license/millecodex/COMP726)
+![GitHub](https://img.shields.io/github/license/millecodex/COMP726) ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/millecodex/comp726)
+
 
 
 ## COMP726 - Blockchain and Cryptocurrency Technology
