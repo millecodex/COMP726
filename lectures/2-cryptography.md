@@ -69,7 +69,7 @@ $$
 
 In more manageable scientific notation this is about $1.16\times 10^{77}$. So the number of possible hashes that SHA256 can output is very large[^atoms]. To manipulate some data to find a collision you would have vary the input, run it through the hash function, and check the outupt against your target. If you only had 16 possible outputs, this would be fast. But with $10^{77}$ its impossible in practice.
 
-[^atoms]: A somewhat close comparison is the estimated number of atoms in the universe at about $10^{80}$. There are 1000 times more atoms than potential hashes. This is comforting. 
+[^atoms]: A somewhat close comparison is the estimated number of atoms in the universe at about 10^80. There are 1000 times more atoms than potential hashes. This is comforting. 
 
 Hashing is sometimes referred to as a one-way function. This is in the mathematical sense that it is easy to follow the algorithm and create a hash using some input string, but hard to start with the string and determine the data. You cannot go backwards. This property gives rise to verification. If someone sends you a hash, you can easily run your own computation to verify that the message used to produce the hash is authentic. 
 
@@ -134,14 +134,14 @@ These tools do not, however, allow us to communicate privately.
 The *Diffie-Hellman (& Merkle) key exchange* algorithm was devised so that two parties could use insecure communication channels to determine a common secret key (Diffie, 1976).
 
 This algorithm starts with two public values that are pre-computed, a large prime number $p$ and an integer value $a$ with $1 < a < p$ for which:
-$a, \quad a^2\mbox{ mod }p,\quad a^3\mbox{ mod }p,\quad \dots,\quad a^{p-1}\mbox{ mod }p$ are all distinct (yield a permutation of ${1,2,3,\dots, p-1}$)[^1]. If this is the case $a$ is called a *primitive root* of $p$.
+$a, \quad a^2\mbox{ mod }p,\quad a^3\mbox{ mod }p,\quad \dots,\quad a^{p-1}\mbox{ mod }p$ are all distinct (yield a permutation of ${1,2,3,\dots, p-1}$)[^mod]. If this is the case $a$ is called a *primitive root* of $p$.
 
 Once a primitive root $a$ of a prime $p$ has been found, for any integer $b$ there is a unique power $i < p$ for which 
 $b\mbox{ mod }p=a^i\mbox{ mod }p$
 and $i$ is called the *discrete logarithm* or *index* of $b$ modulo $p$ for the base $a$.
 
 **For example:** taking $p=7$ and $a=2$, determine $a^k\mod p$ for $k=\{1,2,\quad\dots\quad, p-1\}$.
-[^1]: $\mbox{mod}$ is the modulo arithmetic operator.
+[^mod]: mod is the modulo arithmetic operator.
 
 $$
 \begin{align}
@@ -229,7 +229,7 @@ One drawback of this system is that to communicate there has to be some back-and
 The search for a personal key involves finding a one-way function that some insider information can quickly reverse. This is the foundation of public-key cryptography. A user has a key that they can share and use to encrypt messages, called the public-key. They also have a *trapdoor* into that one-way function to decrypt messages, called the private-key. Sometimes the term *backdoor* is used to indicate insider access unknown to users. This is different from a trapdoor as it introduces a deliberate weakness into the cryptosystem, whereas a trapdoor is simply information that is easy to compute one-way.
 
 ### RSA
-In 1977, Ron Rivest came up with a scheme to deliver exactly this: a key-pair system that allows universal encryption with some additional information to allow the owner (and only that owner) to decrypt messages. Rivest and his colleagues Adi Shamir and Leonard Adleman's system is simply referred to eponymously as RSA encryption (Rivest, 1978). The details will be skipped here, but in brief, RSA uses the properties of large prime numbers to generate encryption keys that are hard to reverse engineer. It is easy to multiply two prime numbers and calculate the output (semi-prime), but given a large semi-prime it is much more difficult to determine the two factors. 
+In 1977, Ron Rivest came up with a scheme to deliver exactly this: a key-pair system that allows universal encryption with some additional information to allow the owner (and only that owner) to decrypt messages. Rivest and his colleagues Adi Shamir and Leonard Adleman's system is simply referred to eponymously as RSA encryption (Rivest, 1978). The details will be skipped here, but in brief, RSA uses the properties of large prime numbers to generate encryption keys that are hard to reverse engineer. It is easy to multiply two prime numbers and calculate the output (semi-prime), but given a large semi-prime it is much more difficult to determine the two prime factors. 
 
 For example, veryify that:
 
@@ -240,16 +240,17 @@ $$
 Now, given a roughly equivallent number, $1961$, find the factors such that $xy=1961$ where $x$ and $y$ are prime.
 
 ### Elliptic Curve Cryptography
-Due to progress in calculating prime factorizations RSA public keys need to be at least 1024 bits to provide adequate security. *Elliptic Curve Cryptography* (ECC) is a promising alternative to RSA for public-key encryption, allowing a much shorter key to be used with far less computational overhead, yet providing the same level of security as RSA against a cryptanalysis attack.
+Due to progress in calculating prime factorizations such as the [quadratic sieve](https://en.wikipedia.org/wiki/Quadratic_sieve), RSA public keys need to be at least 1024 bits to provide adequate security. *Elliptic Curve Cryptography* (ECC) is a promising alternative to RSA for public-key encryption, allowing a much shorter key to be used with far less computational overhead, yet providing the same level of security as RSA against a cryptanalysis attack.
 
-For instance, in order to provide roughly the same level of security as a 128-bit AES[^4] key, RSA requires a 3072-bit key, which places a computational burden on any devices using RSA. Worse still, to be equivalent to a 256-bit AES key, RSA requires a 15360-bit key, which is infeasible on devices with limited power and computation such as mobile phones. ECC however requires just double the number of bits than an AES key, making it particularly attractive for public-key encryption on limited devices. It has begun to challenge RSA and Diffie-Hellman key exchange as the preferred public-key cryptographic algorithm, since the difficulty of cryptanalysis against ECC gets harder for longer keys much faster than for either RSA or Diffie-Hellman (Stallings, 2017).
+For instance, in order to provide roughly the same level of security as a 128-bit [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)[^AES] key, RSA requires a 3072-bit key, which places a computational burden on any devices using RSA. Worse still, to be equivalent to a 256-bit AES key, RSA requires a 15360-bit key, which is infeasible on devices with limited power and computation such as mobile phones. ECC however requires just double the number of bits than an AES key, making it particularly attractive for public-key encryption on limited devices. It has begun to challenge RSA and Diffie-Hellman key exchange as the preferred public-key cryptographic algorithm, since the difficulty of cryptanalysis against ECC gets harder for longer keys much faster than for either RSA or Diffie-Hellman (Stallings, 2017).
 
-[^4]: AES is Advanced Encryption Standard, published by the NIST in 2001.
+[^AES]: AES is Advanced Encryption Standard, published by the NIST in 2001.
 
 > Table: Private key sizes in bits. The rows represent roughly equivallent levels of encryption in terms of computational power required to brute force the keys. 
 
 | AES | RSA   | ECC  |
 |-----|-------|------|
+|symmetric|asymmetric|asymmetric|
 | --- | 512   | 112  |
 | --- | 1024  | 160  |
 | --- | 2048  | 224  |
@@ -274,11 +275,7 @@ Further, if $a=0$ and $b=7$, we get $y^2=(x^3+7)$ taken over a field of primes $
 > <img width="346" alt="Plot of $y^2=(x^3+7)$ over real numbers for visualization only" src="https://github.com/millecodex/COMP842/assets/39792005/341f93cb-e46f-4fcc-9964-45570fde9633">\
 > Figure: Plot of $y^2=(x^3+7)$ over real numbers for visualization only; the same theory applies.
 
-ECC can be utilized for key exchange by making public the chosen field ($p$ or $2^m$), the curve ($a$ and $b$ values in the field), and a generator point $G$ for which there are many multiples $G, 2G, 3G, \dots, nG$ that are all distinct. These distinct multiples are related to the discrete logarithm problem describe above. In this manner the security of an elliptic curve cryptosystem relies on the difficulty in finding the discrete logarithm. This is the method that Bitcoin uses for generating public-private key-pairs; the public part which are used as addresses. Selection of the curve (equation 1) is very important as there may be case-by-case weaknesses. Brown (2010) outlines the standards for curve `secp256k1` that is used by Bitcoin.
-
-
-
-
+ECC can be utilized for key exchange by making public the chosen field ($p$ or $2^m$), the curve ($a$ and $b$ values in the field), and a generator point $G$ for which there are many multiples $G, 2G, 3G, \dots, nG$ that are all distinct. These distinct multiples are related to the discrete logarithm problem describe above. In this manner the security of an elliptic curve cryptosystem relies on the difficulty in finding the discrete logarithm. This is the method that Bitcoin uses for generating public-private key-pairs; the public part which are used as addresses. Selection of the curve (equation above) is very important as there may be case-by-case weaknesses. In this manner cryptosystems get more reliable over time as researchers and adversaries try to find cracks. Brown (2010) outlines the standards for curve `secp256k1` that is used by Bitcoin.
 
 ## Digital Signatures
 A digital signature arises as a consequence of public-key cryptosystems such as RSA & ECC. It allows a user to do three things:
@@ -312,7 +309,7 @@ Digital signatures allow a blockchain user to transfer ownership of a token by v
 # Exercises
 1. Find out what encryption your browser site is using. Now check a different site, do you notice any difference?
 2. SHA256 - Open a terminal window.\
-Windows: `windows key + R`, type `powershell`, press enter. Change where it says `YourString` to your string and paste in[^windows].
+Windows: `windows key + R`, type `powershell`, press enter. Change where it says `YourString` to your message and paste in[^windows].
 ```powershell
 $stringAsStream = [System.IO.MemoryStream]::new()
 $writer = [System.IO.StreamWriter]::new($stringAsStream)
@@ -321,11 +318,12 @@ $writer.Flush()
 $stringAsStream.Position = 0
 Get-FileHash -InputStream $stringAsStream | Select-Object Hash
 ```
-OSX: `Command + Space`, type `Terminal`, press enter. Change where it says `my name is Jeff` to your string and paste in
+OSX: `Command + Space`, type `Terminal`, press enter. Change where it says `my name is Jeff` to your message and paste in
 ```
 echo -n "my name is Jeff" | shasum -a 256
 ```
 3. What is the main mathematical difference between RSA and ECC cryptosystems?
+4. How would you go about finding the prime factorisation of $1961$?
 
 [^windows]: Crazy complicated to do on Windows because they won't natively handle a string, so it has to be converted to a [stream](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.3)
 
