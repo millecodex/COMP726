@@ -133,7 +133,7 @@ These tools do not, however, allow us to communicate privately.
 ### Diffie-Hellman (& Merkle) key exchange
 The *Diffie-Hellman (& Merkle) key exchange* algorithm was devised so that two parties could use insecure communication channels to determine a common secret key (Diffie, 1976).
 
-This algorithm starts with two public values that are pre-computed, a large prime number $p$ and an integer value $a$ with $1 < a < p $  for which:
+This algorithm starts with two public values that are pre-computed, a large prime number $p$ and an integer value $a$ with $1 < a < p$ for which:
 $a, \quad a^2\mbox{ mod }p,\quad a^3\mbox{ mod }p,\quad \dots,\quad a^{p-1}\mbox{ mod }p$ are all distinct (yield a permutation of ${1,2,3,\dots, p-1}$)[^1]. If this is the case $a$ is called a *primitive root* of $p$.
 
 Once a primitive root $a$ of a prime $p$ has been found, for any integer $b$ there is a unique power $i < p$ for which 
@@ -143,34 +143,57 @@ and $i$ is called the *discrete logarithm* or *index* of $b$ modulo $p$ for the 
 **For example:** taking $p=7$ and $a=2$, determine $a^k\mod p$ for $k=\{1,2,\quad\dots\quad, p-1\}$.
 [^1]: $\mbox{mod}$ is the modulo arithmetic operator.
 
-| $2^1$ | $=2\mod7$ | $=2$ | |
-|-------|----------------------|------|---|
-| $2^2$ | $=4\mod7$ | $=4$ | |
-| $2^3$ | $=8\mod7$ | $=1$ | |
-| $2^4$ | $=16\mod7$ | $=\textbf{2}$ | |
-| $2^5$ | $=32\mod7$ | $=\textbf{4}$ | repeated roots means 2 is not a primitive root of 7 |
-| $2^6$ | $=64\mod7$ | $=\textbf{1}$ | |
+$$
+\begin{align}
+2^1= 2\mod7&=2 \\
+2^2= 4\mod7&=4 \\
+2^3= 8\mod7&=1 \\
+2^4=16\mod7&=\textbf{2}*  \\
+2^5=32\mod7&=\textbf{4}*  \\
+2^6=64\mod7&=\textbf{1}* 
+\end{align}
+$$
+
+*Rows 3,4, and 5 have repeated roots: $2,4,1$ which means $2$ is **not** a primitive root of $7$.
 
 Now for $a=3$:
 
-| $3^1$ | $=3\mod7$ | $=3$ | |
-|-------|-----------------------|------|---|
-| $3^2$ | $=9\mod7$ | $=2$ | |
-| $3^3$ | $=27\mod7$ | $=6$ | distinct roots up to $p-1$ means 3 is a primitive root of 7 |
-| $3^4$ | $=81\mod7$ | $=4$ | |
-| $3^5$ | $=243\mod7$ | $=5$ | |
-| $3^6$ | $=729\mod7$ | $=1$ | |
+$$
+\begin{align}
+3^1=  3\mod7&=3 \\
+3^2=  9\mod7&=2  \\
+3^3= 27\mod7&=6   \\
+3^4= 81\mod7&=4  \\
+3^5=243\mod7&=5  \\
+3^6=729\mod7&=1 
+\end{align}
+$$
 
-Thus to find the discrete logarithm of an integer such as $b=1762$ we are looking for the $i$ value in the relation 
-$1762\text{ mod } 7=3^i$
-$1762\text{ mod } 7=5$
-and from row 5 above, $3^5\text{ mod } 7=5$, and so $i=5$.
+These roots are all distinct up to $p-1$, thus $3$ is a primitive root of $7$. *Note* we do **not** know the ordering of roots ${3,2,6,4,5,1}$ until they're computed. 
+
+For example, to find the discrete logarithm of an integer such as $b=1763$ we are looking for $i$ in the relation 
+
+$$
+\begin{align}
+1763\text{ mod } 7&=3^i
+\end{align}
+$$
+
+The left-hand side can be reduced modulo 7: $\frac{1763}{7}=254\frac{6}{7}=6$
+
+$$
+\begin{align}
+1763\text{ mod } 7=6=3^{\color{blue}i}
+\end{align}
+$$
+
+Now we look to the table to find the distinct root $6$ and see it appears in the third row: $3^{\color{blue}3}\text{ mod } 7=6$, and so ${\color{blue}i}=3$.
 
 The security of the Diffie-Hellman key exchange relies on the difficulty of reversing this computation above. Given $b=a^i\mbox{ mod }p$, there is no pattern for relating $b$ to $i$. Stated another way: for any integer, $b$, there is a unique $i$ where $i$ is called the discrete logarithm and is computationally difficult to find.
 
-So how do two people use this to exchange information publicly such that they each end up with a shared secret key that others can not deduce?
+> Q: So how do two people use this to exchange information publicly such that they each end up with a shared secret key that others can not deduce?
 
-Alice and Jeff are going to agree on a large prime, $p$, and a base $a$. These values can be published. Each then selects their own secret number $x < p$. This will act as a private key. Both then calculate $y=a^x\mbox{ mod }p$ which is a quick calculation. After exchanging $y$ values, each can then calculate the same secret key, $k=y^x\mbox{ mod }p$. No secret information has been swapped, and both parties now have a common value, $k$, as a secret key.
+Alice and Jeff are going to agree on a large prime, $p$, and a base $a$. These values can be published. Each then selects their own secret number $x < p$. This will act as a private key. Both then calculate $y=a^x\mod p$ which is a quick calculation. After exchanging $y$ values, each can then calculate the same secret key, $k=y^x\mod p$. No secret information has been swapped, and both parties now have a common value, $k$, as a secret key.
 
 Note that both Alice ($A$) and Jeff ($J$) calculate the same key ($k$):
 
@@ -191,8 +214,15 @@ and a cryptanalyst cannot calculate $k$ without knowing either $x_A$ or $x_J$. O
 
 [^2]: 160 bits is about a 49 digit decimal number, and 1024 bits is a 309 digit decimal number.
 
-One drawback of this system is that to communicate there has to be some back-and-forth between participants to agree on a secret key which can be particularly cumbersome if one participant is offline. If a third person wants to communicate, then a another pair of exchanges must take place. Every pair that needs to communicate needs their own secret key. A group of 40 students in this class requires 780 keys. What if instead each person had their own key and everyone else could use that same key to communicate with them?
+For example, an actual 160 bit prime number:
 
+$$
+p=200516605485365833647237682354398056103622507001
+$$
+
+One drawback of this system is that to communicate there has to be some back-and-forth between participants to agree on a secret key which can be particularly cumbersome if one participant is offline. If a third person wants to communicate, then a another pair of exchanges must take place. Every pair that needs to communicate needs their own secret key. A group of 40 students in this class requires 780 keys[^US]. What if instead each person had their own key and everyone else could use that same key to communicate with them?
+
+[^US]: Key transport was a big problem in World War II. Uboats that were away for months at a time had to have an updated listing of keys to use to communicate with central command back at base. The Germans published key-books tied to a calendar so that subs could determine their key based on the day. Everything is fine as long as a code book doesn't fall into enemy hands.
 
 ## Asymmetric Encryption
 ### Public-Key Cryptography
@@ -201,6 +231,14 @@ The search for a personal key involves finding a one-way function that some insi
 ### RSA
 In 1977, Ron Rivest came up with a scheme to deliver exactly this: a key-pair system that allows universal encryption with some additional information to allow the owner (and only that owner) to decrypt messages. Rivest and his colleagues Adi Shamir and Leonard Adleman's system is simply referred to eponymously as RSA encryption (Rivest, 1978). The details will be skipped here, but in brief, RSA uses the properties of large prime numbers to generate encryption keys that are hard to reverse engineer. It is easy to multiply two prime numbers and calculate the output (semi-prime), but given a large semi-prime it is much more difficult to determine the two factors. 
 
+For example, veryify that:
+
+$$
+(43)(47)=2021
+$$
+
+Now, given a roughly equivallent number, $1961$, find the factors such that $xy=1961$ where $x$ and $y$ are prime.
+
 ### Elliptic Curve Cryptography
 Due to progress in calculating prime factorizations RSA public keys need to be at least 1024 bits to provide adequate security. *Elliptic Curve Cryptography* (ECC) is a promising alternative to RSA for public-key encryption, allowing a much shorter key to be used with far less computational overhead, yet providing the same level of security as RSA against a cryptanalysis attack.
 
@@ -208,6 +246,7 @@ For instance, in order to provide roughly the same level of security as a 128-bi
 
 [^4]: AES is Advanced Encryption Standard, published by the NIST in 2001.
 
+> Table: Private key sizes in bits. The rows represent roughly equivallent levels of encryption in terms of computational power required to brute force the keys. 
 
 | AES | RSA   | ECC  |
 |-----|-------|------|
@@ -221,18 +260,18 @@ For instance, in order to provide roughly the same level of security as a 128-bi
 ### Elliptic Curves
 An *elliptic curve* over a field consists of the set of points $(x,y)$ where $x$ and $y$ are elements of the field that satisfy an equation of the form:
 
-$$y^2 + a_1xy+a_3y = x^3+a_2x^2+a_4x+a_6\,.$$
+$$y^2 + a_1xy+a_3y = x^3+a_2x^2+a_4x+a_6$$
 
 If $a_1=a_2=a_3=0$, this general form can be simplified to:
 
 $$y^2 = x^3+ax+b.$$
 
-Further, if $a=0$ and $b=7$, we get $y^2=(x^3+7)$ taken over a field of primes $\mathbb{Z}_p$ as seen in Antonopoulos (2017). This can be plotted as a series of points similar to Figure 1. Compare to Figure 2 on Page 2 which is plotted over the real numbers. 
+Further, if $a=0$ and $b=7$, we get $y^2=(x^3+7)$ taken over a field of primes $\mathbb{Z}_p$ as seen in Antonopoulos (2017). This can be plotted as a series of points similar to the figure below. Compare to the other figure which is plotted over the real numbers. 
 
-> <img width="346" alt="fieldOfReals" src="https://github.com/millecodex/COMP842/assets/39792005/2bca0a05-c619-4219-9b7c-3b15ada4758e">\
+> <img width="346" alt="Plot of a field of primes up to 17" src="https://github.com/millecodex/COMP842/assets/39792005/2bca0a05-c619-4219-9b7c-3b15ada4758e">\
 > Figure: Plot of a field of primes up to 17 (Antonopoulos, 2017). ECC operates on integers and when plotted appear as distinct points.*
 
-> <img width="346" alt="fieldOfReals" src="https://github.com/millecodex/COMP842/assets/39792005/341f93cb-e46f-4fcc-9964-45570fde9633">\
+> <img width="346" alt="Plot of $y^2=(x^3+7)$ over real numbers for visualization only" src="https://github.com/millecodex/COMP842/assets/39792005/341f93cb-e46f-4fcc-9964-45570fde9633">\
 > Figure: Plot of $y^2=(x^3+7)$ over real numbers for visualization only; the same theory applies.
 
 ECC can be utilized for key exchange by making public the chosen field ($p$ or $2^m$), the curve ($a$ and $b$ values in the field), and a generator point $G$ for which there are many multiples $G, 2G, 3G, \dots, nG$ that are all distinct. These distinct multiples are related to the discrete logarithm problem describe above. In this manner the security of an elliptic curve cryptosystem relies on the difficulty in finding the discrete logarithm. This is the method that Bitcoin uses for generating public-private key-pairs; the public part which are used as addresses. Selection of the curve (equation 1) is very important as there may be case-by-case weaknesses. Brown (2010) outlines the standards for curve `secp256k1` that is used by Bitcoin.
@@ -274,7 +313,7 @@ Digital signatures allow a blockchain user to transfer ownership of a token by v
 1. Find out what encryption your browser site is using. Now check a different site, do you notice any difference?
 2. SHA256 - Open a terminal window.\
 Windows: `windows key + R`, type `powershell`, press enter. Change where it says `YourString` to your string and paste in[^windows].
-```
+```powershell
 $stringAsStream = [System.IO.MemoryStream]::new()
 $writer = [System.IO.StreamWriter]::new($stringAsStream)
 $writer.write("YourString")
@@ -309,5 +348,3 @@ echo -n "my name is Jeff" | shasum -a 256
 8. Rivest, R., Shamir, A., & Adleman, L. 1978. "A Method for Obtaining Digital Signatures and Public-Key Cryptosystems." *Communications of the ACM*. 21(2), 120-126.
 9. Singh, S. 1999. "The Code Book." *Doubleday*.
 10. Stallings, W. 2017. Cryptography and Network Security: Principles and Practice. Pearson.
-
-
