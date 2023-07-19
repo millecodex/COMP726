@@ -41,7 +41,7 @@ Any token that has these properties in addition to being issued by the state is 
 ### Finance
 Finance evolved once systems for credit, debt, and value transfer (cash) gained widespread acceptance. The Medici family in 15th-century Italy revolutionized banking as meticulous money changers who adopted double-entry bookkeeping—where debits were maintained in one column and credits in another. This practice quickly became standard throughout Europe and remains so today (Ferguson, 2008). The concept of recording all account activity in a ledger is a fundamental characteristic of blockchain systems, including Bitcoin.
 
-> <p align="center"><img width="400" alt="Medici Ledger of accounts from 1573" src="https://github.com/millecodex/COMP842/assets/39792005/5a95b958-ddc5-458b-99f3-de6410b8e361"></p>
+> <img width="400" alt="Medici Ledger of accounts from 1573" src="https://github.com/millecodex/COMP842/assets/39792005/5a95b958-ddc5-458b-99f3-de6410b8e361">\
 > Figure: Medici Ledger of accounts from 1573. Source: University of Pennsylvania, OPENN LIbrary.
 
 It’s not just the idea of a permanent ledger that bitcoin borrowed, but rather the motivation to create a system independent of the one pioneered by the Medicis in 15th-century Italy. 
