@@ -18,3 +18,7 @@ Select one that interests you and prepare to give a brief report to the class on
 3. What sets it apart from other chains?
 
 The goal of the exercise to expose you to some of the blockchains and resources available. Through the class reporting and discussion you will be introduced to blockchain specific language and terminology that will be explored in more detail throughout the semester. You do not have to make any decisions about your project at this stage.
+
+## Notes
+> Here are the notes from the session on 19/7/2023:\
+> <img src="https://github.com/millecodex/COMP726/assets/39792005/1be93733-1aa3-41c4-8c70-5bd42fb5a82f" alt="Tutorial 1 Notes from in-class session" width="1000" >
