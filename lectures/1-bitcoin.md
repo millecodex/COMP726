@@ -202,3 +202,6 @@ What began as an experiment has bootstrapped an entire financial system with glo
 9. Nakamoto, S. 2008. *Bitcoin: A Peer-to-Peer Electronic Cash System*. [(pdf)](https://bitcoin.org/bitcoin.pdf)
 10. Narayanan, A., Bonneau, J., Felten, E., Miller, A., & Goldfeder, S. 2016. *Bitcoin and Cryptocurrency Technologies: A Comprehensive Introduction*. Princeton University Press. [(pdf)](https://d28rh4a8wq0iu5.cloudfront.net/bitcointech/readings/princeton_bitcoin_book.pdf)
 11. Wood, G. 2014. *Ethereum: A Secure Decentralised Generalised Transaction Ledger*. Yellow Paper. [(pdf)](https://ethereum.github.io/yellowpaper/paper.pdf)
+
+# Video Lecture
+Here's this lecture recorded live July 17, 2023 on [YouTube]().
