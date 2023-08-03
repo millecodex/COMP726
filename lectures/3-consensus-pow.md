@@ -4,7 +4,6 @@
 1. [Introduction](#introduction)
 2. [Byzantine Fault Tolerance](#byzantine-fault-tolerance)
 3. [The Double-Spend Problem](#the-double-spend-problem)
-4. [Proof-of-Work](#proof-of-work)
 5. [Mining](#mining)
 6. [PoW Vulnerabilities](#pow-vulnerabilities)
 7. [Incentives - Why Participate in the Network?](#incentives---why-participate-in-the-network)
@@ -64,7 +63,7 @@ In their paper *Reaching Agreement in the Presence of Faults*, Pease (1980) show
 
 Early work to overcome **Byzantine Fault Tolerance** (BFT) was either too inefficient or could not allow for messages to be delayed for arbitrary lengths of time. The landmark result by Fischer (1985) concludes that agreement among processors in which at least one is faulty is impossible without some form of timing assumptions such as a message timeout. This is because it is impossible to know if a message has been delayed indefinitely (it may never arrive). The difference between a slow node and a crashed node is difficult to detect.
 
-**Note here about the part-time parliament**
+<!-- Note here about the part-time parliament -->
 
 A decentralized blockchain application has many nodes in the network and each of them has a copy of the blockchain. If Bob wants to send Alice his tokens, the nodes in the network must first agree that Bob has available tokens to spend, and then update the state before Bob can double-spend his tokens. The network needs to be in a state of *consensus* for people to trust it. Consensus in the Byzantine Generals problem has been proven to be impossible if more than a third of the nodes are malicious (Fischer, 1985).
 
@@ -93,12 +92,14 @@ And what about Eve changing history? She would have to alter the block where the
 ### ⛓️
 Regarding Bitcoin nodes coming to agreement, it does not exactly mirror the model of the Byzantine Generals and so is not impossible to reach consensus. In other words, Bitcoin does achieve consensus despite Byzantine behaviour. More practically, Bitcoin achieves a state of *emergent* consensus. This means that over time as blocks get added to the chain, a general state emerges that everyone agrees on. Here we have a new method of distributed consensus, now known as emergent consensus, or eponymously as Nakamoto consensus. 
 
-The absolute revolutionary contribution of Nakamoto was to use Proof-of-Work (next) to secure the ledger against double-spending attacks. Participants are insured against their coins being spent twice by the emergent property of the longest chain. If there is only ever a single chain, it will be the longest and represent the most proof-of-work and be the canonical state of the blockchain. As more blocks are added to the chain there is an exponential decrease in the probability of a block being rejected by other nodes. This is the method that secures the blockchain against malicious nodes attempting to double spend. Nakamoto consensus resolves forks in the chain by allowing both branches to remain active (alive) until there is a clear longest chain. At this point the shorter branch will be orphaned and any outstanding transactions need to be reprocessed and may have been superseded by others paying higher fees. This is the general process by which all proofing-style blockchains maintain consensus.
+The _**absolute revolutionary**_[^revolution] contribution of Nakamoto was to use Proof-of-Work (next) to secure the ledger against double-spending attacks. Participants are insured against their coins being spent twice by the emergent property of the longest chain. If there is only ever a single chain, it will be the longest and represent the most proof-of-work and be the canonical state of the blockchain. As more blocks are added to the chain there is an exponential decrease in the probability of a block being rejected by other nodes. This is the method that secures the blockchain against malicious nodes attempting to double spend. Nakamoto consensus resolves forks in the chain by allowing both branches to remain active (alive) until there is a clear longest chain. At this point the shorter branch will be orphaned and any outstanding transactions need to be reprocessed and may have been superseded by others paying higher fees. This is the general process by which all proofing-style blockchains maintain consensus.
+
+[^revolution]: Emphasis is mine. Not to be understated. Even though many parts of Bitcoin were around before Satoshi, such as ECC key pairing, spam reduction by proof of work, open source software, p2p networks, and so on, this was the component to both incentive honest behaviour and prevent digital double spending 🔥🔥🔥
 
 ## Mining
 Referring back to the Figure, who gets to propose these blocks and earn the block reward? How do we ensure the distribution is fair Random? How are Sybil attacks prevented?
 
-> <img width="800" alt="A state diagram for a distributed blockchain showing the hashing competition for the process of generating new blocks and updating the chain." src="https://github.com/millecodex/COMP842/assets/39792005/59aeb48c-3bcf-4a23-834e-ddab3de2c444">\
+> <img width="800" alt="A state diagram for a distributed blockchain showing the hashing competition for the process of generating new blocks and updating the chain." src="https://github.com/millecodex/COMP842/assets/39792005/ce672191-be4a-439e-8c12-af60acccf5b2">\
 > Figure: A state diagram for a distributed blockchain showing the hashing competition for the process of generating new blocks and updating the chain.
 
 A miner is a network participant that contributes their computing power in a demonstrable way. A fair way to allocate the incentives would be by some resource that can not be gamed or monopolized. One such way is by computing power as proposed by Dwork and Naor in 1993 in relation to email spam, and refined by Back with Hashcash in 2002 for digital currency. Bitcoin miners participate by using their hardware to validate transactions and suggest new blocks. For this effort they receive rewards in proportion of their contribution to the network as a whole. A fair way to determine effort used by the miners is to have them search for a particular hash that meets a target. Bitcoin uses the `SHA256` hashing algorithm as the hash ~~puzzles~~ competition[^hashing] that miners have to win.
@@ -184,12 +185,18 @@ Here is an important distinction where Bitcoin varies from other methods of reac
 The economics of creating a new currency are tricky. There are many problems to consider such as: how is the money distributed? How much is there? How will the supply change over time? Bitcoin deviates from the textbook answers to these questions by setting a fixed upper limit on the number of bitcoin that will ever be produced in addition to a mathematical supply schedule.
 
 ### Fixed Supply
-The fixed upper limit is set at 21 million bitcoin and is an aribtrary constant; as long as the money is divisible the unit amount does not matter. Bitcoin is divisible into 8 decimal places, so the smallest unit, a *satoshi*, is `0.000 000 01` BTC. Divisibility is a benefit of digital money as settlement of small amounts can be handled if fees are cheap enough. (For example, can you send 0.1 cents to someone in New Zealand dollars?)
+The fixed upper limit is set at 21 million[^rounding] bitcoin and is an aribtrary constant; as long as the money is divisible the unit amount does not matter[^fixed]. Bitcoin is divisible into 8 decimal places, so the smallest unit, a *satoshi*, is `0.000 000 01` BTC. Divisibility is a benefit of digital money as settlement of small amounts can be handled if fees are cheap enough. (For example, can you send 0.1 cents to someone in New Zealand dollars?)
+[^rounding]: Due to rounding, this calculation comes out to slightly less than 21 million, see Exercises, also Antonopolous.
+[^fixed]: Some economists may have a different opinion. See [What is the money supply?](https://www.econlib.org/library/Enc/MoneySupply.html). Most of these types of economists do not believe in Bitcoin. Thankfully, this is not an economics course!
 
-Bitcoin's supply schedule is unique because its known in advance how many new coins are going to be produced and available to the market. Every 210,000 blocks (≈ four years) there is a halving event and the next block found is only allowed to pay out half the bitcoins. This defines a finite money supply. If you run the clock forward, assuming a new block is added every ten minutes, there will be no new bitcoins minted after the year 2140 (not a typo!)[^lastcoin].
-[^lastcoin]: The last whole bitcoin will start to be mined in about 2100 with the final few satoshis being rewarded forty years later.
+> <img width="800" alt="bitcoin supply showing the block reward decrease. Note the y-axis is a logarithmic scale." src="https://github.com/millecodex/COMP842/assets/39792005/0462d774-f34e-46ce-b70f-fdf4e045e398">\
+> Figure: Chart showing the block reward decrease. Note the y-axis is a logarithmic scale.
 
-<p align="center"><img width="800" alt="bitcoin_supply" src="https://user-images.githubusercontent.com/39792005/147862906-6537e8d0-aa4d-403d-825b-aefd1e31585a.png"></p>
+Bitcoin's supply schedule is unique because its known in advance how many new coins are going to be produced and available to the market. Every 210,000 blocks ($\approx$ four years) there is a halving event and the next block found is only allowed to pay out half the bitcoins. This defines a finite money supply. If you run the clock forward, assuming a new block is added every ten minutes, there will be no new bitcoin minted after the year 2140 (not a typo!)[^lastcoin].
+[^lastcoin]: The last whole bitcoin will start to be mined in about 2100 with the final few satoshis being rewarded _forty_ years later.
+
+> <img width="800" alt="Chart showing the mining reward decreasing geometric series overlaid with the total supply of bitcoin." src="https://user-images.githubusercontent.com/39792005/147862906-6537e8d0-aa4d-403d-825b-aefd1e31585a.png">\
+> Figure: Chart showing the mining reward decreasing geometric series overlaid with the total supply of bitcoin. 
 
 The [CoinGecko chart](https://www.coingecko.com/en/explain/bitcoin_halving) shows bitcoin's total supply approaching 21 million (green) and the blockreward being cut in half every four years (red). After the final fraction of a bitcoin is mined the network will be incentivised entirely from transaction fees being awarded to the miners. 
 
@@ -197,16 +204,19 @@ The [CoinGecko chart](https://www.coingecko.com/en/explain/bitcoin_halving) show
 The second incentive is from transaction fees. By listening to the network, validating transactions, and including them in a block, whoever is operating the node can choose to include transactions that offer an extra fee. Because bitcoin itself is designed to be digital money, this makes perfect sense and is why cryptocurrency is considered the killer app for blockchain. 
 
 # Summary
-Consensus is the process of networks coming to agreement when new information is introduced and requires processing. Distributed consensus in computing networks requires an algorithm to decide who updates the network? and how to come to agreement? A common algorithm in distributed systems is PBFT - Practical Byzantine Fault Tolerance, which can tolerate up to $\frac{1}{3}$ of the nodes to be malicious or unresponsive. Blockchains are a hyper-decentralised version of a distributed system and some of the consensus algorithms are based on PBFT (more one this next lecture), but the primary method that maintains Bitcoin and until September 2022 maintained Ethereum was Proof-of-work computing. PoW consensus uses the random non-deterministic nature of hash functions to allocate incentives for nodes to maintain a longest-chain of blocks representing the state of the ledger.
+Consensus is the process of networks coming to agreement when new information is introduced and requires processing. Distributed consensus in computing networks requires an algorithm to decide who updates the network? and how to come to agreement? A common algorithm in distributed systems is PBFT - Practical Byzantine Fault Tolerance, which can tolerate up to $\frac{1}{3}$ of the nodes to be malicious or unresponsive. Blockchains are a hyper-decentralised version of a distributed system and some of the consensus algorithms are based on PBFT (more one this next lecture), but the primary method that maintains Bitcoin and until September 2022 maintained Ethereum was Proof-of-work computing. 
+
+PoW consensus uses the random non-deterministic nature of hash functions to allocate incentives for nodes to maintain a longest-chain of blocks representing the state of the ledger. The nodes are all agreeing that this chain represents the most cumulative computational effort via hashing. It is quick to validate the proof of work because the nonce for every block is published. As soon as a miner learns of a new block, they will abandon shorter chains to compete to build on the longer one to win the block reward. The transactions in this chain will have an increasing probability of being accepted over time as new blocks are mined on top of them. 
 
 # What did we miss?
-* We have not discuss alternate consensus mechanisms such as Proof-of-Stake that Ethereum uses
-* We have not mentioned a lot about forking behaviour in consensus
+* We have not discuss alternate consensus mechanisms such as Proof-of-Stake that Ethereum uses.
+* We have not mentioned a lot about forking behaviour in consensus, or other particular details such as sybil resistance mechanicsms. More on this next lecture.
 
 # Exercises
 1. How does the Proof-of-Work consensus algorithm address the potential issue of Sybil attacks in a blockchain network?
 2. In the context of the 'longest chain' rule, can you describe a scenario where a malicious miner with substantial computational power attempts to create an alternate chain in the network? How does the system maintain its integrity in such a situation?
 3. Explain the balance required for a fees-based network. What happens when fees get (a) too high? (b) too low?
+4. Write a script to calculate the total number of bitcoin that will ever be mined. How many halvings will there be?
 
 # Readings
 * SoK (Systemization of Knowledge) from 2015 by the authors of the Princeton Textbook. An oldie but goodie. [(pdf)](https://github.com/millecodex/COMP842/blob/master/papers/SoK_Research_Perspectives_and_Challenges_for_Bitcoin_and_Cryptocurrencies.pdf)
@@ -214,6 +224,9 @@ Consensus is the process of networks coming to agreement when new information is
 
 # Next Lecture
 * :point_right: [Proof-of-Stake Consensus](4-consensus-pos.md)
+
+# Video Lecture
+Here's this lecture recorded live August 01, 2023 on [YouTube](https://www.youtube.com/watch?v=LOGQ7C83tDc).
 
 # References
 1. Baran, P. 1964. On distributed communications: I. introduction to distributed communications networks. Santa Monica, CA: RAND Corporation. https://www.rand.org/pubs/research_memoranda/RM3420.html
