@@ -147,7 +147,7 @@ Understanding consensus mechanisms in blockchain technology is crucial for build
 # Readings
 * PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake ([pdf](./papers/peercoin-paper.pdf))
 * Ethereum's Whitepaper ([2014 pdf, historical](https://ethereum.org/669c9e2e2027310b6b3cdce6e1c52962/Ethereum_Whitepaper_-_Buterin_2014.pdf), current: https://ethereum.org/en/whitepaper/)
-* Tendermint: Consensus without Mining ([pdf](./papers/tendermint.pdf))
+* Tendermint: Consensus without Mining ([pdf](https://github.com/millecodex/COMP842/blob/master/papers/tendermint.pdf))
 
 # Resources
 * Watch Lera Nikolaenko (a16z crypto research partner, super smart) given you the deep dive into Proof of Stake blockchains ([Youtube](https://www.youtube.com/watch?v=mZ-Ya7NRDxM))
