@@ -28,9 +28,9 @@ If your network is distributing rewards such as a coinbase then its imperative t
 Shortly after Bitcoin started people were looking at alternate ways to achieve decentralised consensus by varying the rewards, hashing mechanism, and mechanics of winning a block to append to the chain. One of the primary criticisms of Bitcoin is the mining aspect which seems to incentise more and more miners and specialized hardware coming online just to try and win the block reward.
 
 > "Proof-of-work helped to give birth to Nakamoto’s major breakthrough, however the nature of proof-of-work means that the crypto-currency is dependent on energy consumption, thus introducing significant cost overhead in the operation of such networks, which is borne by the users via a combination of inflation and transaction fees."\
-> 👉 Sunny King, Scott Nadal, [PPCoin Whitepaper](./papers/peercoin-paper.pdf), August 2012.
+> 👉 Sunny King, Scott Nadal, [PPCoin Whitepaper](https://github.com/millecodex/COMP842/blob/master/papers/peercoin-paper.pdf), August 2012.
 
-First outlined by King and Nadal, they suggested a mechanism where users put up a stake of their coins to validate transactions and earn rewards proportional to their stake in the network. The [Peercoin](peercoin.net) design still uses a proof-of-work hash system for users to earn the block proposing right by lottery (in combination with a property called *coin age* $=$ days $\times$ stake), but it is in a limited capacity. In this case, seniority wins and allows for minting rewards based on the amount of coins being held and the length of time they've been inactive. The network can be classified as a hybrid PoW/PoS system.
+First outlined by King and Nadal, they suggested a mechanism where users put up a stake of their coins to validate transactions and earn rewards proportional to their stake in the network. The [Peercoin](https://www.peercoin.net/) design still uses a proof-of-work hash system for users to earn the block proposing right by lottery (in combination with a property called *coin age* $=$ days $\times$ stake), but it is in a limited capacity. In this case, seniority wins and allows for minting rewards based on the amount of coins being held and the length of time they've been inactive. The network can be classified as a hybrid PoW/PoS system.
 
 2014 saw a bloom of research and projects into proof-of-staking style blockchain systems. A proof-of-stake-only system will use staking both for network security and for minting of new tokens. 
 * Nxt, a "100% proof-of-stake cryptocurrency", is released in late 2013 with a whitepaper in 2014
@@ -137,7 +137,7 @@ If safety and liveness are met the network can continue to operate with some gua
 Understanding consensus mechanisms in blockchain technology is crucial for building robust and decentralized systems. Proof of work style chains rely on a longest-chain rule for resolving network partitions (forks) while proof of stake style chains ues a mix of longest-chain, or committee-based voting styles. The work in proof of work is used to disincentivise bots from subverting the blockchain while locked stake can be subject to slashing in a PoS blockchain.
 
 # What did we miss?
-* We skipped a lot of the computer science details on how consensus methods work such as leader selection, transaction finality, timing assumptions, & fault tolerance guarantees.
+* We skipped a lot of the computer science details on how consensus methods work such as leader selection, transaction finality, timing assumptions, safety, liveness, and fault tolerance guarantees.
 * We have yet to get into the security element of blockchains in which we'll cover topics such as: 51%, sybil, nothing-at-stake, grinding, long-range, DDoS, ....
 
 # Exercises
@@ -159,3 +159,4 @@ Understanding consensus mechanisms in blockchain technology is crucial for build
 1. Blocki, J. & Zhou, H.-S. (2016). Designing proof of human-work puzzles for cryptocurrency and beyond. In Theory of cryptography (pp. 517–546). Springer Berlin Heidelberg. [PDF](https://eprint.iacr.org/2016/145.pdf). [DOI](https://doi.org/10.1007/978-3-662-53644-5_20).
 2. Bouraga, S. (2021). A taxonomy of blockchain consensus protocols: A survey and classification framework. *Expert Systems with Applications*, 168, 114384. [DOI](https://doi.org/10.1016/j.eswa.2020.114384)
 3. Nijsse, J. & Litchfield, A. (2020). A taxonomy of blockchain consensus methods. Cryptography, 4, 1-15. [DOI](https://doi.org/10.3390/cryptography4040032)
+
