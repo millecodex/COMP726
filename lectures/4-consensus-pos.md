@@ -130,9 +130,8 @@ A blockchain is a distributed architecture that maintains a totally ordered list
      
 If safety and liveness are met the network can continue to operate with some guarantee that it will maintain a source of truth. If the network is also sybil resistant, then it can be said the blockchain is Byzantine fault tolerant. (Recall from last lecture Byzantine behaviour is malicious behaviour by a node.)
 
-The figure summarizes these properties: 
-![image](https://github.com/millecodex/COMP842/assets/39792005/2b1f994c-0d64-4433-a178-2a2f56c418fa)
-
+> <img width="800" alt="" src="https://github.com/millecodex/COMP842/assets/39792005/4c72c5b3-d228-44dd-ba06-67e3b7eb6126">\
+> Figure: A blockchain must provide Sybil resistance against an attacker creating multiple identities, and a fork-choice rule that allows for multiple nodes to agree on the canonical chain.
 
 ## Summary
 Understanding consensus mechanisms in blockchain technology is crucial for building robust and decentralized systems. Proof of work style chains rely on a longest-chain rule for resolving network partitions (forks) while proof of stake style chains ues a mix of longest-chain, or committee-based voting styles. The work in proof of work is used to disincentivise bots from subverting the blockchain while locked stake can be subject to slashing in a PoS blockchain.
