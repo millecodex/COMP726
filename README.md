@@ -22,7 +22,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 2. [Cryptography](lectures/2-cryptography.md)
 3. [Consensus Part I: Proof of Work](lectures/3-consensus-pow.md)
 4. [Consensus Part II: Proof of Stake & Alternatives](lectures/4-consensus-pos.md)
-5. Scaling
+5. [Scaling](lectures/4-scaling.md)
 6. Wallets & Tokens
 7. Ethereum 
 8. Privacy
