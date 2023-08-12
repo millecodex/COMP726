@@ -155,6 +155,9 @@ Understanding consensus mechanisms in blockchain technology is crucial for build
 # Next Lecture
 * :point_right: [Network Scaling](5-scaling.md)
 
+# Video Lecture
+Here's this lecture recorded live August 08, 2023 on [YouTube](https://www.youtube.com/watch?v=vIMvtkeppaI).
+
 # References
 1. Blocki, J. & Zhou, H.-S. (2016). Designing proof of human-work puzzles for cryptocurrency and beyond. In Theory of cryptography (pp. 517–546). Springer Berlin Heidelberg. [PDF](https://eprint.iacr.org/2016/145.pdf). [DOI](https://doi.org/10.1007/978-3-662-53644-5_20).
 2. Bouraga, S. (2021). A taxonomy of blockchain consensus protocols: A survey and classification framework. *Expert Systems with Applications*, 168, 114384. [DOI](https://doi.org/10.1016/j.eswa.2020.114384)
