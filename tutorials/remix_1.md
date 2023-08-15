@@ -30,17 +30,44 @@ Head to [remix.ethereum.org](https://remix.ethereum.org/) to get started. Find t
 
 Check the plugins tab to make sure LearnEth is in the Active Modules list. Additionally the Solidity compiler needs to be active. See the [docs](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) for more info on how to select a tutorial and get started.
 
-<p align="left"><img width="400" alt="plugin_manager_remix" src="https://user-images.githubusercontent.com/39792005/186283135-fc0d374a-2c34-4ec5-815b-4c50c5fd29c0.PNG"></p>
+<p align="left"><img width="300" alt="plugin_manager_remix" src="https://user-images.githubusercontent.com/39792005/186283135-fc0d374a-2c34-4ec5-815b-4c50c5fd29c0.PNG"></p>
 
 
 ---
 ***error loading: undefined***
-<p align="left"><img width="300" alt="remix_error" src="https://user-images.githubusercontent.com/39792005/186282091-0b5edc91-5fad-4831-99c3-221b895c346b.PNG"></p>
-If you are getting an error try with your laptop and alternately try the links below to a different resource. I have been having an issue using this plugin on the 
-network.
+<p align="left"><img width="200" alt="remix_error" src="https://user-images.githubusercontent.com/39792005/186282091-0b5edc91-5fad-4831-99c3-221b895c346b.PNG"></p>
+If you are getting an error try with your laptop and alternately try the links below to a different resource. I have been having an issue using this plugin on the school network.
 
 ---
-If this tutorial seems too advanced, consider starting with the playlist of videos below or the CryptoZombies game.
+### 1. Load a contract
+From the home page, click on the File Explorer, open the contracts folder, and select 1_Storage.sol.\
+![image](https://github.com/millecodex/COMP726/assets/39792005/da6d9a6b-aee1-4d61-956c-7b08ebdf76ed)
+As it says, this lets you store & retrieve value in a variable.
+
+### 2. Compile the contract
+Click on the compiler tab, its a good idea to click Auto compile, make sure Storage is the selected contract, and click Compile 1_Storage.sol.
+![image](https://github.com/millecodex/COMP726/assets/39792005/ce0a130b-7e34-45d6-a97d-e497345570fb)
+The green check on the left will let you know the contract compiles (and at least has no syntax/coding errors).
+
+### 3. Deploy the contract
+Deploying a contract is the process of sending it to the main chain to be processed by the state machine. This makes it accessible to others that want to use the contract. In this case the deployment will be simulated and not go to any real Ethereum blockchain (main or test).
+Click the deploy tab, have a look at the ENVIRONMENT -- this where the contract will go. In this case its the Remix Virtual Machine that simulated the Shanghai version of Ethereum. Select an account to deploy from; this accounts needs ether to pay gas. Make sure storage is selected and click deploy. 
+![image](https://github.com/millecodex/COMP726/assets/39792005/4b20b245-2371-4b94-9b5c-c9333523a9cf)
+You get a status in the console window, that, when clicked on proved some details including gas cost to deploy this contract.
+![image](https://github.com/millecodex/COMP726/assets/39792005/aeb2294e-e2be-4239-9393-31797a3330c0)
+
+### 4. Call the contract
+To interact with our deployed contract, click > STORAGE AT 0X.... in the bottom left in the Deployed Contracts list. Find the decoded input to see what you have stored.
+![image](https://github.com/millecodex/COMP726/assets/39792005/1e54cbfa-2b45-4329-ac67-1a1eefd01d70)
+
+
+## Exercises
+1. Using remix, modify the Storage.sol contract to store and retrieve a text variable: yourName. How much gas does this use, how does this compare to storing an integer?
+2. Where is a deployed contract stored in Ethereum? Comment on the different gas costs for a) deploying a contract, b) calling a function, and c) storing an address.
+3. Above, where it says STORAGE AT 0X...., what does this mean? Are there differences between someone's Ethereum Address and where your contract is stored?
+4. Open Owner.sol in Remix. What does this contract do? Why would this be required?
+5. What are two development enviornments or tool packages that can help with Ethereum smart contract development (besides Remix)? Choose one of these and setup your local environment to start using it. Include a screenshot showing your dev environment.
+
 
 ## Developer Learning Tools & Resources
 Some links that may be helpful:
@@ -48,7 +75,8 @@ Some links that may be helpful:
 - The whole shebang from FreeCodeCamp - [Web3 Ultimate Course](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 - YouTube tutorial by [Nader Dabit](https://github.com/dabit3/full-stack-ethereum) - [Full-stack ethereum development](https://www.youtube.com/watchv=a0osIaAOFSE&ab_channel=NaderDabit)
 - Still one of the best is [CryptoZombies](https://cryptozombies.io/) - a tutorial for you to build a game similar to [CryptoKitties](https://www.cryptokitties.co/)
-- Jeff has some videos on Remix. (These are over a year old so you may have to set your compiler accordingly.)
+- Official Remix [YouTube Playlist](https://www.youtube.com/@EthereumRemix/videos)
+- Jeff has some videos on Remix. (These are now over 2 years old so beware.)
   - [Playlist on youtube](https://www.youtube.com/watch?v=bqyrRS5AN00&list=PLWdMs73ohrSn2ZnaiOQi-3WpVjKXazUkF)
   - [Remix Part I: deploy an empty contract: helloWorld](https://www.youtube.com/watch?v=bqyrRS5AN00)
   - [Remix Part II: Function Call and visibility](https://www.youtube.com/watch?v=dRZIBw-2DO8)
