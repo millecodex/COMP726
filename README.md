@@ -36,7 +36,7 @@ Tutorial  1 - [Blockchain search and discovery](tutorials/blockchain_search.md)\
 Tutorial  2 - [Python Part I - Block structure, hashing & merkle trees](tutorials/python_blocks.ipynb)📊✔️\
 Tutorial  3 - [Python Part II - Elliptic curve cryptography](tutorials/python_ECC.ipynb)📊✔️\
 Tutorial  4 - <Seminar: with [Base58](https://base58.info/) ⚡> [Python Part III - Proof-of-Work: mining, difficulty, probability](tutorials/python_PoW.ipynb)📊✔️\
-Tutorial  5 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)📊❎\
+Tutorial  5 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)📊✔️\
 Tutorial  6 - [Remix Part II - Metamask & Wallets](tutorials/remix_2.md)📊❎\
 Tutorial  7 - [Two-minute Presentations](tutorials/presentation_checkpoint.md)\
 Tutorial  8 - [NFTs Part I](tutorials/nft_1.md)📊❎\
