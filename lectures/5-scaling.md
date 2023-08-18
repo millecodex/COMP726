@@ -121,9 +121,6 @@ This is different from a state channel where the off-chain transacting happens a
 
 The benefit of using a side chain is that you can have enhanced properties such as faster timing or lower fees and then only settle transactions on the main chain when necessary. The risk is that you are essentially outsourcing some portion of the protocol.
 
-## What did we miss?
-
-## Further Reading - the very short list
-
-## Exercises
+# Video Lecture
+Here's this lecture recorded live August 15, 2023 on [YouTube](https://www.youtube.com/watch?v=1r6_XS8zUZc).
 
