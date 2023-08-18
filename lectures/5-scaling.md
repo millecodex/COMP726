@@ -8,9 +8,6 @@
 4. [Storage](#storage)
 5. [State Channels](#state-channels)
 6. [Side Chains](#side-chains)
-7. [What did we miss?](#what-did-we-miss)
-8. [Further Reading - the very short list](#further-reading---the-very-short-list)
-9. [Exercises](#exercises)
 
 ## Blockchain Stack
 A technology stack is a model to represent the sections and subsections of a complex system. A classic example can be seen in the internet. Underneath the application that we interface with there are many sub-layers to the entire technology. The internet standard defines four layers: application, transport, internet, and link[^1^]. Contrast this with the stack from[^2^] that has five divisions. There is no first-principles based ordering to the stack, and one may have more or fewer layers if sufficient to describe the system. This has been inspired by the OSI model (Open Systems Interconnection, see [link](https://en.wikipedia.org/wiki/OSI_model)).
