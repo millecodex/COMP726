@@ -69,7 +69,7 @@ In MetaMask, the Ethereum mainnet is the default selection. Mainnet Ethereum req
 
 > <img width="299" alt="MM_test_networks" src="https://user-images.githubusercontent.com/39792005/188387547-d54fd7b0-07c4-44e3-b1a1-d3a6ab0bd166.png">
 >
-> Goerli is a fully operational ethereum test network that activated the proof-of-stake merge in August 2022 and should be supported into the merge and subsequent updates.
+> Goerli is a fully operational ethereum test network that activated the proof-of-stake merge in August 2022 and should be supported into the merge and subsequent updates. **Update:** Goerli is deprecated, so you may want to try Sepolia instead.
 
 Back at remix.ethereum.org select the `Deploy` tab and `Injected Provider` environment. MetaMask should open and ask you to connect.
 
@@ -81,13 +81,16 @@ Click `Next` and `Connect`. Remix now shows your MetaMask address `0x99A..C07Ad9
 
 ## Testnet ETH
 We now have access to [Goerli](https://goerli.net/) and an IDE that can compile contracts and send transactions through a wallet. But to do we always need to pay gas fees. Yes, even on testnets, as they must mimic the mainnet as closely as possible. A few options to acquire some goerliETH:
-* go to https://goerlifaucet.com/ and sign up for an Alchemi account and you can access their faucet
-* go to https://goerli-faucet.pk910.de/, enter your address, complete some strange captcha's and mine some. You will have to leave your browser window open for a while
+* go to https://goerlifaucet.com/ and sign up for an Alchemi account and you can access their faucet **Update** this faucet now needs some funds in ETH to access the faucet, about USD$1.80.
+* go to https://goerli-faucet.pk910.de/, enter your address, complete some strange captcha's and mine some. You will have to leave your browser window open for a while; this faucet will end at end of 2023.
 * any other faucets I've investigated aren't working right now because its a busy time due to the merge
 
 Claiming the GoerliETH will *actually* be verified onchain, as opposed to a virtual machine in the browser.
 
 > <img width="267" alt="faucet eth" src="https://user-images.githubusercontent.com/39792005/188402640-bdee8291-827a-45cb-9472-2e03328c8a6b.png">
+
+### Sepolia
+Goerli is deprecated and Sepolia is the primary testnet. Try the sepolia/alchemy faucet here: https://sepoliafaucet.com/
 
 ### Lets use some ETH (finally)
 1. In the `File explorer` tab open the `2_Owner.sol` contract template
