@@ -191,9 +191,11 @@ Check your other account in MetaMask to see.
 > <img width="300" alt="image" src="https://user-images.githubusercontent.com/39792005/188567427-52b4eb18-421e-4c99-aef8-f650e2c2fc83.png">
 
 ## Exercises
-1. If Goerli isn't working for you, try Sepolia.
-2. The `ReceiveEther` contract currently has a balance of zero. Send some ether to this contract.
-3. Why would you want to send ETH to a contract and not to someone's wallet?
-4. Are your gas fees different than mine? Why?
-5. From the section on [security](remix_2.md#security), how much harder is it to guess a 24-word phrase than a 12-word phrase? 
-6. For a (modest) 12-word seed, how long would it take your computer to guess every possible key?
+1. The `ReceiveEther` contract currently has a balance of zero. Send some ether to this contract.
+2. Why would you want to send ETH to a contract and not to someone's wallet?
+3. Are your gas fees different than mine? Why?
+4. From the section on [security](remix_2.md#security), how much harder is it to guess a 24-word phrase than a 12-word phrase? For a (modest) 12-word seed, how long would it take your computer to guess every possible key?
+
+**Choose #5 or #6 as a coding exercise**\
+5. Hierarchical Deterministic (HD) Wallet Creation: Implement a basic Hierarchical Deterministic (HD) Wallet using an existing library. Experiment with creating child keys from a master seed.\
+6. Multisignature (Multisig) Transaction Simulation: Simulate a multisig transaction that requires signatures from at least two out of three parties. You could create three key pairs and write a function that verifies multiple signatures.
