@@ -281,6 +281,5 @@ Sending tokens to any address that you do not control or have the private keys t
 * [The Tokens chapter from *Mastering Ethereum*](https://github.com/ethereumbook/ethereumbook/blob/develop/10tokens.asciidoc)
 
 ## Exercises
-1. a
-2. b
-3. c
+1. Look into the documentation for two wallet providers: MetaMask and TrustWallet, and determine if they use HD key generation.
+2. Reflect on the potential risks and challenges associated with losing private keys in a cryptocurrency system. How do various wallet technologies attempt to mitigate these risks?
