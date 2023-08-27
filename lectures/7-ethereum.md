@@ -132,13 +132,15 @@ The problem is in the `withdraw()` function. In line 17, `call.value()` sends fu
 [^Humiston2018]: Humiston, I. (2018). Attacks and Incidents. In Ethereum Smart Contract Development (pp. 81-94). Apress.
 
 ### Gas
-Computation occurs in the EVM (Ethereum virtual machine) and we will be light on details, but because its a blockchain, all the nodes need to have a copy of the data and verify any updates. This includes running *all* smart contracts and doing *any* calculation. A scenario could arise, either accidentally or maliciously, to halt the network by deploying a contract with an infinite loop:
-```
-int i=1
-while i>0
-  i=i+1
+Computation occurs in the EVM (Ethereum virtual machine) and because its a blockchain, all the nodes need to have a copy of the data and verify any updates. This includes running *all* smart contracts and doing *any* calculation. A scenario could arise, either accidentally or maliciously, to halt the network by deploying a contract with an infinite loop:
+```solidity
+contract InfiniteLoop { 
+  function runOutOfGas() public {
+    while (true) { 
+	jeff++
+} } }
  ```
-The simple code above continually updates the counter because the stop condition of $i$ being less than or equal to $0$ is never met. To avoid this scenario all computation in the EVM needs gas. As a contract is executed gas is consumed and if the contract runs out of the gas then the update fails. All gas is paid in ether (`ETH`) and goes to the nodes that perform the calculations. A follow up question is what if I am wealthy and have enough gas to spam the network in this manner? To prevent this there is a gas limit on all transactions that is calculated based on how busy the network is. The  *London* upgrade to Ethereum changed the way that gas is distributed. Previously the miner would be compensated by receiving the entire gas fee in the transaction. Now, part of this fee is *burned*, and the validator gets the remainder. Burning some ETH offsets the overall issuance.
+The simple code above continually updates the counter because the stop condition of `false` never occurs. To avoid this scenario all computation in the EVM needs gas. As a contract is executed gas is consumed and if the contract runs out of the gas then the update fails. All gas is paid in ether (`ETH`) and goes to the nodes that perform the calculations. A follow up question is what if I am wealthy and have enough gas to spam the network in this manner? To prevent this there is a gas limit on all transactions that is calculated based on how busy the network is. The  *London* upgrade to Ethereum changed the way that gas is distributed. Previously the miner would be compensated by receiving the entire gas fee in the transaction. Now, part of this fee is *burned*, and the validator gets the remainder. Burning some ETH offsets the overall issuance.
 
 
 # Ethereum Architecture
