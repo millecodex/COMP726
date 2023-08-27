@@ -185,7 +185,15 @@ This concept of emulation is shared with the **EVM**, although they serve differ
 > <img width="800" alt="image" src="https://github.com/millecodex/COMP842/assets/39792005/9c3de5ff-de3f-44e9-bbb7-6a80abf43e4d">\
 > Figure: Ethereum EVM shown in the inner box (execution cycle) determines the next state. Source: https://github.com/4c656554/BlockchainIllustrations/ 
 
+When processing a transaction, the EVM takes the following steps:
+1. **State Retrieval**: Before executing the transaction, the EVM retrieves the current state of involved accounts (sender and receiver) from the blockchain's state database.
+2. **Gas Cost Estimation**: The EVM estimates the computational cost of the transaction, measured in 'gas,' to ensure it doesn't exceed the gas limit specified by the sender.
+3. **Nonce Verification**: The EVM checks the nonce of the transaction (a counter that must match the sending account’s current nonce). If it doesn't match, the transaction is invalid.
+4. **Balance Verification**: The EVM checks if the sender's account has sufficient Ether to cover both the value being sent and the gas fees.
+5. **Transaction Execution**: If the transaction is to a contract address, the EVM executes the contract’s code. Inputs are provided through the 'data' field of the transaction, and any output is recorded as a 'logs' event. If it's a value transfer, the EVM updates the state of the sender and receiver accounts.
+6. **State Update**: After successful execution, the EVM updates the world state database (red, immutable, above). The state of the sender’s account is modified to decrease the balance by the total cost (gas used multiplied by gas price), and the receiver’s state is updated accordingly.
 
+In step 5, the actual execution, if the transaction's target is a contract address, the EVM executes the associated smart contract code. The smart contract code is compiled into EVM bytecode, which is a series of opcodes that the EVM understands. This execution takes place in individual nodes and uses the Ethereum world state for reading and writing data. The stack plays an essential role in EVM's computational model. It's a data structure that follows the Last-In, First-Out (LIFO) principle, and is used to store variables temporarily during the execution of opcodes. Operations like `ADD`, `MUL`, `DIV`, etc., typically pop operands off the stack and push the result back onto it. This stack-based execution model allows for deterministic and atomic operations, which is pivotal in maintaining the integrity and consistency of the blockchain state across nodes.
 
 -------------------
 ## Applications
@@ -213,7 +221,6 @@ This list is dominated by DEX activity, so if we [rank](https://dappradar.com/ra
 
 [^caution]: Take these stats with some salt, I haven't looked into dappradar's methodology, and they are only representative as of August, 2023. Generally over the past few years, Maker, Uniswap, Aave, Curve have been relatively stable and popular protocols. 
 
--------------------
 # Characteristics and Quirks
 * Difficulty Bomb: Also known as the "Ice Age," the Ethereum network has a built-in difficulty bomb designed to make mining exponentially more challenging over time. This was originally introduced to motivate the network to transition from Proof of Work (PoW) to Proof of Stake (PoS). It's a fascinating mechanic that's deeply rooted in the network's consensus strategy.
 * The DAO hack was an important event in Ethereum's history. There was a bug, and a lot of money was lost, but then the *immutable* blockchain was rolled back, the community split, now there still exists Ethereum Classic (ETC) and an ongoing question over the decentralised nature of Ethereum. See Laura Shin's book [The Cryptoptians](https://laurashin.com/book/) for an excellent accounting of the events.
@@ -221,8 +228,8 @@ This list is dominated by DEX activity, so if we [rank](https://dappradar.com/ra
 * Uncle Blocks: Unlike other blockchain systems, Ethereum incorporates a mechanism to reward stale blocks, referred to as "uncle" blocks. (Bitcoin calls them orphans.) These are blocks that are valid but not included in the main blockchain. This promotes network security and inclusiveness by providing incentives for miners even if their mined blocks are not included in the main chain.
 
 # What did we miss?
-* MEV
-* zkEVM
+* [MEV](https://ethereum.org/en/developers/docs/mev/)
+* [zkEVM](https://www.alchemy.com/overviews/zkevm)
 
 # Further Reading - the very short list
 * [The Whitepaper by Vitalik Buterin](https://ethereum.org/en/whitepaper/)
@@ -232,7 +239,9 @@ This list is dominated by DEX activity, so if we [rank](https://dappradar.com/ra
 * [Beacon Chain Explained](https://ethos.dev/beacon-chain)
 
 # Exercises
-1. Visit the [EVM playground](https://www.evm.codes/playground?fork=shanghai) to see the stack in operation.
+1. Turing-Completeness of Ethereum. Discuss the implications of Ethereum being Turing-complete in contrast to Bitcoin. What opportunities and challenges does Turing-completeness introduce in the context of blockchain applications? Consider aspects such as computational complexity, attack vectors, and flexibility in contract development.
+2. Initial Coin Offering (ICO) Analysis. Critically examine the ICO model used for Ethereum and compare it with the traditional IPO model. Address questions like: What are the ethical and regulatory considerations? How does the ICO model promote or hinder decentralisation? What are the economic risks associated with the ICO model for investors and the network?
+3. The DAO Hack Look at the Solidity code snippet for donateDAO. Identify and analyse the vulnerabilities present in this smart contract that led to the DAO hack. Propose alternative code or solutions to mitigate such vulnerabilities. It might be helpful to refer to security practices in smart contract development.
 
 # Video Lecture
 To be posted.
