@@ -204,15 +204,15 @@ In step 5, the actual execution, if the transaction's target is a contract addre
 
 The [most used dapps](https://dappradar.com/rankings/protocol/ethereum) on Ethereum in 2023 ranked by Unique active wallets (UaW):
 
-| App            | Category                | UaW (k/30 days) |
+| App            | Category                | UaW (m/30 days) |
 |:-------------  |:-----                   |-------:|
-| Uniswap        |  Decentralised Exchange |    495 |
-| MetaMask Swap  |  Decentralised Exchange |    85 |
-| OpenSea        |  NFT Marketplace        |    81 |
-| Simple FX        |  Decentralised Finance |  80    |
-| Ox Protocol     |Decentralised Exchange| 62 |
+| Stargate      |  Bridge |    1.96 |
+| Lifeform  	|  Decentralized Identification |    1.19 |
+| Galaxe        |  Web3 credential data        |    1.1 |
+| Pankcake Swap	|  Decentralised Finance |  1.02    |
+| Uniswap     	| Decentralised Exchange| 0.722 |
 
-This list is dominated by DEX activity, so if we [rank](https://dappradar.com/rankings/defi?range=24h) by total value locked (TVL)[^caution]:
+Now [ranking](https://dappradar.com/rankings/defi?range=24h) by total value locked (TVL)[^caution]:
 | App            | Category                | TVL ($B) |
 |:-------------  |:-----                   |-------:|
 | Lido            |  Ethereum Staking         |   13.8  |
