@@ -25,7 +25,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 5. [Scaling](lectures/5-scaling.md)
 6. [Wallets & Tokens](lectures/6-wallets.md)
 7. [Ethereum](lectures/7-ethereum.md) 
-8. Privacy
+8. [Privacy](lectures/8-privacy.md)
 9. Security
 10. DeFi
 11. Web3 & 🚀**Seminar**⚡ by [Ryan Johnson-Hunt](https://linktr.ee/ryanjohnsonhunt)
@@ -39,7 +39,7 @@ Tutorial  4 - 🚀**Seminar**⚡ with [Base58](https://base58.info/) & [Python P
 Tutorial  5 - [Remix Part I - Solidity & IDE](tutorials/remix_1.md)📊✔️\
 Tutorial  6 - [Remix Part II - Metamask & Wallets](tutorials/remix_2.md)📊✔️\
 Tutorial  7 - [Two-minute Presentations](tutorials/presentation_checkpoint.md)\
-Tutorial  8 - [NFTs Part I](tutorials/nft_1.md)📊❎\
+Tutorial  8 - [NFTs Part I](tutorials/nft_1.md)📊✔️\
 Tutorial  9 - [IPFS & NFTs Part II](tutorials/nft_2.md)📊❎\
 Tutorial 10 - [Layer Twos: Lightning](tutorials/lightning.md)❎\
 Tutorial 11 - Project Time &/or Seminar\
