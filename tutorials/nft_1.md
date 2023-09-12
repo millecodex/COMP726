@@ -197,6 +197,7 @@ Remember your Alchemy dashboard? It now will register the details. Check that th
 # Exercises
 1. What are some examples of fungible tokens compared to non-fungible tokens that you use that are not blockchain related?
 2. How much gas did you pay to deploy your contract? What are some implications of the gas auction fees model?
+3. Include a link to your contract deployment transaction on https://goerli.etherscan.io/ or similar testnet.
 
 # Sample code
 Files be found [here](https://github.com/millecodex/COMP726/blob/master/my-nft-app/)
