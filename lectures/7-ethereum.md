@@ -246,4 +246,4 @@ Now [ranking](https://dappradar.com/rankings/defi?range=24h) by total value lock
 3. The DAO Hack Look at the Solidity code snippet for donateDAO. Identify and analyse the vulnerabilities present in this smart contract that led to the DAO hack. Propose alternative code or solutions to mitigate such vulnerabilities. It might be helpful to refer to security practices in smart contract development.
 
 # Video Lecture
-To be posted.
+Here's this lecture recorded live August 28, 2023 on [YouTube](https://www.youtube.com/watch?v=bIWsS8o9VAE)
