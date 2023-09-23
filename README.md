@@ -26,7 +26,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 6. [Wallets & Tokens](lectures/6-wallets.md)
 7. [Ethereum](lectures/7-ethereum.md) 
 8. [Privacy](lectures/8-privacy.md)
-9. Security
+9. [Security](lecture/9-security.md)
 10. DeFi
 11. Web3 & 🚀**Seminar**⚡ by [Ryan Johnson-Hunt](https://linktr.ee/ryanjohnsonhunt)
 12. Social Factors
