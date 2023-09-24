@@ -193,10 +193,12 @@ The main practical threat to a single entity controlling the majority of the has
 * There are a number of mining-related attacks; most of which are theoretical for Bitcoin because of its decentralisation and large network hashpower, but could be more practicle for smaller PoW based cryptocurrencies.
 
 # Further Reading - the very short list
-* here
+* Selfish Mining by [decentralizedThoughts](https://decentralizedthoughts.github.io/2020-02-26-selfish-mining/)
 
 # Exercises
-1. To be posted.
+1. How do PoW and PoS mitigate Sybil attacks?
+2. Explain the probabalistic nature of an attacker that has 51% of the network's hashpower. Why are they not guaranteed of double spending?
+3. Mining blocks in secret, or withholding blocks, can be a mining strategy. What is the benefit to the miner for doing this? How is this harmful to the community?
 
 # Resources
 * Watch Micah Warren (math professor) lay out the Bitcoin security hashrate concerns [YouTube](https://www.youtube.com/watch?v=0bUpF0wJrxo)
