@@ -83,6 +83,8 @@ Defenses against Sybil attacks often involve some form of validation that makes 
 ### Routing & Other
 BGP, Alien, and Timejacking highlight some vulnerabilities in routing, and time synchronization across decentralized systems. BGP (Border Gateway Protocol) hijacking involves diverting internet traffic by falsely announcing IP spaces, potentially intercepting or tampering with data. Alien attacks focus on subverting the consensus in blockchain networks by exploiting network delays and out-of-order message delivery. Timejacking manipulates a node's perception of network time, causing discrepancies in block timestamps or transaction validation.
 
+An eclipse attack aims to isolate a target by controlling all the traffic directed at that node. Controlling the information a target gets from the network can then compel the node to be behave in certain ways.
+
 ## 4. Protocol (Consensus) Layer Attacks
 
 | Proof Mechanisms | Transaction Validation | Chain Manipulation   | Mining-Related      |
@@ -123,12 +125,12 @@ In a grinding attack, the attacker increases their probability of being selected
 ## 5. Application Layer Attacks
 
 | User Interface           | Smart Contracts                 | Social  |
-|--------------------------|---------------------------------|----------------------|
-| Phishing                 | Reentrancy                      | Social Engineering   |
-| Multi-Signature          | Front-Running / MEV             | Rug Pull           |
-| Weak Randomness          | Uninitialized Storage Pointers  | Decentralisation   |
-|                           | Integer Overflow/Underflow     | Regulatory Risks    |  
-|                           |Timestamp Dependence            |                        |
+|--------------------------|---------------------------------|--------------------------|
+| Phishing                 | Reentrancy                      | Social Engineering       |
+| Multi-Signature          | Front-Running / MEV             | Rug Pulls                |
+| Weak Randomness          | Uninitialized Storage Pointers  | Decentralisation Risks   |
+|                          | Integer Overflow/Underflow      | Regulatory Risks         |  
+|                          |Timestamp Dependence             |                          |
 
 ### Smart Contracts
 As the industry matures and well known SC exploits are learned from a number of best practices emerge. See the [smart contract security field guide](https://scsfg.io/hackers/) for best practices in smart contract development.
@@ -165,7 +167,7 @@ The problem is in the `withdraw()` function. In line 17, `call.value()` sends fu
 [^Humiston2018]: Humiston, I. (2018). Attacks and Incidents. In Ethereum Smart Contract Development (pp. 81-94). Apress.
 
 #### MEV
-MEV refers to the maximum value that can be extracted from transaction reordering, transaction inclusion, and transaction censorship by validators within a block. Essentially, it quantifies the financial incentives for validators to deviate from the "honest" behavior expected of them. In Ethereum validators have the authority to choose the transactions that will be included in the next block. Because transactions pay fees to validators for their inclusion in a block, validators naturally prioritize transactions offering higher fees. However, the ability to choose transactions and their ordering within a block creates opportunities for MEV.
+Maximum Extractable Value refers to the maximum value that can be extracted from transaction reordering, transaction inclusion, and transaction censorship by validators within a block. Essentially, it quantifies the financial incentives for validators to deviate from the "honest" behavior expected of them. In Ethereum validators have the authority to choose the transactions that will be included in the next block. Because transactions pay fees to validators for their inclusion in a block, validators naturally prioritize transactions offering higher fees. However, the ability to choose transactions and their ordering within a block creates opportunities for MEV.
 
 Validators can strategically reorder transactions to take advantage of arbitrage opportunities or even [front-run](https://hacken.io/discover/front-running/) specific transactions. Front-running involves placing a transaction ahead of another transaction in a block to take advantage of some profitable condition before the latter transaction can be executed. For example, if a trader is about to buy a large amount of a particular token, which is expected to increase the token price, a front-running validator can buy the token first and sell it after the trader's purchase, thereby making a profit.
 
@@ -180,9 +182,12 @@ Outright scams are also prominent as Bitcoin becomes popular and increases in va
 The main practical threat to a single entity controlling the majority of the hashpower is that it will lead to centralization and cause users to abandon the system altogether. Once hashpower gets close to this threshold it is also possible that developers will step in and update the software to limit this behaviour. It is unknown how this will play out in the future. Thus far the bitcoin network has been relatively decentralized, but a few mega mining pools have emerged. There have been some cases of 51% attacks on alternative cryptocurrencies such as Verge, Horizen, and Vertcoin. Smaller cryptocurrencies are more vulnerable to a large mining pool shifting their resources for this purpose. See Case Studies (next).
 
 # Case Studies (🏗️ Under Construction 👷‍♀️)
-* Verge 
-* Horizon
-* Vertcoin
+## Reorgs
+* Ethereum Beacon Chain 2022. "The Ethereum beacon chain experienced a 7-block deep reorg ~2.5h ago." [Source: X](https://twitter.com/koeppelmann/status/1529458000011972610)
+* Here's a list of on-going Ethereum reorgs on [Etherscan](https://etherscan.io/blocks_forked)
+## Double Spends
+* Ethereum Classic (ETC) 2019. A transaction of value 600 ETC in orphaned block 7249357 was double spent representing a 57-block-deep reorg. ([Coinbase post-mortem](https://www.coinbase.com/blog/deep-chain-reorganization-detected-on-ethereum-classic-etc))
+* Horizon (ZEN) 2018. "Between blocks 318165 and 318275, the attacker(s) caused multiple reorganizations of the blockchain, reverting 38 blocks in the longest reorganization. In block 318204 and 318234 the attacker(s) performed double-spend attacks." ([Horizon post-mortem]( https://blog.horizen.io/zencash-statement-on-double-spend-attack/)) 
 
 # What did we miss?
 * There are a number of mining-related attacks; most of which are theoretical for Bitcoin because of its decentralisation and large network hashpower, but could be more practicle for smaller PoW based cryptocurrencies.
@@ -194,8 +199,9 @@ The main practical threat to a single entity controlling the majority of the has
 1. To be posted.
 
 # Resources
+* Watch Micah Warren (math professor) lay out the Bitcoin security hashrate concerns [YouTube](https://www.youtube.com/watch?v=0bUpF0wJrxo)
 * Blockchain Security Vulnerabilities by Hackn https://hackn.gitbook.io/l1-security/
-* Watch Lera Nikolaenko (a16z crypto research partner, super smart) given you the deep dive into Proof of Stake blockchain attacks ([Youtube](https://youtu.be/-uxHoEfxXC4))
+* Watch Lera Nikolaenko (a16z crypto research partner, super smart) given you the deep dive into Proof of Stake blockchain attacks [YouTube](https://youtu.be/-uxHoEfxXC4)
 
 # Video Lecture
 To be posted.
