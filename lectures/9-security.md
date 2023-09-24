@@ -31,9 +31,9 @@ The infrastructure layer involves the hardware components that build up the netw
 
 | Cryptographic       | Transaction Related     |
 |---------------------|-------------------------|
-|    Cryptanalysis    | Double Spending         | 
+|General Cryptanalysis| Double Spending         | 
 |  Hash Collision     | Transaction Malleability | 
-|   Length Extension   | Time-Locked Transaction |
+|   Length Extension  | Time-Locked Transaction |
 
 Cryptanalysis and various cryptographic attacks will not be discussed here as they apply in general and are not specific to blockchain networks.
 
@@ -188,12 +188,13 @@ The main practical threat to a single entity controlling the majority of the has
 * There are a number of mining-related attacks; most of which are theoretical for Bitcoin because of its decentralisation and large network hashpower, but could be more practicle for smaller PoW based cryptocurrencies.
 
 # Further Reading - the very short list
-* Blockchain Security Vulnerabilities by Hackn https://hackn.gitbook.io/l1-security/ 
+* here
 
 # Exercises
 1. To be posted.
 
 # Resources
+* Blockchain Security Vulnerabilities by Hackn https://hackn.gitbook.io/l1-security/
 * Watch Lera Nikolaenko (a16z crypto research partner, super smart) given you the deep dive into Proof of Stake blockchain attacks ([Youtube](https://youtu.be/-uxHoEfxXC4))
 
 # Video Lecture
