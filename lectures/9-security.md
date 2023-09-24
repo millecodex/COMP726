@@ -110,7 +110,7 @@ An adversary doesn't necessarily need 51% of the hash power, but with a large nu
 [^eyal]: Eyal, I., & Sirer, E. G. (2014). Majority is not enough: Bitcoin mining is vulnerable.
 
 ### Nothing at Stake
-Given a fork in a proof of stake system, the user is incentivized to build on every branch. In a proof of work system, the user has a finite amount of hashpower that is most profitable if used to build on the main chain. This constraint is gone in a pure proof of stake system as the user can bid for blocks on any and all branches. The probability of finding a block remains constant. Here, the blockchain may never reach consensus as everyone is scrambling to build blocks rather than maintain the longest chain (BitFury, 2015).
+Given a fork in a proof of stake system, the user is incentivized to build on every branch. In a proof of work system, the user has a finite amount of hashpower that is most profitable if used to build on the main chain. This constraint is gone in a pure proof of stake system as the user can bid for blocks on any and all branches. The probability of finding a block remains constant. Here, the blockchain may never reach consensus as everyone is scrambling to build blocks rather than maintain the longest chain.
 
 A simple solution is to penalize someone who publishes blocks on multiple branches. This is known as slashing and acts as a disincentive to build on non-consensus chains.
 
@@ -120,7 +120,7 @@ A Long Range attack involves rebuilding a blockchain from scratch with the inten
 In the short term, an attacker can attempt a double-spend by incentivizing participants to build on an orphaned chain as soon as a malicious transaction is broadcast. This is done secretly. If the alternate chain succeeds in overtaking the main chain, the double spend was successful. Basically, miners can be bribed to compete on the alternate chain, and this will be profitable up to the value of the double spend. Similar to the Nothing at Stake problem, a short-range attacker is penalized by slashing or revocation of validation privileges.
 
 ### Grinding Attack
-In a grinding attack, the attacker increases their probability of being selected for block minting. For example, a validator could iterate through many combinations of block parameters searching for a favorable one to get published. Given enough computing power, the attacker could always "find" a suitable block. A general mitigation measure for this is to use a source of randomness that cannot be known in advance, like a random function that uses seeds from a group of validators. Of course, the validators could work together and collude. Workarounds for this can be found in Ethereum's Proof of Stake FAQ.
+In a grinding attack, the attacker increases their probability of being selected for block minting. For example, a validator could iterate through many combinations of block parameters searching for a favorable one to get published. Given enough computing power, the attacker could always "find" a suitable block. A general mitigation measure for this is to use a source of randomness that cannot be known in advance, like a random function that uses seeds from a group of validators. Of course, the validators could work together and collude. Workarounds for this can be found in Ethereum's Proof of Stake [FAQ](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attack-and-defense/).
 
 ## 5. Application Layer Attacks
 
@@ -194,6 +194,7 @@ The main practical threat to a single entity controlling the majority of the has
 
 # Further Reading - the very short list
 * Selfish Mining by [decentralizedThoughts](https://decentralizedthoughts.github.io/2020-02-26-selfish-mining/)
+* Ethereum's [FAQ on Attack and Defense](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attack-and-defense/)
 
 # Exercises
 1. How do PoW and PoS mitigate Sybil attacks?
