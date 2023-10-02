@@ -130,4 +130,4 @@ Worth considering here when talking about project sustainability is that somethi
 * Watch
   
 # Video Lecture
-To be posted.
+TBD: Here's this lecture recorded live on October 2, 2023 on [YouTube]()
