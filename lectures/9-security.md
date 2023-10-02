@@ -206,5 +206,5 @@ The main practical threat to a single entity controlling the majority of the has
 * Blockchain Security Vulnerabilities by Hackn https://hackn.gitbook.io/l1-security/
 * Watch Lera Nikolaenko (a16z crypto research partner, super smart) given you the deep dive into Proof of Stake blockchain attacks [YouTube](https://youtu.be/-uxHoEfxXC4)
 
-# Video Lecture
-To be posted.
+# Video Lecture 
+Here's this lecture recorded live September 25, 2023 on [YouTube](https://www.youtube.com/watch?v=VexP2rKp83o)
