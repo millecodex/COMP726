@@ -28,7 +28,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 8. [Privacy](lectures/8-privacy.md)
 9. [Security](lectures/9-security.md)
 10. [Digital Assets](lectures/10-digital-assets.md)
-11. Web3 & 🚀**Seminar**⚡ by [Ryan Johnson-Hunt](https://linktr.ee/ryanjohnsonhunt)
+11. [Web3](lectures/11-web3.md) & 🚀**Seminar**⚡ by [Ryan Johnson-Hunt](https://linktr.ee/ryanjohnsonhunt)
 12. Social Factors
 
 ## Tutorials - Will be updated as we go
