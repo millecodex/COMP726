@@ -29,7 +29,7 @@ Students are expected to **create**, and as such there is a large emphasis on th
 9. [Security](lectures/9-security.md)
 10. [Digital Assets](lectures/10-digital-assets.md)
 11. [Web3](lectures/11-web3.md) & 🚀**Seminar**⚡ by [Ryan Johnson-Hunt](https://linktr.ee/ryanjohnsonhunt)
-12. Social Factors
+12. [The Return to Money](lectures/12.md)
 
 ## Tutorials - Will be updated as we go
 Tutorial  1 - [Blockchain search and discovery](tutorials/blockchain_search.md)\
