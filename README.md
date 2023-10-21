@@ -80,3 +80,7 @@ Resources that may be helpful for the technical aspects of this course
 
 ## Open Source Contributions
 Notice something that doesn't seem right? Could be explained better? Have an analogy that helps with your understanding? Want to include something new that I haven't? Feel free to fork and submit a pull-request. It can also be good practise (and an easy way) to build your contributions.
+
+## License
+#### Creative Commons Zero v1.0 Universal
+Licensed under a highly permissive CC-zero to promote the widest distribution possible. Please do as you may with the course content. If you feel attribution is beneficial you may link back here. The Creative Commons CC0 Public Domain Dedication waives copyright interest in a work you've created and dedicates it to the world-wide public domain. Use CC0 to opt out of copyright entirely and ensure your work has the widest reach. As with the Unlicense and typical software licenses, CC0 disclaims warranties. CC0 is very similar to the Unlicense.
